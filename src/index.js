@@ -1,6 +1,7 @@
 import './reset.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Blog from './components/blog/Blog';
 import reportWebVitals from './reportWebVitals';
 import Homepage from './components/homepage/Homepage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -10,6 +11,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Homepage />} />
+        <Route path='/blog' element={<Blog />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
