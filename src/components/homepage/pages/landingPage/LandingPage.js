@@ -1,7 +1,7 @@
 import './landingPage.css';
 
 function LandingPage() {
-  return <div className='landingPage'>landing page</div>;
+  return <div className='landingPage page'>landing page</div>;
 }
 
 export default LandingPage;
