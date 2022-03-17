@@ -7,20 +7,19 @@ import { useEffect } from 'react';
 
 function Homepage() {
   useEffect(() => {
+    //
     const controller = new ScrollMagic.Controller({
       globalSceneOptions: {
         triggerHook: 'onLeave',
-        duration: '200%',
+        // duration: '200%',
       },
     });
-    const slides = document.querySelectorAll('div.page');
-
-    // create scene for every slide
-    for (let i = 0; i < slides.length; i++) {
+    const pages = document.querySelectorAll('div.page');
+    for (let i = 0; i < pages.length; i++) {
       new ScrollMagic.Scene({
-        triggerElement: slides[i],
+        triggerElement: pages[i],
       })
-        .setPin(slides[i], { pushFollowers: false })
+        .setPin(pages[i], { pushFollowers: false })
         .addTo(controller);
     }
   }, []);
