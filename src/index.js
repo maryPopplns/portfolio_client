@@ -1,10 +1,10 @@
-import './reset.css';
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Blog from './components/blog/Blog';
-import reportWebVitals from './reportWebVitals';
-import Homepage from './components/homepage/Homepage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Homepage from './components/homepage/Homepage';
+import reportWebVitals from './reportWebVitals';
+import Blog from './components/blog/Blog';
+import ReactDOM from 'react-dom';
+import React from 'react';
+import './reset.css';
 
 ReactDOM.render(
   <React.StrictMode>

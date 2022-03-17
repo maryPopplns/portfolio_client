@@ -5,4 +5,5 @@ div.placeholder2 {
   align-items: center;
   height: 100vh;
   border: 1px solid black;
+  background-color: rgb(137, 83, 137);
 }
