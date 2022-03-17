@@ -7,3 +7,8 @@ div.placeholder {
   border: 1px solid black;
   background-color: rgb(89, 140, 89);
 }
+
+.firstBox,
+.secondBox {
+  opacity: 0;
+}
