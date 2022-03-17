@@ -1,35 +1,36 @@
 import LandingPage from './pages/landingPage/LandingPage';
 import Placeholder from './pages/placeholder1/Placeholder';
 import Placeholder2 from './pages/placeholder2/Placeholder2';
-import ScrollMagic from 'scrollmagic';
-import './homepage.css';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useEffect } from 'react';
+import './homepage.css';
 
 function Homepage() {
   useEffect(() => {
-    //
-    const controller = new ScrollMagic.Controller({
-      globalSceneOptions: {
-        triggerHook: 'onLeave',
-        // duration: '200%',
-      },
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray('.page').forEach((panel) => {
+      ScrollTrigger.create({
+        trigger: panel,
+        start: 'top top',
+        pin: true,
+        pinSpacing: false,
+      });
     });
-    const pages = document.querySelectorAll('div.page');
-    for (let i = 0; i < pages.length; i++) {
-      new ScrollMagic.Scene({
-        triggerElement: pages[i],
-      })
-        .setPin(pages[i], { pushFollowers: false })
-        .addTo(controller);
-    }
+
+    ScrollTrigger.create({
+      snap: 1 / 4, // snap whole page to the closest section!
+    });
   }, []);
 
   return (
-    <main>
-      <LandingPage />
-      <Placeholder />
-      <Placeholder2 />
-    </main>
+    <>
+      <main>
+        <LandingPage />
+        <Placeholder />
+        <Placeholder2 />
+      </main>
+    </>
   );
 }
 
