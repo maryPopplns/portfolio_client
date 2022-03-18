@@ -15,6 +15,7 @@ function LandingPage() {
           <div>teran</div>
         </li>
       </ul>
+      <div className='homepage_down_arrow'></div>
     </main>
   );
 }

@@ -28,10 +28,16 @@ li.personal_description_veteran div:nth-child(1) {
 li.personal_description_veteran div:nth-child(3) {
   color: rgb(123, 90, 255);
 }
+div.homepage_down_arrow {
+  display: inline-block;
+  border: solid white;
+  transform: rotate(45deg);
+}
 
 /* mobile */
 @media (max-width: 764px) {
   main.landingPage {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,9 +59,15 @@ li.personal_description_veteran div:nth-child(3) {
   ul.personal_description > li {
     margin: 2rem 0;
     font-family: 'archivoThin';
-  }
-  ul li {
     font-size: 1.5rem;
+  }
+  /* ul.personal_description li {
+  } */
+  div.homepage_down_arrow {
+    position: absolute;
+    border-width: 0 3px 3px 0;
+    padding: 1rem;
+    bottom: 2rem;
   }
 }
 
