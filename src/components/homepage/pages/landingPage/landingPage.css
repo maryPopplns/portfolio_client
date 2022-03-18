@@ -1,17 +1,32 @@
 /* fonts */
 @font-face {
   font-family: 'archivoRegular';
-  src: url('./ArchivoBlack-Regular.ttf') format('truetype');
+  src: url('./fonts/ArchivoBlack-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'archivoThin';
+  src: url('./fonts/ArchivoNarrow-VariableFont_wght.ttf') format('truetype');
 }
 
 /* global */
 main.landingPage {
   height: 100vh;
-  color: rgb(255, 255, 255);
-  background-color: rgb(0, 0, 0);
+  color: white;
+  background-color: black;
 }
 h1.name_heading {
   font-family: 'archivoRegular';
+  line-height: 5rem;
+}
+li.personal_description_veteran {
+  display: flex;
+  justify-content: center;
+}
+li.personal_description_veteran div:nth-child(1) {
+  color: rgb(255, 83, 108);
+}
+li.personal_description_veteran div:nth-child(3) {
+  color: rgb(123, 90, 255);
 }
 
 /* mobile */
@@ -22,23 +37,36 @@ h1.name_heading {
     align-items: center;
     text-align: center;
   }
+  h1.name_heading {
+    line-height: 5rem;
+  }
   h1.first_name_heading {
-    margin: 3rem;
+    margin-top: 2rem;
     font-size: 3rem;
   }
   h1.last_name_heading {
-    font-size: 4rem;
+    font-size: 4.5rem;
+  }
+  main.landingPage hr {
+    width: 80vw;
+  }
+  ul.personal_description > li {
+    margin: 2rem 0;
+    font-family: 'archivoThin';
+  }
+  ul li {
+    font-size: 1.5rem;
   }
 }
 
 @media (min-width: 765px) {
   main.landingPage {
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size: 3rem;
     text-align: center;
-    line-height: 1.2rem;
+    line-height: 1.2rem; */
   }
 }

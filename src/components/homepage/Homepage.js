@@ -17,7 +17,7 @@ function Homepage() {
         pinSpacing: i === 1 ? true : false,
       });
     });
-    //
+    // placeholder text
     gsap.to('.firstBox', {
       right: 0,
       scrollTrigger: {
@@ -41,7 +41,7 @@ function Homepage() {
     <div className='container'>
       <LandingPage />
       <Placeholder />
-      <Placeholder2 />s
+      <Placeholder2 />
     </div>
   );
 }
