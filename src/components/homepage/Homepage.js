@@ -9,22 +9,30 @@ import Placeholder2 from './pages/placeholder2/Placeholder2';
 function Homepage() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.utils.toArray('.page').forEach((panel) => {
+    gsap.utils.toArray('.page').forEach((panel, i) => {
       ScrollTrigger.create({
         trigger: panel,
         start: 'top top',
         pin: true,
-        pinSpacing: true, // gives extra space for each page
+        pinSpacing: i === 1 ? true : false,
       });
     });
     //
     gsap.to('.firstBox', {
-      opacity: 1,
+      right: 0,
       scrollTrigger: {
         trigger: '.placeholder',
         start: 'top top',
-        end: '+=500',
-        scrub: true,
+        yoyo: true,
+      },
+    });
+    gsap.to('.secondBox', {
+      left: 0,
+      display: 'block',
+      scrollTrigger: {
+        trigger: '.placeholder',
+        start: 'top top',
+        yoyo: true,
       },
     });
   }, []);
@@ -34,7 +42,7 @@ function Homepage() {
       <main className='container'>
         <LandingPage />
         <Placeholder />
-        <Placeholder2 />
+        <Placeholder2 />s
       </main>
     </>
   );

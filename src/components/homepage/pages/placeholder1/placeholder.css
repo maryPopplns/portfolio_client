@@ -8,7 +8,13 @@ div.placeholder {
   background-color: rgb(89, 140, 89);
 }
 
-.firstBox,
+.firstBox {
+  position: relative;
+  right: 55vw;
+}
+
 .secondBox {
-  opacity: 0;
+  display: none;
+  position: relative;
+  left: 55vw;
 }
