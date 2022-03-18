@@ -5,14 +5,14 @@ import Placeholder from './pages/placeholder1/Placeholder';
 import Placeholder2 from './pages/placeholder2/Placeholder2';
 import {
   pageTransitions,
-  descriptionAnimation,
+  traitsAnimation,
   placeholderAnimation,
 } from './utils/animations';
 
 function Homepage() {
   useEffect(() => {
     pageTransitions();
-    descriptionAnimation();
+    traitsAnimation();
     placeholderAnimation();
   }, []);
 

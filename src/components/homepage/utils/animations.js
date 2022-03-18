@@ -13,23 +13,26 @@ export function pageTransitions() {
   });
 }
 
-export function descriptionAnimation() {
-  // if window < 765px
-
+export function traitsAnimation() {
   function webHandler() {
-    const scrollDistance = window.scrollY;
-
     const webDeveloper = document.getElementById(
       'personal_description_web_developer'
     );
     const fitness = document.getElementById('personal_description_fitness');
     const veteran = document.getElementById('personal_description_veteran');
 
-    if (scrollDistance > 0) {
-      webDeveloper.classList.add('hiddenDescriptions1');
-      fitness.classList.add('hiddenDescriptions2');
-      veteran.classList.add('hiddenDescriptions3');
-    } else {
+    if (window.innerWidth < 765) {
+      if (window.scrollY > 0) {
+        webDeveloper.classList.add('hiddenDescriptions1');
+        fitness.classList.add('hiddenDescriptions2');
+        veteran.classList.add('hiddenDescriptions3');
+      } else {
+        webDeveloper.classList.remove('hiddenDescriptions1');
+        fitness.classList.remove('hiddenDescriptions2');
+        veteran.classList.remove('hiddenDescriptions3');
+      }
+    }
+    if (window.innerWidth >= 765 && webDeveloper.classList.value !== '') {
       webDeveloper.classList.remove('hiddenDescriptions1');
       fitness.classList.remove('hiddenDescriptions2');
       veteran.classList.remove('hiddenDescriptions3');
