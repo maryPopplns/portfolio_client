@@ -67,11 +67,14 @@ div.homepage_down_arrow {
     font-size: 1.5rem;
     transition: transform 1s;
   }
-  .hiddenDescriptionsLeft {
-    transform: translateX(70vw);
-  }
-  .hiddenDescriptionsRight {
+  .hiddenDescriptions1 {
     transform: translateX(-70vw);
+  }
+  .hiddenDescriptions2 {
+    transform: translateX(-140vw);
+  }
+  .hiddenDescriptions3 {
+    transform: translateX(-210vw);
   }
   /* down arrow */
   div.homepage_down_arrow {

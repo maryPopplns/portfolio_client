@@ -26,13 +26,13 @@ export function descriptionAnimation() {
     const veteran = document.getElementById('personal_description_veteran');
 
     if (scrollDistance > 0) {
-      webDeveloper.classList.add('hiddenDescriptionsLeft');
-      veteran.classList.add('hiddenDescriptionsLeft');
-      fitness.classList.add('hiddenDescriptionsRight');
+      webDeveloper.classList.add('hiddenDescriptions1');
+      fitness.classList.add('hiddenDescriptions2');
+      veteran.classList.add('hiddenDescriptions3');
     } else {
-      webDeveloper.classList.remove('hiddenDescriptionsLeft');
-      veteran.classList.remove('hiddenDescriptionsLeft');
-      fitness.classList.remove('hiddenDescriptionsRight');
+      webDeveloper.classList.remove('hiddenDescriptions1');
+      fitness.classList.remove('hiddenDescriptions2');
+      veteran.classList.remove('hiddenDescriptions3');
     }
   }
 
