@@ -18,14 +18,14 @@ h1.name_heading {
   font-family: 'archivoRegular';
   line-height: 5rem;
 }
-li.personal_description_veteran {
+li#personal_description_veteran {
   display: flex;
   justify-content: center;
 }
-li.personal_description_veteran div:nth-child(1) {
+li#personal_description_veteran div:nth-child(1) {
   color: rgb(255, 83, 108);
 }
-li.personal_description_veteran div:nth-child(3) {
+li#personal_description_veteran div:nth-child(3) {
   color: rgb(123, 90, 255);
 }
 div.homepage_down_arrow {
@@ -37,12 +37,12 @@ div.homepage_down_arrow {
 /* mobile */
 @media (max-width: 764px) {
   main.landingPage {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
+  /* heading */
   h1.name_heading {
     line-height: 5rem;
   }
@@ -56,13 +56,24 @@ div.homepage_down_arrow {
   main.landingPage hr {
     width: 80vw;
   }
+  /* personal descriptions */
+  ul.personal_description {
+    margin-top: 20vh;
+    height: 100vh;
+  }
   ul.personal_description > li {
-    margin: 2rem 0;
+    margin: 1rem 0;
     font-family: 'archivoThin';
     font-size: 1.5rem;
+    transition: transform 1s;
   }
-  /* ul.personal_description li {
-  } */
+  .hiddenDescriptionsLeft {
+    transform: translateX(70vw);
+  }
+  .hiddenDescriptionsRight {
+    transform: translateX(-70vw);
+  }
+  /* down arrow */
   div.homepage_down_arrow {
     position: absolute;
     border-width: 0 3px 3px 0;
