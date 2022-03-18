@@ -38,13 +38,11 @@ function Homepage() {
   }, []);
 
   return (
-    <>
-      <main className='container'>
-        <LandingPage />
-        <Placeholder />
-        <Placeholder2 />s
-      </main>
-    </>
+    <div className='container'>
+      <LandingPage />
+      <Placeholder />
+      <Placeholder2 />s
+    </div>
   );
 }
 
