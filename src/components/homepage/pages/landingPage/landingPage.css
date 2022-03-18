@@ -1,10 +1,7 @@
+/* fonts */
 @font-face {
-  font-family: 'ArchivoBlack';
-  src: url(./ArchivoBlack-Regular.ttf) format('ttf');
-}
-
-:root {
-  --Archivo-black: 'ArchivoBlack';
+  font-family: 'archivoRegular';
+  src: url('./ArchivoBlack-Regular.ttf') format('truetype');
 }
 
 /* global */
@@ -13,8 +10,8 @@ main.landingPage {
   color: rgb(255, 255, 255);
   background-color: rgb(0, 0, 0);
 }
-h1 {
-  font-family: var(--Archivo-black);
+h1.name_heading {
+  font-family: 'archivoRegular';
 }
 
 /* mobile */
@@ -26,8 +23,8 @@ h1 {
     text-align: center;
   }
   h1.first_name_heading {
-    font-size: 3rem;
     margin: 3rem;
+    font-size: 3rem;
   }
   h1.last_name_heading {
     font-size: 4rem;
