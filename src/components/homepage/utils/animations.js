@@ -20,23 +20,19 @@ export function traitsAnimation() {
     );
     const fitness = document.getElementById('personal_description_fitness');
     const veteran = document.getElementById('personal_description_veteran');
+    const hr = document.getElementById('name_trait_divisor');
 
-    // if (window.innerWidth < 800) {
     if (window.scrollY > 0) {
       webDeveloper.classList.add('hiddenDescriptions1');
       fitness.classList.add('hiddenDescriptions2');
       veteran.classList.add('hiddenDescriptions3');
+      hr.classList.add('name_trait_divisor_shrink');
     } else {
       webDeveloper.classList.remove('hiddenDescriptions1');
       fitness.classList.remove('hiddenDescriptions2');
       veteran.classList.remove('hiddenDescriptions3');
+      hr.classList.remove('name_trait_divisor_shrink');
     }
-    // }
-    // if (window.innerWidth >= 800 && webDeveloper.classList.value !== '') {
-    //   webDeveloper.classList.remove('hiddenDescriptions1');
-    //   fitness.classList.remove('hiddenDescriptions2');
-    //   veteran.classList.remove('hiddenDescriptions3');
-    // }
   }
 
   window.addEventListener('scroll', webHandler);

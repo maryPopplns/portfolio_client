@@ -9,7 +9,7 @@
 }
 
 /* global */
-main.landingPage {
+main.landing_page {
   height: 100vh;
   color: white;
   background-color: black;
@@ -39,7 +39,7 @@ div.homepage_down_arrow {
 
 /* mobile */
 @media (max-width: 799px) {
-  main.landingPage {
+  main.landing_page {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,7 +57,7 @@ div.homepage_down_arrow {
   h1.last_name_heading {
     font-size: 4.5rem;
   }
-  main.landingPage hr {
+  main.landing_page hr {
     width: 80vw;
   }
   /* personal descriptions */
@@ -90,7 +90,7 @@ div.homepage_down_arrow {
 
 /* tablet */
 @media (min-width: 800px) {
-  main.landingPage {
+  main.landing_page {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,11 +107,12 @@ div.homepage_down_arrow {
   h1.last_name_heading::before {
     content: '_';
   }
-  main.landingPage hr {
+  main.landing_page hr {
     margin: 0 1.5rem;
     width: 2px;
     height: 60vh;
     background-color: white;
+    transition: all 1s;
   }
   ul.personal_description {
     display: flex;
@@ -131,6 +132,11 @@ div.homepage_down_arrow {
   }
   .hiddenDescriptions3 {
     transform: translateY(-200vh);
+  }
+  main.landing_page .name_trait_divisor_shrink {
+    height: 0rem;
+    background-color: black;
+    border-color: black;
   }
   div.homepage_down_arrow {
     display: none;
