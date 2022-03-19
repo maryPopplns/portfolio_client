@@ -30,13 +30,19 @@ main.skills h1 {
 
 /* mobile */
 @media (max-width: 799px) {
+  main.skills {
+    position: relative;
+  }
   main.skills h1 {
+    position: absolute;
+    top: 1rem;
     margin-bottom: 0.5rem;
     font-size: 3rem;
     text-transform: uppercase;
   }
   #title_skills_divisor {
-    margin-bottom: 5rem;
+    position: absolute;
+    top: 5rem;
     width: 60%;
   }
   main.skills ul {
@@ -61,12 +67,15 @@ main.skills h1 {
   main.skills h1 {
     font-size: 4rem;
   }
+  main.skills ul {
+    margin-top: 8rem;
+  }
   main.skills ul li {
     width: 33%;
   }
   .technology_icon {
-    height: 60%;
-    width: 60%;
+    height: 70%;
+    width: 70%;
   }
 }
 
