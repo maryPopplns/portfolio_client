@@ -59,6 +59,12 @@ div.homepage_down_arrow {
   }
   main.landing_page hr {
     width: 80vw;
+    transition: all 1s;
+  }
+  main.landing_page .name_trait_divisor_shrink {
+    width: 0rem;
+    background-color: black;
+    border-color: black;
   }
   /* personal descriptions */
   ul.personal_description {
@@ -122,16 +128,16 @@ div.homepage_down_arrow {
   }
   ul.personal_description > li {
     font-size: 1.4rem;
-    transition: transform 1s;
+    transition: transform 1.3s;
   }
   .hiddenDescriptions1 {
-    transform: translateY(-300vh);
+    transform: translateY(-180vh);
   }
   .hiddenDescriptions2 {
-    transform: translateY(-250vh);
+    transform: translateY(-140vh);
   }
   .hiddenDescriptions3 {
-    transform: translateY(-200vh);
+    transform: translateY(-100vh);
   }
   main.landing_page .name_trait_divisor_shrink {
     height: 0rem;
