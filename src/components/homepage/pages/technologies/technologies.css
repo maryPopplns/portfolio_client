@@ -1,19 +1,16 @@
-main.placeholder {
+/* global */
+main.technologies {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-top: 5px solid white;
+  border-bottom: 5px solid white;
   height: 100vh;
-  background-color: rgb(89, 140, 89);
+  background-color: black;
+  color: white;
 }
 
-.firstBox {
-  /* position: relative;
-  right: 55vw; */
-}
-
-.secondBox {
-  /* display: none;
-  position: relative;
-  left: 55vw; */
+main.hidePageDivision {
+  border-top: 5px solid black;
 }

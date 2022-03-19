@@ -26,10 +26,10 @@ li#personal_description_veteran {
   justify-content: center;
 }
 li#personal_description_veteran div:nth-child(1) {
-  color: rgb(255, 128, 183);
+  color: rgb(254, 182, 213);
 }
 li#personal_description_veteran div:nth-child(3) {
-  color: rgb(187, 138, 255);
+  color: rgb(212, 182, 254);
 }
 div.homepage_down_arrow {
   display: inline-block;
@@ -45,7 +45,6 @@ div.homepage_down_arrow {
     align-items: center;
     text-align: center;
   }
-  /* heading */
   h1.name_heading {
     line-height: 5rem;
     text-transform: uppercase;
@@ -60,11 +59,7 @@ div.homepage_down_arrow {
   main.landing_page hr {
     width: 80vw;
     transition: all 1s;
-  }
-  main.landing_page .name_trait_divisor_shrink {
-    width: 0rem;
-    background-color: black;
-    border-color: black;
+    background-color: white;
   }
   /* personal descriptions */
   ul.personal_description {
@@ -76,6 +71,7 @@ div.homepage_down_arrow {
     font-size: 1.5rem;
     transition: transform 1s;
   }
+  /* description animation */
   .hiddenDescriptions1 {
     transform: translateX(-70vw);
   }
@@ -84,6 +80,12 @@ div.homepage_down_arrow {
   }
   .hiddenDescriptions3 {
     transform: translateX(-210vw);
+  }
+  /* hr animation */
+  main.landing_page .name_trait_divisor_shrink {
+    width: 0rem;
+    background-color: black;
+    border-color: black;
   }
   /* down arrow */
   div.homepage_down_arrow {
@@ -130,6 +132,7 @@ div.homepage_down_arrow {
     font-size: 1.4rem;
     transition: transform 1.3s;
   }
+  /* description animation */
   .hiddenDescriptions1 {
     transform: translateY(-180vh);
   }
@@ -139,6 +142,7 @@ div.homepage_down_arrow {
   .hiddenDescriptions3 {
     transform: translateY(-100vh);
   }
+  /* hr animation */
   main.landing_page .name_trait_divisor_shrink {
     height: 0rem;
     background-color: black;

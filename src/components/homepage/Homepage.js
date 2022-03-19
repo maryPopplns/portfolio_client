@@ -6,14 +6,14 @@ import Placeholder2 from './pages/placeholder2/Placeholder2';
 import {
   pageTransitions,
   traitsAnimation,
-  placeholderAnimation,
+  pageDivisonAnimation,
 } from './utils/animations';
 
 function Homepage() {
   useEffect(() => {
     pageTransitions();
     traitsAnimation();
-    placeholderAnimation();
+    pageDivisonAnimation();
   }, []);
 
   return (

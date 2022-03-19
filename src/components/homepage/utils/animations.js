@@ -38,28 +38,37 @@ export function traitsAnimation() {
   window.addEventListener('scroll', webHandler);
 }
 
-export function placeholderAnimation() {
-  function placeholderHandler() {
-    // get the position of Technology page
-    // get top of the screen position
-    // get bottom of the screen position
+export function pageDivisonAnimation() {
+  function pageDivisionHandler() {
+    const technologyElement = Array.from(
+      document.getElementsByClassName('technologies')
+    )[0];
+    const { top } = technologyElement.getBoundingClientRect();
+
+    if (top === 0) {
+      technologyElement.classList.add('hidePageDivision');
+    } else {
+      technologyElement.classList.remove('hidePageDivision');
+    }
   }
-  window.addEventListener('scroll', placeholderHandler);
-  // gsap.to('.firstBox', {
-  //   right: 0,
-  //   scrollTrigger: {
-  //     trigger: '.placeholder',
-  //     start: 'top top',
-  //     yoyo: true,
-  //   },
-  // });
-  // gsap.to('.secondBox', {
-  //   left: 0,
-  //   display: 'block',
-  //   scrollTrigger: {
-  //     trigger: '.placeholder',
-  //     start: 'top top',
-  //     yoyo: true,
-  //   },
-  // });
+
+  window.addEventListener('scroll', pageDivisionHandler);
 }
+
+// gsap.to('.firstBox', {
+//   right: 0,
+//   scrollTrigger: {
+//     trigger: '.placeholder',
+//     start: 'top top',
+//     yoyo: true,
+//   },
+// });
+// gsap.to('.secondBox', {
+//   left: 0,
+//   display: 'block',
+//   scrollTrigger: {
+//     trigger: '.placeholder',
+//     start: 'top top',
+//     yoyo: true,
+//   },
+// });
