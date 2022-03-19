@@ -98,9 +98,6 @@ div.homepage_down_arrow {
     text-align: center;
     line-height: 1.2rem;
   }
-  /* h1.name_heading {
-    text-transform: capitalize;
-  } */
   h1.first_name_heading {
     font-size: 3rem;
   }
@@ -111,7 +108,7 @@ div.homepage_down_arrow {
     content: '_';
   }
   main.landingPage hr {
-    margin: 0 1rem;
+    margin: 0 1.5rem;
     width: 2px;
     height: 60vh;
     background-color: white;
@@ -124,6 +121,16 @@ div.homepage_down_arrow {
   }
   ul.personal_description > li {
     font-size: 1.4rem;
+    transition: transform 1s;
+  }
+  .hiddenDescriptions1 {
+    transform: translateY(-300vh);
+  }
+  .hiddenDescriptions2 {
+    transform: translateY(-250vh);
+  }
+  .hiddenDescriptions3 {
+    transform: translateY(-200vh);
   }
   div.homepage_down_arrow {
     display: none;
