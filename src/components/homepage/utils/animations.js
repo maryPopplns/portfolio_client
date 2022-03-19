@@ -23,13 +23,13 @@ export function traitsAnimation() {
     const hr = document.getElementById('name_trait_divisor');
 
     if (window.scrollY > 0) {
-      webDeveloper.classList.add('hiddenDescriptions1');
-      fitness.classList.add('hiddenDescriptions2');
+      webDeveloper.classList.add('hidden_descriptions_1');
+      fitness.classList.add('hidden_descriptions_2');
       veteran.classList.add('hiddenDescriptions3');
       hr.classList.add('name_trait_divisor_shrink');
     } else {
-      webDeveloper.classList.remove('hiddenDescriptions1');
-      fitness.classList.remove('hiddenDescriptions2');
+      webDeveloper.classList.remove('hidden_descriptions_1');
+      fitness.classList.remove('hidden_descriptions_2');
       veteran.classList.remove('hiddenDescriptions3');
       hr.classList.remove('name_trait_divisor_shrink');
     }
@@ -46,29 +46,15 @@ export function pageDivisonAnimation() {
     const { top } = technologyElement.getBoundingClientRect();
 
     if (top === 0) {
-      technologyElement.classList.add('hidePageDivision');
+      technologyElement.classList.add('hide_page_division');
     } else {
-      technologyElement.classList.remove('hidePageDivision');
+      technologyElement.classList.remove('hide_page_division');
     }
   }
 
   window.addEventListener('scroll', pageDivisionHandler);
 }
 
-// gsap.to('.firstBox', {
-//   right: 0,
-//   scrollTrigger: {
-//     trigger: '.placeholder',
-//     start: 'top top',
-//     yoyo: true,
-//   },
-// });
-// gsap.to('.secondBox', {
-//   left: 0,
-//   display: 'block',
-//   scrollTrigger: {
-//     trigger: '.placeholder',
-//     start: 'top top',
-//     yoyo: true,
-//   },
-// });
+export function technologies() {
+  //
+}

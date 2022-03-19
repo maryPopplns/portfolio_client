@@ -72,13 +72,13 @@ div.homepage_down_arrow {
     transition: transform 1s;
   }
   /* description animation */
-  .hiddenDescriptions1 {
+  .hidden_descriptions_1 {
     transform: translateX(-70vw);
   }
-  .hiddenDescriptions2 {
+  .hidden_descriptions_2 {
     transform: translateX(-140vw);
   }
-  .hiddenDescriptions3 {
+  .hidden_descriptions_3 {
     transform: translateX(-210vw);
   }
   /* hr animation */
@@ -133,13 +133,13 @@ div.homepage_down_arrow {
     transition: transform 1.3s;
   }
   /* description animation */
-  .hiddenDescriptions1 {
+  .hidden_descriptions_1 {
     transform: translateY(-180vh);
   }
-  .hiddenDescriptions2 {
+  .hidden_descriptions_2 {
     transform: translateY(-140vh);
   }
-  .hiddenDescriptions3 {
+  .hidden_descriptions_3 {
     transform: translateY(-100vh);
   }
   /* hr animation */
