@@ -25,12 +25,12 @@ export function traitsAnimation() {
     if (window.scrollY > 0) {
       webDeveloper.classList.add('hidden_descriptions_1');
       fitness.classList.add('hidden_descriptions_2');
-      veteran.classList.add('hiddenDescriptions3');
+      veteran.classList.add('hidden_descriptions_3');
       hr.classList.add('name_trait_divisor_shrink');
     } else {
       webDeveloper.classList.remove('hidden_descriptions_1');
       fitness.classList.remove('hidden_descriptions_2');
-      veteran.classList.remove('hiddenDescriptions3');
+      veteran.classList.remove('hidden_descriptions_3');
       hr.classList.remove('name_trait_divisor_shrink');
     }
   }

@@ -1,5 +1,17 @@
+/* fonts */
+@font-face {
+  font-family: 'archivoRegular';
+  src: url('../../../../fonts/ArchivoBlack-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'archivoThin';
+  src: url('../../../../fonts/ArchivoNarrow-VariableFont_wght.ttf')
+    format('truetype');
+}
+
 /* global */
 main.technologies {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,7 +19,7 @@ main.technologies {
   border-top: 5px solid white;
   border-bottom: 5px solid white;
   height: 100vh;
-  background-color: rgb(114, 114, 114);
+  background-color: black;
   color: white;
 }
 
@@ -16,9 +28,27 @@ main.hide_page_division {
 }
 
 @media (max-width: 799px) {
+  main.technologies h1 {
+    position: absolute;
+    top: 1rem;
+    font-family: archivoRegular;
+    text-transform: uppercase;
+  }
+  main.technologies ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 75%;
+  }
+  main.technologies ul li {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
   .technology_icon {
     color: black;
-    height: 5rem;
-    width: 5rem;
+    height: 80%;
+    width: 80%;
   }
 }

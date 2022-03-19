@@ -11,7 +11,7 @@ import JEST from './icons/jest.svg';
 function Technologies() {
   return (
     <main className='technologies page'>
-      <h1>Technologies</h1>
+      <h1>technologies</h1>
       <ul>
         <li>
           <img className='technology_icon' src={CSS} alt='css icon'></img>
