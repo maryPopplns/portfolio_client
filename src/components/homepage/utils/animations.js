@@ -41,7 +41,7 @@ export function traitsAnimation() {
 export function pageDivisonAnimation() {
   function pageDivisionHandler() {
     const technologyElement = Array.from(
-      document.getElementsByClassName('technologies')
+      document.getElementsByClassName('skills')
     )[0];
     const { top } = technologyElement.getBoundingClientRect();
 

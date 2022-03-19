@@ -1,4 +1,4 @@
-import './technologies.css';
+import './skills.css';
 import CSS from './icons/css3.svg';
 import HTML from './icons/html5.svg';
 import JS from './icons/javascript.svg';
@@ -8,10 +8,10 @@ import NODE from './icons/nodejs.svg';
 import GIT from './icons/git.svg';
 import JEST from './icons/jest.svg';
 
-function Technologies() {
+function Skills() {
   return (
-    <main className='technologies page'>
-      <h1>technologies</h1>
+    <main className='skills page'>
+      <h1>skills</h1>
       <ul>
         <li>
           <img className='technology_icon' src={CSS} alt='css icon'></img>
@@ -42,4 +42,4 @@ function Technologies() {
   );
 }
 
-export default Technologies;
+export default Skills;

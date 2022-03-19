@@ -10,8 +10,7 @@
 }
 
 /* global */
-main.technologies {
-  position: relative;
+main.skills {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,27 +27,28 @@ main.hide_page_division {
 }
 
 @media (max-width: 799px) {
-  main.technologies h1 {
-    position: absolute;
-    top: 1rem;
+  main.skills h1 {
+    margin-bottom: 3rem;
+    top: 2rem;
+    font-size: 3rem;
     font-family: archivoRegular;
     text-transform: uppercase;
   }
-  main.technologies ul {
+  main.skills ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    align-content: flex-start;
-    width: 75%;
+    /* align-content: flex-start; */
+    width: 100%;
   }
-  main.technologies ul li {
+  main.skills ul li {
     display: flex;
     justify-content: center;
     width: 50%;
   }
   .technology_icon {
     color: black;
-    height: 80%;
-    width: 80%;
+    height: 60%;
+    width: 60%;
   }
 }
