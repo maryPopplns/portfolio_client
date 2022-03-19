@@ -1,7 +1,7 @@
 import './homepage.css';
 import { useEffect } from 'react';
 import LandingPage from './pages/landingPage/LandingPage';
-import Placeholder from './pages/placeholder1/Placeholder';
+import Technologies from './pages/technologies/Technologies';
 import Placeholder2 from './pages/placeholder2/Placeholder2';
 import {
   pageTransitions,
@@ -19,7 +19,7 @@ function Homepage() {
   return (
     <div className='container'>
       <LandingPage />
-      <Placeholder />
+      <Technologies />
       <Placeholder2 />
     </div>
   );

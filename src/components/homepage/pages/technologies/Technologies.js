@@ -1,6 +1,6 @@
-import './placeholder.css';
+import './technologies.css';
 
-function Placeholder() {
+function Technologies() {
   return (
     <main className='placeholder page'>
       <div className='firstBox'>first</div>
@@ -9,4 +9,4 @@ function Placeholder() {
   );
 }
 
-export default Placeholder;
+export default Technologies;

@@ -8,12 +8,12 @@ main.placeholder {
 }
 
 .firstBox {
-  position: relative;
-  right: 55vw;
+  /* position: relative;
+  right: 55vw; */
 }
 
 .secondBox {
-  display: none;
+  /* display: none;
   position: relative;
-  left: 55vw;
+  left: 55vw; */
 }

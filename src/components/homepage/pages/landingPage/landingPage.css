@@ -18,6 +18,9 @@ h1.name_heading {
   font-family: 'archivoRegular';
   line-height: 5rem;
 }
+ul.personal_description li {
+  font-family: 'archivoThin';
+}
 li#personal_description_veteran {
   display: flex;
   justify-content: center;
@@ -35,64 +38,94 @@ div.homepage_down_arrow {
 }
 
 /* mobile */
-/* @media (max-width: 764px) { */
-main.landingPage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-/* heading */
-h1.name_heading {
-  line-height: 5rem;
-}
-h1.first_name_heading {
-  margin-top: 2rem;
-  font-size: 3rem;
-}
-h1.last_name_heading {
-  font-size: 4.5rem;
-}
-main.landingPage hr {
-  width: 80vw;
-}
-/* personal descriptions */
-ul.personal_description {
-  margin-top: 20vh;
-  height: 100vh;
-}
-ul.personal_description > li {
-  margin: 1rem 0;
-  font-family: 'archivoThin';
-  font-size: 1.5rem;
-  transition: transform 1s;
-}
-.hiddenDescriptions1 {
-  transform: translateX(-70vw);
-}
-.hiddenDescriptions2 {
-  transform: translateX(-140vw);
-}
-.hiddenDescriptions3 {
-  transform: translateX(-210vw);
-}
-/* down arrow */
-div.homepage_down_arrow {
-  position: absolute;
-  border-width: 0 3px 3px 0;
-  padding: 1rem;
-  bottom: 2rem;
-}
-/* } */
-
-@media (min-width: 765px) {
+@media (max-width: 799px) {
   main.landingPage {
-    /* display: flex;
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  /* heading */
+  h1.name_heading {
+    line-height: 5rem;
+    text-transform: uppercase;
+  }
+  h1.first_name_heading {
+    margin-top: 2rem;
+    font-size: 3rem;
+  }
+  h1.last_name_heading {
+    font-size: 4.5rem;
+  }
+  main.landingPage hr {
+    width: 80vw;
+  }
+  /* personal descriptions */
+  ul.personal_description {
+    margin-top: 20vh;
+    height: 100vh;
+  }
+  ul.personal_description > li {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    transition: transform 1s;
+  }
+  .hiddenDescriptions1 {
+    transform: translateX(-70vw);
+  }
+  .hiddenDescriptions2 {
+    transform: translateX(-140vw);
+  }
+  .hiddenDescriptions3 {
+    transform: translateX(-210vw);
+  }
+  /* down arrow */
+  div.homepage_down_arrow {
+    position: absolute;
+    border-width: 0 3px 3px 0;
+    padding: 1rem;
+    bottom: 2rem;
+  }
+}
+
+/* tablet */
+@media (min-width: 800px) {
+  main.landingPage {
+    display: flex;
     justify-content: center;
     align-items: center;
     font-size: 3rem;
     text-align: center;
-    line-height: 1.2rem; */
+    line-height: 1.2rem;
+  }
+  /* h1.name_heading {
+    text-transform: capitalize;
+  } */
+  h1.first_name_heading {
+    font-size: 3rem;
+  }
+  h1.last_name_heading {
+    font-size: 3rem;
+  }
+  h1.last_name_heading::before {
+    content: '_';
+  }
+  main.landingPage hr {
+    margin: 0 1rem;
+    width: 2px;
+    height: 60vh;
+    background-color: white;
+  }
+  ul.personal_description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 4rem;
+  }
+  ul.personal_description > li {
+    font-size: 1.4rem;
+  }
+  div.homepage_down_arrow {
+    display: none;
   }
 }
