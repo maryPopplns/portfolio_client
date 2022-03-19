@@ -21,24 +21,28 @@ main.skills {
   background-color: black;
   color: white;
 }
-
 main.hide_page_division {
   border-top: 5px solid black;
 }
+main.skills h1 {
+  font-family: archivoRegular;
+}
 
-@media (max-width: 799px) {
+@media (max-width: 500px) {
   main.skills h1 {
-    margin-bottom: 3rem;
-    top: 2rem;
+    /* top: 4rem; */
+    margin-bottom: 0.5rem;
     font-size: 3rem;
-    font-family: archivoRegular;
     text-transform: uppercase;
+  }
+  #title_skills_divisor {
+    margin-bottom: 5rem;
+    width: 60%;
   }
   main.skills ul {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    /* align-content: flex-start; */
     width: 100%;
   }
   main.skills ul li {

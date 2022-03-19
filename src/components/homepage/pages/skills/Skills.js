@@ -1,41 +1,42 @@
 import './skills.css';
-import CSS from './icons/css3.svg';
-import HTML from './icons/html5.svg';
-import JS from './icons/javascript.svg';
-import SASS from './icons/sass.svg';
-import REACT from './icons/react.svg';
-import NODE from './icons/nodejs.svg';
-import GIT from './icons/git.svg';
-import JEST from './icons/jest.svg';
+import css from './icons/css3.svg';
+import html from './icons/html5.svg';
+import js from './icons/javascript.svg';
+import sass from './icons/sass.svg';
+import react from './icons/react.svg';
+import node from './icons/nodejs.svg';
+import git from './icons/git.svg';
+import jest from './icons/jest.svg';
 
 function Skills() {
   return (
     <main className='skills page'>
       <h1>skills</h1>
+      <hr id='title_skills_divisor'></hr>
       <ul>
         <li>
-          <img className='technology_icon' src={CSS} alt='css icon'></img>
+          <img className='technology_icon' src={css} alt='css icon'></img>
         </li>
         <li>
-          <img className='technology_icon' src={HTML} alt='html icon'></img>
+          <img className='technology_icon' src={html} alt='html icon'></img>
         </li>
         <li>
-          <img className='technology_icon' src={JS} alt='javascript icon'></img>
+          <img className='technology_icon' src={js} alt='javascript icon'></img>
         </li>
         <li>
-          <img className='technology_icon' src={SASS} alt='sass icon'></img>
+          <img className='technology_icon' src={sass} alt='sass icon'></img>
         </li>
         <li>
-          <img className='technology_icon' src={REACT} alt='react icon'></img>
+          <img className='technology_icon' src={react} alt='react icon'></img>
         </li>
         <li>
-          <img className='technology_icon' src={NODE} alt='node icon'></img>
+          <img className='technology_icon' src={node} alt='node icon'></img>
         </li>
         <li>
-          <img className='technology_icon' src={GIT} alt='git icon'></img>
+          <img className='technology_icon' src={git} alt='git icon'></img>
         </li>
         <li>
-          <img className='technology_icon' src={JEST} alt='jest icon'></img>
+          <img className='technology_icon' src={jest} alt='jest icon'></img>
         </li>
       </ul>
     </main>
