@@ -28,9 +28,9 @@ main.skills h1 {
   font-family: archivoRegular;
 }
 
-@media (max-width: 500px) {
+/* mobile */
+@media (max-width: 799px) {
   main.skills h1 {
-    /* top: 4rem; */
     margin-bottom: 0.5rem;
     font-size: 3rem;
     text-transform: uppercase;
@@ -52,6 +52,29 @@ main.skills h1 {
   }
   .technology_icon {
     color: black;
+    height: 60%;
+    width: 60%;
+  }
+}
+
+@media (max-width: 799px) {
+  main.skills h1 {
+    font-size: 4rem;
+  }
+  main.skills ul li {
+    width: 33%;
+  }
+  .technology_icon {
+    height: 60%;
+    width: 60%;
+  }
+}
+
+@media (max-width: 500px) {
+  main.skills ul li {
+    width: 50%;
+  }
+  .technology_icon {
     height: 60%;
     width: 60%;
   }
