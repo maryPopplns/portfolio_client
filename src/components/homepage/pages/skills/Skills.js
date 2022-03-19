@@ -7,6 +7,7 @@ import react from './icons/react.svg';
 import node from './icons/nodejs.svg';
 import git from './icons/git.svg';
 import jest from './icons/jest.svg';
+import linux from './icons/linux.svg';
 
 function Skills() {
   return (
@@ -14,6 +15,7 @@ function Skills() {
       <h1>skills</h1>
       <hr id='title_skills_divisor'></hr>
       <ul>
+        {/* mobile */}
         <li>
           <img className='technology_icon' src={css} alt='css icon'></img>
         </li>
@@ -37,6 +39,14 @@ function Skills() {
         </li>
         <li>
           <img className='technology_icon' src={jest} alt='jest icon'></img>
+        </li>
+        {/* tablet */}
+        <li>
+          <img
+            className='technology_icon linux_icon'
+            src={linux}
+            alt='linux icon'
+          ></img>
         </li>
       </ul>
     </main>
