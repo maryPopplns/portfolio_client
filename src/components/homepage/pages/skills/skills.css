@@ -23,6 +23,9 @@ main.hide_page_division {
 main.skills h1 {
   font-family: archivoRegular;
 }
+#title_skills_divisor {
+  background-color: white;
+}
 
 /* mobile */
 @media (max-width: 799px) {
@@ -88,7 +91,7 @@ main.skills h1 {
   main.skills ul li {
     width: 50%;
   }
-  main.skills ul li.linux_icon {
+  main.skills .linux_icon {
     display: none;
   }
   .technology_icon {
@@ -103,5 +106,14 @@ main.skills h1 {
 }
 
 @media (min-width: 800px) {
-  /*  */
+  main.skills {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  #title_skills_divisor {
+    margin: 0;
+    height: 60vh;
+  }
 }
