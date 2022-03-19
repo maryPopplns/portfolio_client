@@ -26,10 +26,10 @@ li#personal_description_veteran {
   justify-content: center;
 }
 li#personal_description_veteran div:nth-child(1) {
-  color: rgb(255, 83, 108);
+  color: rgb(255, 128, 183);
 }
 li#personal_description_veteran div:nth-child(3) {
-  color: rgb(123, 90, 255);
+  color: rgb(187, 138, 255);
 }
 div.homepage_down_arrow {
   display: inline-block;
@@ -146,5 +146,31 @@ div.homepage_down_arrow {
   }
   div.homepage_down_arrow {
     display: none;
+  }
+}
+
+/* desktop */
+@media (min-width: 1000px) {
+  h1.first_name_heading {
+    font-size: 4rem;
+  }
+  h1.last_name_heading {
+    font-size: 4rem;
+  }
+  ul.personal_description > li {
+    font-size: 1.75rem;
+  }
+}
+
+/* extra large */
+@media (min-width: 1500px) {
+  h1.first_name_heading {
+    font-size: 5.5rem;
+  }
+  h1.last_name_heading {
+    font-size: 5.5rem;
+  }
+  ul.personal_description > li {
+    font-size: 2.5rem;
   }
 }
