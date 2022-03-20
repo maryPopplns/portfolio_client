@@ -42,12 +42,10 @@ main.skills img.technology_icon_fade {
 @media (max-width: 799px) {
   main.skills {
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  main.skills {
-    position: relative;
   }
   /* skills header */
   main.skills h1 {
@@ -119,6 +117,9 @@ main.skills img.technology_icon_fade {
   }
   main.skills h1 {
     font-size: 3rem;
+  }
+  main.skills h1::before {
+    content: 'tech_';
   }
   main.skills hr {
     margin: 0 1.5rem;
