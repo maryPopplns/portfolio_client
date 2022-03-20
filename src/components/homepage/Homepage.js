@@ -7,6 +7,7 @@ import {
   sectionWipe,
   traitsAnimation,
   pageDivisonAnimation,
+  skillsAnimation,
 } from './utils/animations';
 
 function Homepage() {
@@ -14,6 +15,7 @@ function Homepage() {
     sectionWipe();
     traitsAnimation();
     pageDivisonAnimation();
+    skillsAnimation();
   }, []);
 
   return (

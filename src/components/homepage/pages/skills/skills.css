@@ -26,6 +26,10 @@ main.skills h1 {
 #title_skills_divisor {
   background-color: white;
 }
+main.skills .title_skills_divisor_shrink {
+  background-color: black;
+  border-color: black;
+}
 
 /* mobile/tablet */
 @media (max-width: 799px) {
@@ -45,10 +49,14 @@ main.skills h1 {
     font-size: 5rem;
     text-transform: uppercase;
   }
-  #title_skills_divisor {
+  main.skills hr {
     position: absolute;
     top: 6rem;
-    width: 60%;
+    width: 60vw;
+    transition: all 1s;
+  }
+  main.skills .title_skills_divisor_shrink {
+    width: 0rem;
   }
   main.skills ul {
     display: flex;
@@ -107,10 +115,14 @@ main.skills h1 {
   main.skills h1 {
     font-size: 3rem;
   }
-  #title_skills_divisor {
+  main.skills hr {
     margin: 0 1.5rem;
     height: 60vh;
     width: 2px;
+    transition: all 1s;
+  }
+  main.skills .title_skills_divisor_shrink {
+    height: 0rem;
   }
   main.skills ul {
     display: flex;
