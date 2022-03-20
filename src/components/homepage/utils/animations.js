@@ -1,17 +1,16 @@
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import ScrollMagic from 'scrollmagic';
 
-export function pageTransitions() {
-  gsap.registerPlugin(ScrollTrigger);
-  gsap.utils.toArray('.page').forEach((panel, i) => {
-    ScrollTrigger.create({
-      trigger: panel,
-      start: 'top top',
-      pin: true,
-      // pinSpacing: i === 1 ? true : false,
-      pinSpacing: false,
-    });
-  });
+export function sectionWipe() {
+  const controller = new ScrollMagic.Controller();
+  const slides = document.getElementsByClassName('page');
+  for (let i = 0; i < slides.length; i++) {
+    new ScrollMagic.Scene({
+      triggerHook: 'onLeave',
+      triggerElement: slides[i],
+    })
+      .setPin(slides[i], { pushFollowers: false })
+      .addTo(controller);
+  }
 }
 
 export function traitsAnimation() {

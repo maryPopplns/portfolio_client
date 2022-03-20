@@ -4,14 +4,14 @@ import LandingPage from './pages/landingPage/LandingPage';
 import Skills from './pages/skills/Skills';
 import Placeholder2 from './pages/placeholder2/Placeholder2';
 import {
-  pageTransitions,
+  sectionWipe,
   traitsAnimation,
   pageDivisonAnimation,
 } from './utils/animations';
 
 function Homepage() {
   useEffect(() => {
-    pageTransitions();
+    sectionWipe();
     traitsAnimation();
     pageDivisonAnimation();
   }, []);

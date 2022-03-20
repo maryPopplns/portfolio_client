@@ -12,8 +12,8 @@
 /* global */
 main.skills {
   border-top: 5px solid white;
-  border-bottom: 5px solid white;
   height: 100vh;
+  margin-bottom: 75vh;
   background-color: black;
   color: white;
 }
