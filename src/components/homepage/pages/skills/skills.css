@@ -82,7 +82,7 @@ main.skills h1 {
   main.skills ul li {
     width: 50%;
   }
-  main.skills .linux_icon {
+  main.skills .figma_icon {
     display: none;
   }
   .technology_icon {
@@ -130,10 +130,22 @@ main.skills h1 {
   }
 }
 
+@media (min-width: 1000px) {
+  main.skills h1 {
+    font-size: 4rem;
+  }
+}
+
 /* extra large */
 @media (min-width: 1400px) {
   .technology_icon {
     height: 70%;
     width: 70%;
+  }
+}
+
+@media (min-width: 1500px) {
+  main.skills h1 {
+    font-size: 5.5rem;
   }
 }

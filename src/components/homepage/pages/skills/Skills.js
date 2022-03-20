@@ -7,7 +7,7 @@ import react from './icons/react.svg';
 import node from './icons/nodejs.svg';
 import git from './icons/git.svg';
 import jest from './icons/jest.svg';
-import linux from './icons/linux.svg';
+import figma from './icons/figma.svg';
 
 function Skills() {
   return (
@@ -43,9 +43,9 @@ function Skills() {
         {/* tablet */}
         <li>
           <img
-            className='technology_icon linux_icon'
-            src={linux}
-            alt='linux icon'
+            className='technology_icon figma_icon'
+            src={figma}
+            alt='figma icon'
           ></img>
         </li>
       </ul>
