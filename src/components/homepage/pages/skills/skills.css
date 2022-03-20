@@ -12,7 +12,7 @@
 /* global */
 main.skills {
   height: 100vh;
-  margin-bottom: 75vh;
+  margin-bottom: 50vh;
   background-color: black;
   color: white;
   border-top: 5px solid white;
@@ -63,7 +63,6 @@ main.skills h1 {
     width: 33%;
   }
   .technology_icon {
-    color: black;
     height: 70%;
     width: 70%;
   }
@@ -97,6 +96,7 @@ main.skills h1 {
   }
 }
 
+/* desktop */
 @media (min-width: 800px) {
   main.skills {
     display: flex;
@@ -125,8 +125,15 @@ main.skills h1 {
     width: 33%;
   }
   .technology_icon {
-    color: black;
     height: 80%;
     width: 80%;
+  }
+}
+
+/* extra large */
+@media (min-width: 1400px) {
+  .technology_icon {
+    height: 70%;
+    width: 70%;
   }
 }
