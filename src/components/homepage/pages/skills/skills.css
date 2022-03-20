@@ -11,11 +11,11 @@
 
 /* global */
 main.skills {
-  border-top: 5px solid white;
   height: 100vh;
   margin-bottom: 75vh;
   background-color: black;
   color: white;
+  border-top: 5px solid white;
 }
 main.hide_page_division {
   border-top: 5px solid black;

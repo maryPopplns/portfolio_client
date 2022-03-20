@@ -43,18 +43,23 @@ export function pageDivisonAnimation() {
     const technologyElement = Array.from(
       document.getElementsByClassName('skills')
     )[0];
-    const { top } = technologyElement.getBoundingClientRect();
+    const skillsElement = Array.from(
+      document.getElementsByClassName('placeholder2')
+    )[0];
+    const techTop = technologyElement.getBoundingClientRect().top;
+    const skillsTop = skillsElement.getBoundingClientRect().top;
 
-    if (top === 0) {
+    if (techTop === 0) {
       technologyElement.classList.add('hide_page_division');
     } else {
       technologyElement.classList.remove('hide_page_division');
     }
+    if (skillsTop === 0) {
+      skillsElement.classList.add('hide_page_division');
+    } else {
+      skillsElement.classList.remove('hide_page_division');
+    }
   }
 
   window.addEventListener('scroll', pageDivisionHandler);
-}
-
-export function technologies() {
-  //
 }

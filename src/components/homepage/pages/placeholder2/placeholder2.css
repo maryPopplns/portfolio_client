@@ -1,9 +1,14 @@
-div.placeholder2 {
+main.placeholder2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   background-color: black;
+  border-top: 5px solid white;
   color: white;
+}
+
+main.hide_page_division {
+  border-top: 5px solid black;
 }
