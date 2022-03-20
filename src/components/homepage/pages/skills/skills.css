@@ -49,6 +49,7 @@ main.skills img.technology_icon_fade {
   main.skills {
     position: relative;
   }
+  /* skills header */
   main.skills h1 {
     position: absolute;
     top: 1rem;
@@ -83,31 +84,28 @@ main.skills img.technology_icon_fade {
   }
 }
 
+/* mobile  */ /* after 799 on purpose */
 @media (max-width: 500px) {
   main.skills h1 {
     font-size: 4rem;
   }
-  #title_skills_divisor {
+  main.skills hr {
     top: 5rem;
     width: 70%;
   }
   main.skills ul {
-    margin-top: 18rem;
+    margin-top: 8rem;
   }
   main.skills ul li {
     width: 50%;
   }
+  /* dont show figma on mobile */
   main.skills .figma_icon {
     display: none;
   }
   .technology_icon {
     height: 60%;
     width: 60%;
-  }
-}
-@media (max-width: 450px) {
-  main.skills ul {
-    margin-top: 14rem;
   }
 }
 
@@ -166,5 +164,9 @@ main.skills img.technology_icon_fade {
 @media (min-width: 1500px) {
   main.skills h1 {
     font-size: 5.5rem;
+  }
+  .technology_icon {
+    height: 60%;
+    width: 60%;
   }
 }

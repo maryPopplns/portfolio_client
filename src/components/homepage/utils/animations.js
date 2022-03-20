@@ -38,24 +38,22 @@ export function traitsAnimation() {
 }
 
 export function pageDivisonAnimation() {
-  const technologyElement = Array.from(
-    document.getElementsByClassName('skills')
-  )[0];
-  const skillsElement = Array.from(
+  const skillsPage = Array.from(document.getElementsByClassName('skills'))[0];
+  const placeholderPage = Array.from(
     document.getElementsByClassName('placeholder2')
   )[0];
   function pageDivisionHandler() {
-    const techTop = technologyElement.getBoundingClientRect().top;
-    const skillsTop = skillsElement.getBoundingClientRect().top;
-    if (techTop === 0) {
-      technologyElement.classList.add('hide_page_division');
+    const placeholderTop = placeholderPage.getBoundingClientRect().top;
+    const skillsTop = skillsPage.getBoundingClientRect().top;
+    if (placeholderTop < 2) {
+      placeholderPage.classList.add('hide_page_division');
     } else {
-      technologyElement.classList.remove('hide_page_division');
+      placeholderPage.classList.remove('hide_page_division');
     }
     if (skillsTop === 0) {
-      skillsElement.classList.add('hide_page_division');
+      skillsPage.classList.add('hide_page_division');
     } else {
-      skillsElement.classList.remove('hide_page_division');
+      skillsPage.classList.remove('hide_page_division');
     }
   }
 
@@ -63,27 +61,30 @@ export function pageDivisonAnimation() {
 }
 
 export function skillsAnimation() {
-  const technologyElement = Array.from(
-    document.getElementsByClassName('skills')
+  const skillsPage = Array.from(document.getElementsByClassName('skills'))[0];
+  const placeholder2 = Array.from(
+    document.getElementsByClassName('placeholder2')
   )[0];
   const technologyIcons = Array.from(
     document.getElementsByClassName('technology_icon')
   );
   function skillsHandler() {
-    const techTop = technologyElement.getBoundingClientRect().top;
-    const techBottom = technologyElement.getBoundingClientRect().bottom;
+    const skillsTop = skillsPage.getBoundingClientRect().top;
+    const placeholderTop = placeholder2.getBoundingClientRect().top;
+    const skillsBottom = skillsPage.getBoundingClientRect().bottom;
 
     const hr = document.getElementById('title_skills_divisor');
-    if (techTop === 0) {
-      hr.classList.remove('title_skills_divisor_shrink');
+
+    if (skillsTop === 0 && skillsBottom < placeholderTop) {
       technologyIcons.forEach((icon) =>
         icon.classList.remove('technology_icon_fade')
       );
+      hr.classList.remove('title_skills_divisor_shrink');
     } else {
-      hr.classList.add('title_skills_divisor_shrink');
       technologyIcons.forEach((icon) =>
         icon.classList.add('technology_icon_fade')
       );
+      hr.classList.add('title_skills_divisor_shrink');
     }
   }
 
