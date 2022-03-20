@@ -13,6 +13,7 @@ export function sectionWipe() {
   }
 }
 
+// landing page animations
 export function traitsAnimation() {
   const webDeveloper = document.getElementById(
     'personal_description_web_developer'
@@ -37,6 +38,7 @@ export function traitsAnimation() {
   window.addEventListener('scroll', webHandler);
 }
 
+// page border animations
 export function pageDivisonAnimation() {
   const skillsPage = Array.from(document.getElementsByClassName('skills'))[0];
   const placeholderPage = Array.from(
@@ -60,6 +62,7 @@ export function pageDivisonAnimation() {
   window.addEventListener('scroll', pageDivisionHandler);
 }
 
+// skills page animation
 export function skillsAnimation() {
   const skillsPage = Array.from(document.getElementsByClassName('skills'))[0];
   const placeholder2 = Array.from(

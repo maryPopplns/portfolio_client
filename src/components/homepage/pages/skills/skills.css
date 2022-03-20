@@ -38,7 +38,7 @@ main.skills img.technology_icon_fade {
   opacity: 0;
 }
 
-/* mobile/tablet */
+/* mobile */
 @media (max-width: 799px) {
   main.skills {
     display: flex;
@@ -84,7 +84,7 @@ main.skills img.technology_icon_fade {
   }
 }
 
-/* mobile  */ /* after 799 on purpose */
+/* mobile: after 799 on purpose */
 @media (max-width: 500px) {
   main.skills h1 {
     font-size: 4rem;
@@ -99,7 +99,7 @@ main.skills img.technology_icon_fade {
   main.skills ul li {
     width: 50%;
   }
-  /* dont show figma on mobile */
+  /* hide figma on mobile */
   main.skills .figma_icon {
     display: none;
   }
@@ -109,7 +109,7 @@ main.skills img.technology_icon_fade {
   }
 }
 
-/* desktop */
+/* tablet */
 @media (min-width: 800px) {
   main.skills {
     display: flex;
@@ -147,6 +147,7 @@ main.skills img.technology_icon_fade {
   }
 }
 
+/* desktop */
 @media (min-width: 1000px) {
   main.skills h1 {
     font-size: 4rem;
