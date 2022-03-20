@@ -12,7 +12,7 @@
 /* global */
 main.skills {
   height: 100vh;
-  margin-bottom: 50vh;
+  margin-bottom: 75vh;
   background-color: black;
   color: white;
   border-top: 5px solid white;
@@ -29,6 +29,13 @@ main.skills h1 {
 main.skills .title_skills_divisor_shrink {
   background-color: black;
   border-color: black;
+}
+main.skills img {
+  opacity: 1;
+  transition: all 1s;
+}
+main.skills img.technology_icon_fade {
+  opacity: 0;
 }
 
 /* mobile/tablet */
@@ -128,12 +135,12 @@ main.skills .title_skills_divisor_shrink {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 8rem;
     width: 60%;
   }
   main.skills ul li {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 33%;
   }
   .technology_icon {

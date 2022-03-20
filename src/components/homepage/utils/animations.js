@@ -14,14 +14,13 @@ export function sectionWipe() {
 }
 
 export function traitsAnimation() {
+  const webDeveloper = document.getElementById(
+    'personal_description_web_developer'
+  );
+  const fitness = document.getElementById('personal_description_fitness');
+  const veteran = document.getElementById('personal_description_veteran');
+  const hr = document.getElementById('name_trait_divisor');
   function webHandler() {
-    const webDeveloper = document.getElementById(
-      'personal_description_web_developer'
-    );
-    const fitness = document.getElementById('personal_description_fitness');
-    const veteran = document.getElementById('personal_description_veteran');
-    const hr = document.getElementById('name_trait_divisor');
-
     if (window.scrollY > 0) {
       webDeveloper.classList.add('hidden_descriptions_1');
       fitness.classList.add('hidden_descriptions_2');
@@ -39,13 +38,13 @@ export function traitsAnimation() {
 }
 
 export function pageDivisonAnimation() {
+  const technologyElement = Array.from(
+    document.getElementsByClassName('skills')
+  )[0];
+  const skillsElement = Array.from(
+    document.getElementsByClassName('placeholder2')
+  )[0];
   function pageDivisionHandler() {
-    const technologyElement = Array.from(
-      document.getElementsByClassName('skills')
-    )[0];
-    const skillsElement = Array.from(
-      document.getElementsByClassName('placeholder2')
-    )[0];
     const techTop = technologyElement.getBoundingClientRect().top;
     const skillsTop = skillsElement.getBoundingClientRect().top;
     if (techTop === 0) {
@@ -64,16 +63,27 @@ export function pageDivisonAnimation() {
 }
 
 export function skillsAnimation() {
+  const technologyElement = Array.from(
+    document.getElementsByClassName('skills')
+  )[0];
+  const technologyIcons = Array.from(
+    document.getElementsByClassName('technology_icon')
+  );
   function skillsHandler() {
-    const technologyElement = Array.from(
-      document.getElementsByClassName('skills')
-    )[0];
     const techTop = technologyElement.getBoundingClientRect().top;
+    const techBottom = technologyElement.getBoundingClientRect().bottom;
+
     const hr = document.getElementById('title_skills_divisor');
     if (techTop === 0) {
       hr.classList.remove('title_skills_divisor_shrink');
+      technologyIcons.forEach((icon) =>
+        icon.classList.remove('technology_icon_fade')
+      );
     } else {
       hr.classList.add('title_skills_divisor_shrink');
+      technologyIcons.forEach((icon) =>
+        icon.classList.add('technology_icon_fade')
+      );
     }
   }
 
