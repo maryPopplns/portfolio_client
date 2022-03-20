@@ -8,7 +8,8 @@ export function pageTransitions() {
       trigger: panel,
       start: 'top top',
       pin: true,
-      pinSpacing: i === 1 ? true : false,
+      // pinSpacing: i === 1 ? true : false,
+      pinSpacing: false,
     });
   });
 }
