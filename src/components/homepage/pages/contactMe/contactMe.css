@@ -28,7 +28,6 @@ main.contact h1 {
   font-family: archivoRegular;
 }
 main.contact form {
-  border: 1px solid white;
   border-radius: 0.25rem;
 }
 .contact_input_container {
@@ -91,12 +90,11 @@ main.contact .contact_form_icons {
     flex-direction: column;
   }
   main.contact form {
+    border: 1px solid white;
     padding: 1rem;
   }
   .contact_input_container label {
     margin-bottom: 0.5rem;
-  }
-  main.contact label {
     font-size: 1.1rem;
   }
   #email {
@@ -136,55 +134,40 @@ main.contact .contact_form_icons {
   }
 }
 
-/*  */
-/* @media (min-width: 800px) {
+/* tablet */
+@media (min-width: 800px) {
   main.contact {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
   }
   main.contact h1 {
-    text-transform: uppercase;
+    font-size: 3rem;
+    margin-left: 1rem;
   }
-  main.contact form {
-    border: 1px solid white;
-    border-radius: 0.25rem;
-    padding: 1rem;
+  main.contact h1::after {
+    content: '_me';
   }
   #header_contact_divisor {
     margin: 0 1.5rem;
-    height: 80%;
+    height: 65%;
+    width: 2px;
   }
-  .contact_input_container {
-    display: flex;
-    flex-direction: column;
-    margin: 1rem 0;
-  }
-  .contact_input_container label {
-    margin-bottom: 0.5rem;
-  }
-  #email:focus,
-  #message:focus {
-    outline: 3px solid rgb(34, 255, 0);
+  main.contact form {
+    border: 2px solid white;
+    padding: 1.5rem;
   }
   main.contact label {
-    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
   }
   #email {
-    width: 50vw;
+    width: 40vw;
     height: 1.75rem;
-    border: none;
-    border-radius: 0.25rem;
-    text-indent: 0.25rem;
   }
   #message {
-    width: 50vw;
+    width: 40vw;
     height: 8rem;
-    border: none;
-    box-shadow: none;
-    resize: none;
-    border-radius: 0.25rem;
-    text-indent: 0.25rem;
   }
   main.contact .submit_contact_container {
     display: flex;
@@ -193,22 +176,34 @@ main.contact .contact_form_icons {
   }
   main.contact button {
     padding: 0.5rem 1rem;
-    font-size: 1.2rem;
-    font-family: archivoRegular;
-    background-color: black;
-    color: white;
-    border: 2px solid white;
-    border-radius: 0.25rem;
+    font-size: 1.4rem;
   }
   main.contact .contact_form_icons {
     display: flex;
     justify-content: center;
     margin-top: 3rem;
-    width: 100%;
   }
   .contact_form_icons img {
     margin: 0 2rem;
     color: white;
     height: 5rem;
   }
-} */
+}
+
+@media (min-width: 1000px) {
+  main.contact h1 {
+    font-size: 4rem;
+  }
+  #email {
+    max-width: 40vw;
+  }
+  #message {
+    max-width: 40vw;
+  }
+}
+
+@media (min-width: 1500px) {
+  main.contact h1 {
+    font-size: 5.5rem;
+  }
+}
