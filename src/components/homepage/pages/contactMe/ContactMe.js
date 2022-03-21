@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './contactMe.css';
 
 function ContactMe() {
-  const [title, setTitle] = useState('');
+  const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
   return (
@@ -10,22 +10,31 @@ function ContactMe() {
       <h1>contact</h1>
       <hr id='header_contact_divisor'></hr>
       <form>
-        <label htmlFor='title'></label>
-        <input
-          onChange={({ target }) => setTitle(target.value)}
-          value={title}
-          type='text'
-          id='title'
-          name='title'
-        ></input>
-        <label htmlFor='message'></label>
-        <textarea
-          onChange={({ target }) => setMessage(target.value)}
-          value={message}
-          type='textarea'
-          id='message'
-          name='message'
-        ></textarea>
+        <div className='contact_input_container'>
+          <label htmlFor='email'>email</label>
+          <input
+            onChange={({ target }) => setEmail(target.value)}
+            value={email}
+            type='email'
+            id='email'
+            name='email'
+            required
+          ></input>
+        </div>
+        <div className='contact_input_container'>
+          <label htmlFor='message'>message</label>
+          <textarea
+            onChange={({ target }) => setMessage(target.value)}
+            value={message}
+            type='textarea'
+            id='message'
+            name='message'
+            required
+          ></textarea>
+        </div>
+        <div className='submit_contact_container'>
+          <button>submit</button>
+        </div>
       </form>
     </main>
   );
