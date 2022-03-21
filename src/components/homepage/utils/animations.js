@@ -42,7 +42,7 @@ export function traitsAnimation() {
 export function pageDivisonAnimation() {
   const skillsPage = Array.from(document.getElementsByClassName('skills'))[0];
   const placeholderPage = Array.from(
-    document.getElementsByClassName('placeholder2')
+    document.getElementsByClassName('contact')
   )[0];
   function pageDivisionHandler() {
     const placeholderTop = placeholderPage.getBoundingClientRect().top;
@@ -65,20 +65,18 @@ export function pageDivisonAnimation() {
 // skills page animation
 export function skillsAnimation() {
   const skillsPage = Array.from(document.getElementsByClassName('skills'))[0];
-  const placeholder2 = Array.from(
-    document.getElementsByClassName('placeholder2')
-  )[0];
+  const contactPage = Array.from(document.getElementsByClassName('contact'))[0];
   const technologyIcons = Array.from(
     document.getElementsByClassName('technology_icon')
   );
   function skillsHandler() {
     const skillsTop = skillsPage.getBoundingClientRect().top;
-    const placeholderTop = placeholder2.getBoundingClientRect().top;
+    const contactTop = contactPage.getBoundingClientRect().top;
     const skillsBottom = skillsPage.getBoundingClientRect().bottom;
 
     const hr = document.getElementById('title_skills_divisor');
 
-    if (skillsTop === 0 && skillsBottom < placeholderTop) {
+    if (skillsTop === 0 && skillsBottom < contactTop) {
       technologyIcons.forEach((icon) =>
         icon.classList.remove('technology_icon_fade')
       );

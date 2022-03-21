@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'archivoRegular';
+  src: url('../../../../fonts/ArchivoBlack-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'archivoThin';
+  src: url('../../../../fonts/ArchivoNarrow-VariableFont_wght.ttf')
+    format('truetype');
+}
+
+/* global */
+main.contact {
+  height: 100vh;
+  background-color: black;
+  border-top: 5px solid white;
+  color: white;
+}
+main.hide_page_division {
+  border-top: 5px solid black;
+}
+main.contact {
+  font-family: archivoThin;
+}
+main.contact h1 {
+  font-family: archivoRegular;
+}
+
+@media (max-width: 799px) {
+  main.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  main.contact h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+  }
+  #header_contact_divisor {
+    width: 90%;
+  }
+}
