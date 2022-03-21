@@ -8,6 +8,7 @@ import {
   traitsAnimation,
   pageDivisonAnimation,
   skillsAnimation,
+  contactAnimation,
 } from './utils/animations';
 
 function Homepage() {
@@ -16,6 +17,7 @@ function Homepage() {
     traitsAnimation();
     pageDivisonAnimation();
     skillsAnimation();
+    contactAnimation();
   }, []);
 
   return (

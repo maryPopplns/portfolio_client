@@ -15,8 +15,13 @@ main.contact {
   border-top: 5px solid white;
   color: white;
 }
-#header_contact_divisor {
+main.contact hr {
   background-color: white;
+  transition: all 1s;
+}
+main.contact hr.header_contact_divisor_shrink {
+  background-color: black;
+  border-color: black;
 }
 main.hide_page_division {
   border-top: 5px solid black;
@@ -67,6 +72,7 @@ main.contact .contact_form_icons {
   width: 100%;
 }
 
+/* mobile */
 @media (max-width: 799px) {
   main.contact {
     display: flex;
@@ -80,10 +86,16 @@ main.contact .contact_form_icons {
     font-size: 5rem;
     text-transform: uppercase;
   }
-  #header_contact_divisor {
+  main.contact hr {
     position: absolute;
     top: 6rem;
     width: 80%;
+    transition: all 1s;
+  }
+  main.contact .header_contact_divisor_shrink {
+    width: 0rem;
+    background-color: black;
+    border-color: black;
   }
   main.contact .contact_form_container {
     display: flex;
@@ -129,7 +141,7 @@ main.contact .contact_form_icons {
   main.contact h1 {
     font-size: 4rem;
   }
-  #header_contact_divisor {
+  main.contact hr {
     top: 5rem;
   }
 }
@@ -148,10 +160,16 @@ main.contact .contact_form_icons {
   main.contact h1::after {
     content: '_me';
   }
-  #header_contact_divisor {
+  main.contact hr {
     margin: 0 1.5rem;
     height: 65%;
     width: 2px;
+    transition: all 1s;
+  }
+  main.contact .header_contact_divisor_shrink {
+    height: 0%;
+    background-color: black;
+    border-color: black;
   }
   main.contact form {
     border: 2px solid white;

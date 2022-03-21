@@ -91,3 +91,15 @@ export function skillsAnimation() {
 
   window.addEventListener('scroll', skillsHandler);
 }
+
+export function contactAnimation() {
+  const hr = document.getElementById('header_contact_divisor');
+  function contactHandler() {
+    if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight) {
+      hr.classList.remove('header_contact_divisor_shrink');
+    } else {
+      hr.classList.add('header_contact_divisor_shrink');
+    }
+  }
+  window.addEventListener('scroll', contactHandler);
+}
