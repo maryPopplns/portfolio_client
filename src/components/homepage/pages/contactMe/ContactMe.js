@@ -11,7 +11,7 @@ function ContactMe() {
     <main className='contact page'>
       <h1>contact</h1>
       <hr id='header_contact_divisor'></hr>
-      <div className='contact_form_container'>
+      <div id='contact_form_container'>
         <form>
           <div className='contact_input_container'>
             <label htmlFor='email'>email</label>
