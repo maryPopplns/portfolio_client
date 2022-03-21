@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import github from './icons/github.svg';
+import linkedin from './icons/linkedin.svg';
 import './contactMe.css';
 
 function ContactMe() {
@@ -36,6 +38,22 @@ function ContactMe() {
           <button>submit</button>
         </div>
       </form>
+      <div className='contact_form_icons'>
+        <a
+          href='https://www.linkedin.com/in/spencer-knight-dev/'
+          target='_blank'
+          rel='noreferrer'
+        >
+          <img src={linkedin} alt='linkedin icon'></img>
+        </a>
+        <a
+          href='https://github.com/maryPopplns'
+          target='_blank'
+          rel='noreferrer'
+        >
+          <img src={github} alt='github icon'></img>
+        </a>
+      </div>
     </main>
   );
 }
