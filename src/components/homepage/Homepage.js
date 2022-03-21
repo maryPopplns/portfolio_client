@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import LandingPage from './pages/landingPage/LandingPage';
 import Skills from './pages/skills/Skills';
 import ContactMe from './pages/contactMe/ContactMe';
+import Cursor from './cursor/Cursor';
 import {
   sectionWipe,
   traitsAnimation,
@@ -21,10 +22,11 @@ function Homepage() {
   }, []);
 
   return (
-    <div className='container'>
+    <div className='homepageContainer'>
       <LandingPage />
       <Skills />
       <ContactMe />
+      <Cursor />
     </div>
   );
 }

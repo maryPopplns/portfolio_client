@@ -19,6 +19,7 @@ main.contact hr {
   background-color: white;
   transition: all 1s;
 }
+/* header animation */
 main.contact hr.header_contact_divisor_shrink {
   background-color: black;
   border-color: black;
@@ -75,6 +76,9 @@ main.contact button {
   color: white;
   border: 2px solid white;
   border-radius: 0.25rem;
+}
+main.contact button:hover {
+  cursor: pointer;
 }
 main.contact .contact_form_icons {
   width: 100%;

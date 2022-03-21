@@ -13,10 +13,12 @@ function ContactMe() {
       <hr id='header_contact_divisor'></hr>
       <div id='contact_form_container'>
         <form>
+          {/* user input */}
           <div className='contact_input_container'>
             <label htmlFor='email'>email</label>
             <input
               onChange={({ target }) => setEmail(target.value)}
+              placeholder='your_email'
               value={email}
               type='email'
               id='email'
@@ -28,6 +30,7 @@ function ContactMe() {
             <label htmlFor='message'>message</label>
             <textarea
               onChange={({ target }) => setMessage(target.value)}
+              placeholder='your_message'
               value={message}
               type='textarea'
               id='message'
@@ -39,6 +42,7 @@ function ContactMe() {
             <button>submit</button>
           </div>
         </form>
+        {/* social media icons */}
         <div className='contact_form_icons'>
           <a
             href='https://www.linkedin.com/in/spencer-knight-dev/'
