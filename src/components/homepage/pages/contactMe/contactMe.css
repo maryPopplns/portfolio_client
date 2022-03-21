@@ -38,4 +38,13 @@ main.contact h1 {
   #header_contact_divisor {
     width: 90%;
   }
+  #title {
+    height: 3rem;
+  }
+  #message {
+    height: 3rem;
+    border: none;
+    overflow: auto;
+    outline: none;
+  }
 }
