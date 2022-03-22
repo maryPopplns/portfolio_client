@@ -16,10 +16,9 @@
 #homepage_navbar ul li a {
   font-family: archivoRegular;
   text-decoration: none;
-  text-transform: uppercase;
 }
 
-/* tablet */
+/* mobile/tablet */
 @media (max-width: 799px) {
   #homepage_navbar {
     box-sizing: border-box;
@@ -35,12 +34,6 @@
   #homepage_navbar.hide_navbar {
     transform: translateY(0);
   }
-  #homepage_navbar ul li {
-    border: 4px solid white;
-  }
-  #homepage_navbar ul li a {
-    letter-spacing: 3px;
-  }
   #homepage_navbar ul,
   #homepage_navbar ul li,
   #homepage_navbar ul li a {
@@ -52,6 +45,17 @@
     width: 100%;
     height: 100%;
   }
+  #homepage_navbar ul {
+    justify-content: space-between;
+  }
+  #homepage_navbar ul li {
+    border: 4px solid white;
+    border-radius: 0.25rem;
+  }
+  #homepage_navbar ul li a {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
 }
 
 /* mobile */
@@ -60,5 +64,42 @@
     font-size: 1.25rem;
   }
 }
+
+/* tablet */
 @media (min-width: 800px) {
+  #homepage_navbar {
+    top: 0.5rem;
+    left: calc(50% - 9rem);
+    width: 18rem;
+    height: 3rem;
+    transform: translateY(-3.5rem);
+    transition: transform 0.5s;
+  }
+  #homepage_navbar.hide_navbar {
+    transform: translateY(0);
+  }
+  #homepage_navbar ul,
+  #homepage_navbar ul li,
+  #homepage_navbar ul li a {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  #homepage_navbar ul {
+    justify-content: space-around;
+  }
+  #homepage_navbar ul li {
+    background-color: black;
+    border: 4px solid white;
+    border-radius: 0.25rem;
+    width: 49%;
+  }
+  #homepage_navbar ul li a {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+  }
 }

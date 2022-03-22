@@ -121,3 +121,5 @@ export function navbarAnimation() {
   }
   window.addEventListener('scroll', navbarHandler);
 }
+
+// navbar animation
