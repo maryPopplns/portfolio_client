@@ -1,17 +1,16 @@
 #cursor {
   position: fixed;
+  left: -100px;
+  top: 50%;
+  height: 30px;
+  width: 30px;
+  z-index: 5;
+  border: 2px solid white;
   border-radius: 50%;
   transform: translateX(-50%) translateY(-50%);
   pointer-events: none;
-  left: -100px;
-  top: 50%;
   mix-blend-mode: difference;
   background-color: white;
-  z-index: 5;
-  border: 2px solid white;
-  height: 30px;
-  width: 30px;
-  transition: all 300ms ease-out;
 }
 
 @media (max-width: 800px) {
