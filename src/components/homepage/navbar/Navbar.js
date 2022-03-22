@@ -1,7 +1,19 @@
 import './navbar.css';
+import { Link } from 'react-router-dom';
 
-function NavBar() {
-  return <div id='homepage_navbar'>navbar</div>;
+function Navbar() {
+  return (
+    <nav id='homepage_navbar'>
+      <ul>
+        <li>
+          <Link to={'/blog'}>blog</Link>
+        </li>
+        <li>
+          <Link to={'/projects'}>projects</Link>
+        </li>
+      </ul>
+    </nav>
+  );
 }
 
-export default NavBar;
+export default Navbar;
