@@ -123,3 +123,9 @@ export function navbarAnimation() {
 }
 
 // navbar animation
+export function navbarHover() {
+  const blog = document.getElementById('homepage_blog_link');
+  const projects = document.getElementById('homepage_projects_link');
+
+  // blog.addEventListener('mouseenter', navbarHandler);
+}

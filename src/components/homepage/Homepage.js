@@ -12,6 +12,7 @@ import {
   skillsAnimation,
   contactAnimation,
   navbarAnimation,
+  navbarHover,
 } from './utils/animations';
 
 function Homepage() {
@@ -22,6 +23,7 @@ function Homepage() {
     skillsAnimation();
     contactAnimation();
     navbarAnimation();
+    navbarHover();
   }, []);
 
   return (
