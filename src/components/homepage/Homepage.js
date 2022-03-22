@@ -4,12 +4,14 @@ import LandingPage from './pages/landingPage/LandingPage';
 import Skills from './pages/skills/Skills';
 import ContactMe from './pages/contactMe/ContactMe';
 import Cursor from './cursor/Cursor';
+import Navbar from './navbar/Navbar';
 import {
   sectionWipe,
   traitsAnimation,
   pageDivisonAnimation,
   skillsAnimation,
   contactAnimation,
+  navbarAnimation,
 } from './utils/animations';
 
 function Homepage() {
@@ -19,6 +21,7 @@ function Homepage() {
     pageDivisonAnimation();
     skillsAnimation();
     contactAnimation();
+    navbarAnimation();
   }, []);
 
   return (
@@ -27,6 +30,7 @@ function Homepage() {
       <Skills />
       <ContactMe />
       <Cursor />
+      <Navbar />
     </div>
   );
 }

@@ -106,3 +106,18 @@ export function contactAnimation() {
   }
   window.addEventListener('scroll', contactHandler);
 }
+
+export function navbarAnimation() {
+  const navbar = document.getElementById('homepage_navbar');
+  let oldPosition = 0;
+  function navbarHandler(event) {
+    const newPosition = window.pageYOffset;
+    if (oldPosition - newPosition < 0) {
+      navbar.classList.add('hide_navbar');
+    } else if (oldPosition - newPosition > 0) {
+      navbar.classList.remove('hide_navbar');
+    }
+    oldPosition = newPosition;
+  }
+  window.addEventListener('scroll', navbarHandler);
+}
