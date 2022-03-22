@@ -11,6 +11,7 @@ import {
   pageDivisonAnimation,
   skillsAnimation,
   contactAnimation,
+  navbarAnimation,
 } from './utils/animations';
 
 function Homepage() {
@@ -20,6 +21,7 @@ function Homepage() {
     pageDivisonAnimation();
     skillsAnimation();
     contactAnimation();
+    navbarAnimation();
   }, []);
 
   return (

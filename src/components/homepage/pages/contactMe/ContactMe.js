@@ -30,7 +30,7 @@ function ContactMe() {
             <label htmlFor='message'>message</label>
             <textarea
               onChange={({ target }) => setMessage(target.value)}
-              placeholder='your_message'
+              placeholder='message'
               value={message}
               type='textarea'
               id='message'

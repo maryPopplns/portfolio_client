@@ -106,3 +106,12 @@ export function contactAnimation() {
   }
   window.addEventListener('scroll', contactHandler);
 }
+
+export function navbarAnimation() {
+  const navbar = document.getElementById('homepage_navbar');
+  function navbarHandler(event) {
+    navbar.classList.add('hide_navbar');
+    // console.log(event.wheelDelta);
+  }
+  window.addEventListener('scroll', navbarHandler);
+}

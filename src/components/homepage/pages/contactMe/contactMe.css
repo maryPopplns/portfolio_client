@@ -158,6 +158,12 @@ main.contact .contact_form_icons {
   }
 }
 
+@media (max-width: 400px) {
+  #contact_form_container {
+    margin-top: 5rem;
+  }
+}
+
 /* tablet */
 @media (min-width: 800px) {
   main.contact {
