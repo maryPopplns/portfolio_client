@@ -1,0 +1,251 @@
+@font-face {
+  font-family: 'archivoRegular';
+  src: url('../../../../fonts/ArchivoBlack-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'archivoThin';
+  src: url('../../../../fonts/ArchivoNarrow-VariableFont_wght.ttf')
+    format('truetype');
+}
+
+/* global */
+main.contact {
+  height: 100vh;
+  background-color: black;
+  border-top: 5px solid white;
+  color: white;
+}
+main.contact hr {
+  background-color: white;
+  transition: all 1s;
+}
+/* header animation */
+main.contact hr.header_contact_divisor_shrink {
+  background-color: black;
+  border-color: black;
+}
+main.hide_page_division {
+  border-top: 5px solid black;
+}
+main.contact {
+  font-family: archivoThin;
+}
+main.contact h1 {
+  font-family: archivoRegular;
+}
+main.contact form {
+  border-radius: 0.25rem;
+}
+.contact_input_container {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+#email:focus,
+#message:focus {
+  outline: 3px solid rgb(34, 255, 0);
+}
+#email {
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1.05rem;
+  font-family: archivoThin;
+  text-indent: 0.25rem;
+}
+#message {
+  box-shadow: none;
+  resize: none;
+  font-size: 1.1rem;
+  font-family: archivoThin;
+  font-weight: 100;
+  text-indent: 0.25rem;
+  border: none;
+  border-radius: 0.25rem;
+}
+main.contact #contact_form_container {
+  transform: scale(0);
+  transition: all 1s;
+}
+main.contact #contact_form_container.form_shrink {
+  transform: scale(1);
+}
+
+main.contact button {
+  font-family: archivoRegular;
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+  border-radius: 0.25rem;
+}
+main.contact button:hover {
+  cursor: pointer;
+}
+main.contact .contact_form_icons {
+  width: 100%;
+}
+
+/* mobile */
+@media (max-width: 799px) {
+  main.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  main.contact h1 {
+    position: absolute;
+    top: 1rem;
+    font-size: 5rem;
+    text-transform: uppercase;
+  }
+  main.contact hr {
+    position: absolute;
+    top: 6rem;
+    width: 80%;
+    transition: all 1s;
+  }
+  main.contact .header_contact_divisor_shrink {
+    width: 0rem;
+    background-color: black;
+    border-color: black;
+  }
+  main.contact #contact_form_container {
+    display: flex;
+    flex-direction: column;
+  }
+  main.contact form {
+    border: 1px solid white;
+    padding: 1rem;
+  }
+  .contact_input_container label {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+  #email {
+    width: 70vw;
+    height: 1.75rem;
+  }
+  #message {
+    width: 70vw;
+    height: 8rem;
+  }
+  main.contact .submit_contact_container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  main.contact button {
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+  }
+  main.contact .contact_form_icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+  .contact_form_icons img {
+    margin: 0 1rem;
+    height: 5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  main.contact h1 {
+    font-size: 4rem;
+  }
+  main.contact hr {
+    top: 5rem;
+  }
+}
+
+/* tablet */
+@media (min-width: 800px) {
+  main.contact {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  main.contact h1 {
+    font-size: 3rem;
+    margin-left: 1rem;
+  }
+  main.contact h1::after {
+    content: '_me';
+  }
+  main.contact hr {
+    margin: 0 1.5rem;
+    height: 65%;
+    width: 2px;
+    transition: all 1s;
+  }
+  main.contact .header_contact_divisor_shrink {
+    height: 0%;
+    background-color: black;
+    border-color: black;
+  }
+  main.contact form {
+    border: 2px solid white;
+    padding: 1.5rem;
+  }
+  main.contact label {
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+  }
+  #email {
+    width: 40vw;
+    height: 1.75rem;
+  }
+  #message {
+    width: 40vw;
+    height: 8rem;
+  }
+  main.contact .submit_contact_container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  main.contact button {
+    padding: 0.5rem 1rem;
+    font-size: 1.4rem;
+  }
+  main.contact .contact_form_icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+  }
+  .contact_form_icons img {
+    margin: 0 2rem;
+    color: white;
+    height: 5rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  main.contact h1 {
+    font-size: 4rem;
+  }
+  #email {
+    max-width: 40vw;
+  }
+  #message {
+    max-width: 40vw;
+  }
+}
+
+@media (min-width: 1000px) {
+  main.contact h1 {
+    margin-left: 4rem;
+  }
+}
+
+@media (min-width: 1300px) {
+  main.contact h1 {
+    margin-left: 5rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  main.contact h1 {
+    font-size: 5.5rem;
+  }
+}
