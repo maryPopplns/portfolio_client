@@ -30,17 +30,21 @@
     width: 100%;
     background-color: black;
     transform: translateY(5rem);
-    transition: transform 1s;
+    transition: transform 0.5s;
   }
   #homepage_navbar.hide_navbar {
     transform: translateY(0);
   }
   #homepage_navbar ul li {
-    border: 3px solid white;
+    border: 4px solid white;
+  }
+  #homepage_navbar ul li a {
+    letter-spacing: 3px;
   }
   #homepage_navbar ul,
   #homepage_navbar ul li,
   #homepage_navbar ul li a {
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,11 +56,8 @@
 
 /* mobile */
 @media (max-width: 500px) {
-  #homepage_navbar {
-    /* height: 0.5rem; */
-  }
   #homepage_navbar ul li a {
-    /* font-size: 1.5rem; */
+    font-size: 1.25rem;
   }
 }
 @media (min-width: 800px) {

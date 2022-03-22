@@ -81,7 +81,7 @@ export function skillsAnimation() {
         icon.classList.remove('technology_icon_fade')
       );
       hr.classList.remove('title_skills_divisor_shrink');
-    } else {
+    } else if (hr) {
       technologyIcons.forEach((icon) =>
         icon.classList.add('technology_icon_fade')
       );
@@ -109,9 +109,15 @@ export function contactAnimation() {
 
 export function navbarAnimation() {
   const navbar = document.getElementById('homepage_navbar');
+  let oldPosition = 0;
   function navbarHandler(event) {
-    navbar.classList.add('hide_navbar');
-    // console.log(event.wheelDelta);
+    const newPosition = window.pageYOffset;
+    if (oldPosition - newPosition < 0) {
+      navbar.classList.add('hide_navbar');
+    } else if (oldPosition - newPosition > 0) {
+      navbar.classList.remove('hide_navbar');
+    }
+    oldPosition = newPosition;
   }
   window.addEventListener('scroll', navbarHandler);
 }
