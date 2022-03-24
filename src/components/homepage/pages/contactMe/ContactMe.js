@@ -7,6 +7,8 @@ function ContactMe() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
+  // TODO create event liseners for submit and social media icons
+
   return (
     <main className='contact page'>
       <h1>contact</h1>

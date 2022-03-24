@@ -43,7 +43,7 @@ main.contact form {
 }
 #email:focus,
 #message:focus {
-  outline: 3px solid rgb(34, 255, 0);
+  outline: 5px solid white;
 }
 #email {
   border: none;
