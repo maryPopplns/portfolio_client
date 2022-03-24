@@ -8,7 +8,6 @@
   mix-blend-mode: difference;
   background-color: white;
   z-index: 5;
-  border: 2px solid white;
   height: 30px;
   width: 30px;
 }

@@ -81,7 +81,7 @@ export function skillsAnimation() {
         icon.classList.remove('technology_icon_fade')
       );
       hr.classList.remove('title_skills_divisor_shrink');
-    } else {
+    } else if (hr) {
       technologyIcons.forEach((icon) =>
         icon.classList.add('technology_icon_fade')
       );
