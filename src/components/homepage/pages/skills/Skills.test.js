@@ -7,6 +7,7 @@ describe('skills page', () => {
     const header = screen.getByRole('heading', { name: /skills/i });
     expect(header).toBeInTheDocument();
   });
+  // tech icons
   describe('icons', () => {
     test('JavaScript icon', () => {
       render(<Skills />);
