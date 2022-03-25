@@ -7,7 +7,7 @@ function ContactMe() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  // TODO create event liseners for submit and social media icons
+  // TODO create event liseners for social media icons
 
   return (
     <main className='contact page'>
@@ -51,14 +51,18 @@ function ContactMe() {
             target='_blank'
             rel='noreferrer'
           >
-            <img src={linkedin} alt='linkedin icon'></img>
+            <img
+              id='homepage_linkedin_icon'
+              src={linkedin}
+              alt='linkedin icon'
+            ></img>
           </a>
           <a
             href='https://github.com/maryPopplns'
             target='_blank'
             rel='noreferrer'
           >
-            <img src={github} alt='github icon'></img>
+            <img id='homepage_github_icon' src={github} alt='github icon'></img>
           </a>
         </div>
       </div>
