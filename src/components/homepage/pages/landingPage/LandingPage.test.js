@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import LandingPage from './LandingPage';
 
-describe('Landing page headear', () => {
+describe('Landing page header', () => {
   test('header includes first name', () => {
     render(<LandingPage />);
     const firstName = screen.getByRole('heading', { name: /spencer/i });
