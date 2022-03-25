@@ -83,11 +83,15 @@ main.contact button:hover {
   color: black;
   border: 2px solid black;
 }
-main.contact button:hover {
-  cursor: pointer;
-}
 main.contact .contact_form_icons {
   width: 100%;
+}
+.contact_form_icons a {
+  cursor: none;
+}
+#homepage_linkedin_icon,
+#homepage_github_icon {
+  cursor: crosshair;
 }
 
 /* mobile */
@@ -143,6 +147,9 @@ main.contact .contact_form_icons {
   main.contact button {
     padding: 0.5rem 1rem;
     font-size: 1.2rem;
+  }
+  main.contact button:hover {
+    cursor: pointer;
   }
   main.contact .contact_form_icons {
     display: flex;
@@ -213,6 +220,9 @@ main.contact .contact_form_icons {
   main.contact button {
     padding: 0.5rem 1rem;
     font-size: 1.4rem;
+  }
+  main.contact button:hover {
+    cursor: crosshair;
   }
   main.contact .contact_form_icons {
     display: flex;

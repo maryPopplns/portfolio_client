@@ -94,5 +94,6 @@
   }
   #homepage_navbar ul li a {
     letter-spacing: 1px;
+    cursor: crosshair;
   }
 }

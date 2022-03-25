@@ -1,4 +1,9 @@
 .homepageContainer {
   user-select: none;
-  cursor: crosshair;
+}
+
+@media (min-width: 800px) {
+  .homepageContainer {
+    cursor: none;
+  }
 }
