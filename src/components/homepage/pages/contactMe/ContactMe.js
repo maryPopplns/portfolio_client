@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import urlencoded from '../../../../helpers/urlencoded';
 import github from './icons/github.svg';
 import linkedin from './icons/linkedin.svg';
 import './contactMe.css';
@@ -6,13 +7,29 @@ import './contactMe.css';
 function ContactMe() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  function submitHandler(event) {
+    event.preventDefault();
+
+    const contactInfo = urlencoded({ email, message });
+
+    fetch('https://protected-beyond-87972.herokuapp.com/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: contactInfo,
+    })
+      .then((result) => result.json())
+      .then((result) => console.log(result))
+      .catch((error) => console.log(error));
+  }
 
   return (
     <main className='contact page'>
       <h1>contact</h1>
       <hr id='header_contact_divisor'></hr>
       <div id='contact_form_container'>
-        <form>
+        <form onSubmit={submitHandler}>
           {/* user input */}
           <div className='contact_input_container'>
             <label htmlFor='email'>email</label>
