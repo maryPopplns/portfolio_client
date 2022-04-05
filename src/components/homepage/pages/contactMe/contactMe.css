@@ -93,6 +93,16 @@ main.contact .contact_form_icons {
 #homepage_github_icon {
   cursor: crosshair;
 }
+.contact_form_response_modal {
+  box-sizing: border-box;
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-family: archivoRegular;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+}
 
 /* mobile */
 @media (max-width: 799px) {
@@ -159,6 +169,15 @@ main.contact .contact_form_icons {
   .contact_form_icons img {
     margin: 0 1rem;
     height: 5rem;
+  }
+  .contact_form_response_modal {
+    top: calc(50% - 3rem);
+    left: calc(50% - 5rem);
+    height: 6rem;
+    width: 10rem;
+    color: white;
+    background-color: black;
+    font-size: 1.5rem;
   }
 }
 

@@ -8,6 +8,13 @@ function ContactMe() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [response, setResponse] = useState(0);
+
+  const responseStyle = {
+    outline: response === 200 ? 'px solid green' : '3px solid red',
+    color: response === 200 ? 'green' : 'red',
+    display: 'flex',
+  };
+
   function submitHandler(event) {
     event.preventDefault();
 
@@ -21,10 +28,17 @@ function ContactMe() {
       body: contactInfo,
     })
       .then((result) => {
-        // TODO create modal popup if stats !==200
         setResponse(result.status);
+        setTimeout(() => {
+          setResponse(0);
+        }, 3000);
       })
-      .catch((error) => console.log(error));
+      .catch((error) => {
+        setResponse(500);
+        setTimeout(() => {
+          setResponse(0);
+        }, 3000);
+      });
   }
 
   return (
@@ -40,10 +54,10 @@ function ContactMe() {
               onChange={({ target }) => setEmail(target.value)}
               placeholder='your_email'
               value={email}
-              type='email'
+              // type='email'
               id='email'
               name='email'
-              required
+              // required
             ></input>
           </div>
           <div className='contact_input_container'>
@@ -84,7 +98,12 @@ function ContactMe() {
           </a>
         </div>
       </div>
-      <div>{response === 200 ? 'success' : 'retry'}</div>
+      <div
+        style={response ? responseStyle : {}}
+        className='contact_form_response_modal'
+      >
+        {response === 200 ? 'success' : 'retry'}
+      </div>
     </main>
   );
 }
