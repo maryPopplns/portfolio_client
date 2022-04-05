@@ -15,8 +15,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --coverage",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "test": "react-scripts test --coverage --watchAll",
     "eject": "react-scripts eject",
     "git": "git add . && git commit && git push origin $(git rev-parse --abbrev-ref HEAD) && echo '\n' && echo $(tput setaf 2)'committed: ' $(tput setaf 1)$(date) && echo '\n'"
   },
@@ -40,5 +40,11 @@
   },
   "devDependencies": {
     "react-test-renderer": "^17.0.2"
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/src/helpers",
+      "<rootDir>/src/components/homepage/utils"
+    ]
   }
 }
