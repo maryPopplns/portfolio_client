@@ -253,6 +253,15 @@ main.contact .contact_form_icons {
     color: white;
     height: 5rem;
   }
+  .contact_form_response_modal {
+    top: calc(50% - 4.5rem);
+    left: calc(50% - 7.5rem);
+    height: 9rem;
+    width: 15rem;
+    color: white;
+    background-color: black;
+    font-size: 1.5rem;
+  }
 }
 
 @media (min-width: 1000px) {
