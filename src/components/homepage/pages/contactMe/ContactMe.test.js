@@ -71,6 +71,45 @@ describe('contact page', () => {
   });
   // form submissions
   describe('form submissions', () => {
-    test('successfully submits form', () => {});
+    test.skip('successfully submits form', async () => {
+      render(<ContactMe />);
+      const messageInput = screen.getByRole('textbox', { name: /message/i });
+      const emailInput = screen.getByRole('textbox', { name: /email/i });
+
+      userEvent.type(emailInput, 'test@testing.com');
+      userEvent.type(messageInput, 'this is the message');
+
+      const submitButton = screen.getByRole('button', { name: /submit/i });
+
+      userEvent.click(submitButton);
+
+      await waitFor(
+        () => {
+          const successModal = screen.getByText(/success/i);
+          expect(successModal).toBeInTheDocument();
+        },
+        { timeout: 10000 }
+      );
+    });
+    test('handles form errors', async () => {
+      render(<ContactMe />);
+      const messageInput = screen.getByRole('textbox', { name: /message/i });
+      const emailInput = screen.getByRole('textbox', { name: /email/i });
+
+      userEvent.type(emailInput, 'test@');
+      userEvent.type(messageInput, 'this is the message');
+
+      const submitButton = screen.getByRole('button', { name: /submit/i });
+
+      userEvent.click(submitButton);
+
+      await waitFor(
+        () => {
+          const successModal = screen.getByText(/retry/i);
+          expect(successModal).toBeInTheDocument();
+        },
+        { timeout: 10000 }
+      );
+    });
   });
 });

@@ -29,12 +29,14 @@ function ContactMe() {
     })
       .then((result) => {
         setResponse(result.status);
+        // modal timeout
         setTimeout(() => {
           setResponse(0);
         }, 3000);
       })
       .catch((error) => {
         setResponse(500);
+        // modal timeout
         setTimeout(() => {
           setResponse(0);
         }, 3000);
@@ -54,10 +56,10 @@ function ContactMe() {
               onChange={({ target }) => setEmail(target.value)}
               placeholder='your_email'
               value={email}
-              // type='email'
+              type='email'
               id='email'
               name='email'
-              // required
+              required
             ></input>
           </div>
           <div className='contact_input_container'>
