@@ -7,6 +7,7 @@ import './contactMe.css';
 function ContactMe() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [response, setResponse] = useState(0);
   function submitHandler(event) {
     event.preventDefault();
 
@@ -21,7 +22,7 @@ function ContactMe() {
     })
       .then((result) => {
         // TODO create modal popup if stats !==200
-        console.log(result.status);
+        setResponse(result.status);
       })
       .catch((error) => console.log(error));
   }
@@ -29,7 +30,7 @@ function ContactMe() {
   return (
     <main className='contact page'>
       <h1>contact</h1>
-      <hr id='header_contact_divisor'></hr>
+      <hr id='header_contact_divisor' />
       <div id='contact_form_container'>
         <form onSubmit={submitHandler}>
           {/* user input */}
@@ -83,6 +84,7 @@ function ContactMe() {
           </a>
         </div>
       </div>
+      <div>{response === 200 ? 'success' : 'retry'}</div>
     </main>
   );
 }
