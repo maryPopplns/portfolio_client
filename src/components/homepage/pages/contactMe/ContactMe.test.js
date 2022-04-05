@@ -69,4 +69,8 @@ describe('contact page', () => {
       expect(githubIcon).toBeInTheDocument();
     });
   });
+  // form submissions
+  describe('form submissions', () => {
+    test('successfully submits form', () => {});
+  });
 });

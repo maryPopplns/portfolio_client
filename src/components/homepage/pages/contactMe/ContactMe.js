@@ -19,8 +19,10 @@ function ContactMe() {
       },
       body: contactInfo,
     })
-      .then((result) => result.json())
-      .then((result) => console.log(result))
+      .then((result) => {
+        // TODO create modal popup if stats !==200
+        console.log(result.status);
+      })
       .catch((error) => console.log(error));
   }
 
