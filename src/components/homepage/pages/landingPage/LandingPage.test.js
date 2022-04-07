@@ -12,14 +12,14 @@ describe('Landing page header', () => {
     const lastName = screen.getByRole('heading', { name: /knight/i });
     expect(lastName).toBeInTheDocument();
   });
-  test('landing page includes text "web developer"', () => {
+  test('landing page includes text "web_developer"', () => {
     render(<LandingPage />);
-    const webdeveloper = screen.getByText(/web developer/i);
+    const webdeveloper = screen.getByText(/web_developer/i);
     expect(webdeveloper).toBeInTheDocument();
   });
-  test('landing page includes text "fitness 🤍"', () => {
+  test('landing page includes text "fitness_🤍"', () => {
     render(<LandingPage />);
-    const fitness = screen.getByText(/fitness 🤍/i);
+    const fitness = screen.getByText(/fitness_🤍/i);
     expect(fitness).toBeInTheDocument();
   });
   describe('contains the text veteran', () => {

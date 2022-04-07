@@ -7,8 +7,8 @@ function LandingPage() {
       <h1 className='name_heading last_name_heading'>knight</h1>
       <hr id='name_trait_divisor'></hr>
       <ul className='personal_description'>
-        <li id='personal_description_web_developer'>Web Developer</li>
-        <li id='personal_description_fitness'>Fitness 🤍</li>
+        <li id='personal_description_web_developer'>web_developer</li>
+        <li id='personal_description_fitness'>fitness_🤍</li>
         <li id='personal_description_veteran'>
           <div>v</div>
           <div>e</div>
