@@ -10,7 +10,7 @@ function LandingPage() {
         <li id='personal_description_web_developer'>Web Developer</li>
         <li id='personal_description_fitness'>Fitness 🤍</li>
         <li id='personal_description_veteran'>
-          <div>V</div>
+          <div>v</div>
           <div>e</div>
           <div>teran</div>
         </li>
