@@ -20,7 +20,7 @@ function ContactMe() {
 
     const contactInfo = urlencoded({ email, message });
 
-    fetch('https://protected-beyond-87972.herokuapp.com/contact', {
+    fetch('https://whispering-depths-29284.herokuapp.com/contact', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
