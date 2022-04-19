@@ -1,8 +1,34 @@
-import { render, screen, waitFor } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+import { rest } from 'msw';
 import ContactMe from './ContactMe';
+import { setupServer } from 'msw/node';
+import userEvent from '@testing-library/user-event';
+import { render, screen, waitFor } from '@testing-library/react';
 
 describe('contact page', () => {
+  const contactMeResponse = rest.post(
+    'https://whispering-depths-29284.herokuapp.com/contact',
+    (req, res, ctx) => {
+      const { email } = req.body.split('&').reduce((object, input) => {
+        const [key, value] = input.split('=');
+        object[key] = value;
+        return object;
+      }, {});
+
+      const decodedEmail = decodeURIComponent(email);
+      if (decodedEmail === 'test@test.com') {
+        return res(ctx.status(200));
+      } else {
+        return res(ctx.status(500));
+      }
+    }
+  );
+
+  const server = new setupServer(contactMeResponse);
+
+  beforeAll(() => server.listen());
+  afterEach(() => server.resetHandlers());
+  afterAll(() => server.close());
+
   test('header includes "contact"', () => {
     render(<ContactMe />);
     const header = screen.getByRole('heading', { name: /contact/i });
@@ -71,24 +97,25 @@ describe('contact page', () => {
   });
   // form submissions
   describe('form submissions', () => {
-    test.skip('successfully submits form', async () => {
+    test('successfully submits form', async () => {
       render(<ContactMe />);
       const messageInput = screen.getByRole('textbox', { name: /message/i });
       const emailInput = screen.getByRole('textbox', { name: /email/i });
 
-      userEvent.type(emailInput, 'test@testing.com');
+      userEvent.type(emailInput, 'test@test.com');
       userEvent.type(messageInput, 'this is the message');
 
       const submitButton = screen.getByRole('button', { name: /submit/i });
 
       userEvent.click(submitButton);
 
+      const modal = screen.getByTestId('contact_form_response_modal');
+
       await waitFor(
-        () => {
-          const successModal = screen.getByText(/success/i);
-          expect(successModal).toBeInTheDocument();
+        function networkCall() {
+          expect(modal).toHaveTextContent('success');
         },
-        { timeout: 10000 }
+        { timeout: 1000 }
       );
     });
     test('handles form errors', async () => {
@@ -96,7 +123,7 @@ describe('contact page', () => {
       const messageInput = screen.getByRole('textbox', { name: /message/i });
       const emailInput = screen.getByRole('textbox', { name: /email/i });
 
-      userEvent.type(emailInput, 'test@');
+      userEvent.type(emailInput, 'test@test1.com');
       userEvent.type(messageInput, 'this is the message');
 
       const submitButton = screen.getByRole('button', { name: /submit/i });
@@ -108,7 +135,7 @@ describe('contact page', () => {
           const successModal = screen.getByText(/retry/i);
           expect(successModal).toBeInTheDocument();
         },
-        { timeout: 10000 }
+        { timeout: 1000 }
       );
     });
   });

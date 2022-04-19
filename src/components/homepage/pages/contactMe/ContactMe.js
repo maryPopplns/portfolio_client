@@ -36,7 +36,7 @@ function ContactMe() {
         setMessage('');
       }, 3000);
     }
-    fetch('https://protected-beyond-87972.herokuapp.com/contact', {
+    fetch('https://whispering-depths-29284.herokuapp.com/contact', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
@@ -113,6 +113,7 @@ function ContactMe() {
       <div
         style={response ? responseStyle : {}}
         className='contact_form_response_modal'
+        data-testid='contact_form_response_modal'
       >
         {response === 200 ? 'success' : 'retry'}
       </div>
