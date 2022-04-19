@@ -117,8 +117,14 @@ describe('contact page', () => {
         },
         { timeout: 1000 }
       );
+      await waitFor(
+        function networkCall() {
+          expect(modal).not.toBeVisible();
+        },
+        { timeout: 3000 }
+      );
     });
-    test('handles form errors', async () => {
+    test.skip('handles form errors', async () => {
       render(<ContactMe />);
       const messageInput = screen.getByRole('textbox', { name: /message/i });
       const emailInput = screen.getByRole('textbox', { name: /email/i });
@@ -130,12 +136,19 @@ describe('contact page', () => {
 
       userEvent.click(submitButton);
 
+      const modal = screen.getByTestId('contact_form_response_modal');
+
       await waitFor(
-        () => {
-          const successModal = screen.getByText(/retry/i);
-          expect(successModal).toBeInTheDocument();
+        function networkCall() {
+          expect(modal).toHaveTextContent('retry');
         },
         { timeout: 1000 }
+      );
+      await waitFor(
+        function networkCall() {
+          expect(modal).not.toHaveTextContent('success');
+        },
+        { timeout: 3000 }
       );
     });
   });

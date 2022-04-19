@@ -96,7 +96,6 @@ main.contact .contact_form_icons {
 .contact_form_response_modal {
   box-sizing: border-box;
   position: fixed;
-  display: none;
   justify-content: center;
   align-items: center;
   font-family: archivoRegular;

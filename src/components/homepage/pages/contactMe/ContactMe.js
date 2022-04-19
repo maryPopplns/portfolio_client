@@ -111,7 +111,7 @@ function ContactMe() {
         </div>
       </div>
       <div
-        style={response ? responseStyle : {}}
+        style={response ? responseStyle : { display: 'none' }}
         className='contact_form_response_modal'
         data-testid='contact_form_response_modal'
       >
