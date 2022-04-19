@@ -48,7 +48,8 @@
       "<rootDir>/src/index.js",
       "<rootDir>/src/reportWebVitals.js",
       "<rootDir>/src/components/homepage/utils",
-      "<rootDir>/src/components/homepage/Homepage.js"
+      "<rootDir>/src/components/homepage/Homepage.js",
+      "<rootDir>/src/components/homepage/cursor/Cursor.js"
     ]
   }
 }
