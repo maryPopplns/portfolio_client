@@ -10,7 +10,7 @@ function ContactMe() {
   const [response, setResponse] = useState(0);
 
   const responseStyle = {
-    outline: response === 200 ? 'px solid green' : '3px solid red',
+    border: response === 200 ? '3px solid green' : '3px solid red',
     color: response === 200 ? 'green' : 'red',
     display: 'flex',
   };
@@ -20,6 +20,22 @@ function ContactMe() {
 
     const contactInfo = urlencoded({ email, message });
 
+    function errorResponse() {
+      setResponse(500);
+      // modal timeout
+      setTimeout(() => {
+        setResponse(0);
+      }, 3000);
+    }
+    function successResponse() {
+      setResponse(200);
+      // modal timeout
+      setTimeout(() => {
+        setResponse(0);
+        setEmail('');
+        setMessage('');
+      }, 3000);
+    }
     fetch('https://protected-beyond-87972.herokuapp.com/contact', {
       method: 'POST',
       headers: {
@@ -27,20 +43,14 @@ function ContactMe() {
       },
       body: contactInfo,
     })
-      .then((result) => {
-        setResponse(result.status);
-        // modal timeout
-        setTimeout(() => {
-          setResponse(0);
-        }, 3000);
+      .then(({ status }) => {
+        if (status === 200) {
+          successResponse();
+        } else {
+          errorResponse();
+        }
       })
-      .catch((error) => {
-        setResponse(500);
-        // modal timeout
-        setTimeout(() => {
-          setResponse(0);
-        }, 3000);
-      });
+      .catch(() => errorResponse());
   }
 
   return (
