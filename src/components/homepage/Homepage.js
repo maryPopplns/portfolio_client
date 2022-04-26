@@ -1,10 +1,11 @@
 import './homepage.css';
 import { useEffect } from 'react';
-import LandingPage from './pages/landingPage/LandingPage';
-import Skills from './pages/skills/Skills';
-import ContactMe from './pages/contactMe/ContactMe';
 import Cursor from './cursor/Cursor';
 import Navbar from './navbar/Navbar';
+import Skills from './pages/skills/Skills';
+import ContactMe from './pages/contactMe/ContactMe';
+import LandingPage from './pages/landingPage/LandingPage';
+
 import {
   sectionWipe,
   traitsAnimation,
