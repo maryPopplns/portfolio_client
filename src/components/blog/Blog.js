@@ -1,11 +1,15 @@
 import './blog.css';
 import { useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { setCurrentPage } from '../../store/slices/currentPage';
 
 function Blog() {
-  const loggedIn = useSelector((state) => state.posts.value);
-  console.log(loggedIn);
-  return <div>blog</div>;
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(setCurrentPage('blog'));
+  }, [dispatch]);
+
+  return <div className='blog'>blog</div>;
 }
 
 export default Blog;

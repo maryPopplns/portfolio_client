@@ -108,16 +108,16 @@ export function contactAnimation() {
 }
 
 export function navbarAnimation() {
-  const navbar = document.getElementById('homepage_navbar');
+  const navbar = document.getElementById('navbar');
   let oldPosition = 0;
   function navbarHandler(event) {
     const newPosition = window.pageYOffset;
     if (oldPosition - newPosition < 0) {
-      navbar.classList.add('hide_navbar');
+      navbar.classList.add('show_navbar');
     } else if (oldPosition - newPosition > 0) {
-      navbar.classList.remove('hide_navbar');
+      navbar.classList.remove('show_navbar');
     }
     oldPosition = newPosition;
   }
-  window.addEventListener('scroll', navbarHandler);
+  return navbarHandler;
 }

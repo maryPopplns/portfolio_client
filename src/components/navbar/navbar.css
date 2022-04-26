@@ -9,17 +9,17 @@
 }
 
 /* global */
-#homepage_navbar {
+#navbar {
   position: fixed;
   transition: transform 0.5s;
   z-index: 1;
 }
-#homepage_navbar.hide_navbar {
+#navbar.show_navbar {
   transform: translateY(0);
 }
-#homepage_navbar ul,
-#homepage_navbar ul li,
-#homepage_navbar ul li a {
+#navbar ul,
+#navbar ul li,
+#navbar ul li a {
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -27,33 +27,33 @@
   width: 100%;
   height: 100%;
 }
-#homepage_navbar ul li {
+#navbar ul li {
   background-color: black;
   border: 4px solid white;
   border-radius: 0.25rem;
   transition: all 1s;
 }
-#homepage_navbar ul li.navbarHovered {
+#navbar ul li.navbarHovered {
   background-color: white;
   border: 4px solid black;
   border-radius: 0.5rem;
 }
-#homepage_navbar ul li a {
+#navbar ul li a {
   font-family: archivoRegular;
   text-decoration: none;
 }
-#homepage_navbar ul li a {
+#navbar ul li a {
   color: white;
   text-transform: uppercase;
   transition: all 1s;
 }
-#homepage_navbar ul li a.navbarHovered {
+#navbar ul li a.navbarHovered {
   color: black;
 }
 
 /* mobile/tablet */
 @media (max-width: 799px) {
-  #homepage_navbar {
+  #navbar {
     box-sizing: border-box;
     display: flex;
     align-items: center;
@@ -62,37 +62,37 @@
     width: 100%;
     transform: translateY(5rem);
   }
-  #homepage_navbar ul {
+  #navbar ul {
     justify-content: space-between;
   }
-  #homepage_navbar ul li a {
+  #navbar ul li a {
     letter-spacing: 2px;
   }
 }
 
 /* mobile */
 @media (max-width: 500px) {
-  #homepage_navbar ul li a {
+  #navbar ul li a {
     font-size: 1.25rem;
   }
 }
 
 /* tablet */
 @media (min-width: 800px) {
-  #homepage_navbar {
+  #navbar {
     top: 0.5rem;
     left: calc(50% - 9rem);
     width: 18rem;
     height: 3rem;
     transform: translateY(-3.5rem);
   }
-  #homepage_navbar ul {
+  #navbar ul {
     justify-content: space-around;
   }
-  #homepage_navbar ul li {
+  #navbar ul li {
     width: 49%;
   }
-  #homepage_navbar ul li a {
+  #navbar ul li a {
     letter-spacing: 1px;
     cursor: crosshair;
   }

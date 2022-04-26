@@ -1,12 +1,13 @@
 import './navbar.css';
-import { useDispatch } from 'react-redux';
 import { useState, useEffect } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { setPosts } from '../../store/slices/posts';
+import { useSelector, useDispatch } from 'react-redux';
 
 function Navbar() {
   const [blogClass, setBlogClass] = useState('');
   const [projectsClass, setProjectsClass] = useState('');
+  // const currentPage = useSelector((state) => state.currentPage.value);
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -15,27 +16,13 @@ function Navbar() {
       .then((posts) => dispatch(setPosts(posts)));
   }, [dispatch]);
 
-  function blogEnterHandler() {
-    setBlogClass('navbarHovered');
-  }
-  function blogExitHandler() {
-    setBlogClass('');
-  }
-  function projectEnterHandler() {
-    setProjectsClass('navbarHovered');
-  }
-  function projectExitHandler() {
-    setProjectsClass('');
-  }
-
   return (
     <>
-      <nav id='homepage_navbar'>
+      <nav id='navbar'>
         <ul>
           <li
-            id='homepage_blog_link'
-            onMouseEnter={blogEnterHandler}
-            onMouseLeave={blogExitHandler}
+            onMouseEnter={() => setBlogClass('navbarHovered')}
+            onMouseLeave={() => setBlogClass('')}
             className={blogClass}
           >
             <Link to={'/blog'} className={blogClass}>
@@ -43,9 +30,8 @@ function Navbar() {
             </Link>
           </li>
           <li
-            id='homepage_projects_link'
-            onMouseEnter={projectEnterHandler}
-            onMouseLeave={projectExitHandler}
+            onMouseEnter={() => setProjectsClass('navbarHovered')}
+            onMouseLeave={() => setProjectsClass('')}
             className={projectsClass}
           >
             <Link to={'/projects'} className={projectsClass}>
