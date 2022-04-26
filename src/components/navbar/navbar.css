@@ -1,18 +1,18 @@
 /* fonts */
 @font-face {
   font-family: 'archivoRegular';
-  src: url('../../../fonts/ArchivoBlack-Regular.ttf') format('truetype');
+  src: url('../../fonts/ArchivoBlack-Regular.ttf') format('truetype');
 }
 @font-face {
   font-family: 'archivoThin';
-  src: url('../../../fonts/ArchivoNarrow-VariableFont_wght.ttf')
-    format('truetype');
+  src: url('../../fonts/ArchivoNarrow-VariableFont_wght.ttf') format('truetype');
 }
 
 /* global */
 #homepage_navbar {
   position: fixed;
   transition: transform 0.5s;
+  z-index: 1;
 }
 #homepage_navbar.hide_navbar {
   transform: translateY(0);

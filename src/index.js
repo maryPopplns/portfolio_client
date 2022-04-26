@@ -1,20 +1,23 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Homepage from './components/homepage/Homepage';
-import reportWebVitals from './reportWebVitals';
-import Blog from './components/blog/Blog';
-import { Provider } from 'react-redux';
-import store from './store/store';
-import ReactDOM from 'react-dom';
-import React from 'react';
 import './reset.css';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import store from './store/store';
+import { Provider } from 'react-redux';
+import Blog from './components/blog/Blog';
+import Navbar from './components/navbar/Navbar';
+import reportWebVitals from './reportWebVitals';
+import Homepage from './components/homepage/Homepage';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Homepage />} />
-          <Route path='/blog' element={<Blog />} />
+          <Route path='/' element={<Navbar />}>
+            <Route index element={<Homepage />} />
+            <Route path='blog' element={<Blog />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </Provider>

@@ -1,7 +1,6 @@
 import './homepage.css';
 import { useEffect } from 'react';
 import Cursor from './cursor/Cursor';
-import Navbar from './navbar/Navbar';
 import Skills from './pages/skills/Skills';
 import ContactMe from './pages/contactMe/ContactMe';
 import LandingPage from './pages/landingPage/LandingPage';
@@ -31,7 +30,6 @@ function Homepage() {
       <Skills />
       <ContactMe />
       <Cursor />
-      <Navbar />
     </div>
   );
 }
