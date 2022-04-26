@@ -1,13 +1,17 @@
-import { render, screen, waitFor } from '@testing-library/react';
+import Navbar from './Navbar';
+import { Provider } from 'react-redux';
+import store from '../../store/store';
 import { MemoryRouter } from 'react-router-dom';
 import userEvent from '@testing-library/user-event';
-import Navbar from './Navbar';
+import { render, screen, waitFor } from '@testing-library/react';
 
 function setup() {
   render(
-    <MemoryRouter>
-      <Navbar />
-    </MemoryRouter>
+    <Provider store={store}>
+      <MemoryRouter>
+        <Navbar />
+      </MemoryRouter>
+    </Provider>
   );
 }
 
