@@ -6,6 +6,10 @@ import { setCurrentPage } from '../../store/slices/currentPage';
 function Blog() {
   const dispatch = useDispatch();
   useEffect(() => {
+    // show navbar
+    const navbar = document.getElementById('navbar');
+    navbar.classList.add('show_navbar');
+
     dispatch(setCurrentPage('blog'));
   }, [dispatch]);
 
