@@ -47,7 +47,9 @@
   "jest": {
     "coveragePathIgnorePatterns": [
       "<rootDir>/src/helpers",
-      "<rootDir>/src/components/homepage/utils"
+      "<rootDir>/src/components/homepage/utils",
+      "<rootDir>/src/store/slices",
+      "<rootDir>/src/store"
     ]
   }
 }
