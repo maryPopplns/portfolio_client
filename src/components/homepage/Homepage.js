@@ -23,13 +23,17 @@ function Homepage() {
   }, [dispatch]);
 
   useEffect(() => {
+    // hide navbar
+    const navbar = document.getElementById('navbar');
+    navbar.classList.remove('show_navbar');
+    // remove scroll handler upon dismount
     const scrollHandler = navbarAnimation();
     window.addEventListener('scroll', scrollHandler);
-    // remove scroll handler
     return () => window.removeEventListener('scroll', scrollHandler);
   }, []);
 
   useEffect(() => {
+    // animations
     sectionWipe();
     traitsAnimation();
     pageDivisonAnimation();

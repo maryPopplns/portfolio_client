@@ -13,7 +13,7 @@ function Blog() {
     dispatch(setCurrentPage('blog'));
   }, [dispatch]);
 
-  return <div className='blog'>blog</div>;
+  return <div className='blog'>{/* <div className='modal'></div> */}</div>;
 }
 
 export default Blog;
