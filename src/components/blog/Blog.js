@@ -1,12 +1,12 @@
 import './blog.css';
-import { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import Categories from './subcomponents/categories/Categories';
 import { setCurrentPage } from '../../store/slices/currentPage';
 
 function Blog() {
+  const [showingPosts, setShowingPosts] = useState([]);
   const dispatch = useDispatch();
-  const allPosts = useSelector((state) => state.posts.value);
 
   useEffect(() => {
     // show navbar
@@ -16,9 +16,11 @@ function Blog() {
     dispatch(setCurrentPage('blog'));
   }, [dispatch]);
 
+  // TODO use showingPosts to create modals to show
+
   return (
     <div className='blog'>
-      <Categories allPosts={allPosts} />
+      <Categories setShowingPosts={setShowingPosts} />
     </div>
   );
 }
