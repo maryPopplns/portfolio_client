@@ -21,13 +21,7 @@ div.blog::before {
   background-position: center;
 }
 
-@media (max-width: 799px) {
-  div.blog::before {
-    background-size: 175%;
-  }
-}
-
-div.modal {
+/* div.modal {
   height: 20rem;
   width: 20rem;
   margin: 5rem;
@@ -45,4 +39,16 @@ div.modal:before {
   height: 100%;
   position: absolute;
   width: 100%;
+} */
+
+@media (max-width: 799px) {
+  div.blog::before {
+    background-size: 175%;
+  }
+}
+
+@media (max-width: 499px) {
+  div.blog::before {
+    background-size: 275%;
+  }
 }
