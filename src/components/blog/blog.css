@@ -14,7 +14,7 @@ div.blog::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('./images/mandelbrot_large.webp');
+  background-image: url('./images/mandelbrot.webp');
   filter: invert(1);
   background-repeat: no-repeat;
   background-size: cover;
@@ -23,25 +23,26 @@ div.blog::before {
 
 @media (max-width: 799px) {
   div.blog::before {
-    background-size: 150%;
+    background-size: 175%;
   }
 }
 
-/* div.modal {
+div.modal {
   height: 20rem;
   width: 20rem;
-  background: rgba(255, 255, 255, 0.19);
+  margin: 5rem;
+  background-color: #ffffff1a;
   border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5.8px);
+  box-shadow: 0 4px 30px #0000001a;
+  backdrop-filter: blur(3px);
   -webkit-backdrop-filter: blur(5.8px);
-} */
+}
 
-/* div.modal:before {
-  background-color: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px) saturate(100%) contrast(45%) brightness(130%);
+div.modal:before {
   content: '';
+  background-color: #ffffff4d;
+  border-radius: 16px;
   height: 100%;
   position: absolute;
   width: 100%;
-} */
+}
