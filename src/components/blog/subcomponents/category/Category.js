@@ -1,7 +1,11 @@
 import './category.css';
 
-function Category() {
-  return <li className='category'>category</li>;
+function Category({ category, setShowingPosts, categoryPosts }) {
+  return (
+    <li onClick={() => setShowingPosts(categoryPosts)} className='category'>
+      {category}
+    </li>
+  );
 }
 
 export default Category;

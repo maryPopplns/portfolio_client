@@ -1,5 +1,3 @@
 li.category {
-  z-index: 7;
-  color: red;
-  font-size: 4rem;
+  margin: 0 0.5rem;
 }
