@@ -5,10 +5,7 @@ import { useEffect, useState, useRef } from 'react';
 
 function Categories({ setShowingPosts }) {
   const allPosts = useSelector((state) => state.posts.value);
-  const allCats = useSelector((state) => state.currentCategory.value);
   const [categories, setCategories] = useState([]);
-
-  console.log(allCats);
 
   useEffect(() => {
     const allCategories = allPosts.map(({ category }) => category);

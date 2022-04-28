@@ -20,6 +20,7 @@ li.category {
   border-radius: 1rem;
   font-family: archivoThin;
   text-transform: uppercase;
+  text-align: center;
   transition: all 1s;
   user-select: none;
 }

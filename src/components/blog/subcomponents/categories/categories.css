@@ -29,6 +29,7 @@
     height: 100vh;
     bottom: 0;
     left: 6rem;
+    max-width: 12rem;
   }
 }
 
