@@ -58,7 +58,7 @@ div.homepage_down_arrow {
     font-size: 4.5rem;
   }
   main.landing_page hr {
-    width: 80vw;
+    width: 60vw;
     transition: all 1s;
     background-color: white;
   }
@@ -94,6 +94,12 @@ div.homepage_down_arrow {
     border-width: 0 3px 3px 0;
     padding: 1rem;
     bottom: 2rem;
+  }
+}
+
+@media (max-width: 499px) {
+  main.landing_page hr {
+    width: 70vw;
   }
 }
 

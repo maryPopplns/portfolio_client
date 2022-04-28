@@ -27,6 +27,7 @@ function Blog() {
         <p>o</p>
         <p>g</p>
       </h1>
+      <hr />
       {/* <Categories setShowingPosts={setShowingPosts} /> */}
     </div>
   );

@@ -37,6 +37,9 @@ h1.blogHeading {
   font-family: archivoRegular;
   text-transform: uppercase;
 }
+div.blog hr {
+  background-color: white;
+}
 /* div.modal {
   height: 20rem;
   width: 20rem;
@@ -61,13 +64,22 @@ div.modal:before {
   h1.blogHeading {
     display: flex;
     top: 1rem;
+    font-size: 5rem;
   }
   div.blog::before {
     background-size: 175%;
   }
+  div.blog hr {
+    position: absolute;
+    top: 6rem;
+    width: 50vw;
+  }
 }
 
 @media (max-width: 499px) {
+  h1.blogHeading {
+    font-size: 4rem;
+  }
   div.blog::before {
     background-size: 275%;
   }
@@ -81,6 +93,9 @@ div.modal:before {
   }
   h1.blogHeading p {
     margin: -2px;
+  }
+  div.blog hr {
+    display: none;
   }
 }
 
