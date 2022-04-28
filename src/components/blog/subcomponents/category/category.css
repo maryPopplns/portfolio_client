@@ -1,11 +1,25 @@
+/* fonts */
+@font-face {
+  font-family: 'archivoRegular';
+  src: url('../../../../fonts/ArchivoBlack-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'archivoThin';
+  src: url('../../../../fonts/ArchivoNarrow-VariableFont_wght.ttf')
+    format('truetype');
+}
+
 li.category {
-  /* position: fixed; */
+  display: flex;
+  justify-content: center;
   padding: 0.5rem 1rem;
   color: white;
   cursor: crosshair;
   border: 3px solid white;
   background-color: black;
   border-radius: 1rem;
+  font-family: archivoThin;
+  text-transform: uppercase;
   transition: all 1s;
 }
 li.category:hover {
@@ -14,8 +28,26 @@ li.category:hover {
   border-color: black;
 }
 
+@media (max-width: 799px) {
+  li.category {
+    margin: 0.25rem 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 499px) {
+  li.category {
+    font-size: 0.8rem;
+  }
+}
+
 @media (min-width: 800px) {
   li.category {
     margin: 0.5rem 0;
+  }
+}
+
+@media (min-width: 1500px) {
+  li.category {
+    font-size: 1.1rem;
   }
 }

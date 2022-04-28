@@ -6,6 +6,21 @@
 
 /* TODO create media queries dependent on what the navbar does */
 
+@media (max-width: 799px) {
+  #categories {
+    top: 8rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+  }
+}
+
+@media (max-width: 500px) {
+  #categories {
+    top: 7rem;
+  }
+}
+
 @media (min-width: 800px) {
   #categories {
     flex-direction: column;
@@ -13,6 +28,12 @@
     margin-top: 4.5rem;
     height: 100vh;
     bottom: 0;
+    left: 6rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  #categories {
     left: 7rem;
   }
 }

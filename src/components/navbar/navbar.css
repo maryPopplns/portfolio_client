@@ -10,6 +10,7 @@
 
 /* global */
 #navbar {
+  user-select: none;
   position: fixed;
   transition: transform 0.5s;
   z-index: 1;

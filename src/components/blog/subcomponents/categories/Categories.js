@@ -27,6 +27,7 @@ function Categories({ setShowingPosts }) {
       />
     );
   });
+  // TODO add all category
 
   return <ul id='categories'>{categoryComponents}</ul>;
 }

@@ -36,6 +36,7 @@ h1.blogHeading {
   color: white;
   font-family: archivoRegular;
   text-transform: uppercase;
+  user-select: none;
 }
 div.blog hr {
   background-color: white;
@@ -103,7 +104,7 @@ div.modal:before {
   div.blog hr {
     position: fixed;
     margin: 0;
-    left: 6rem;
+    left: 5rem;
     top: calc(50% - 151px);
     height: 300px;
     width: 2px;
