@@ -21,7 +21,13 @@ function Blog() {
 
   return (
     <div className='blog'>
-      <Categories setShowingPosts={setShowingPosts} />
+      <h1 className='blogHeading'>
+        <p>b</p>
+        <p>l</p>
+        <p>o</p>
+        <p>g</p>
+      </h1>
+      {/* <Categories setShowingPosts={setShowingPosts} /> */}
     </div>
   );
 }
