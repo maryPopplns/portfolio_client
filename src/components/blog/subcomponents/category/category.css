@@ -21,6 +21,7 @@ li.category {
   font-family: archivoThin;
   text-transform: uppercase;
   transition: all 1s;
+  user-select: none;
 }
 li.category:hover {
   color: black;

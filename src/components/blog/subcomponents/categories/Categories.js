@@ -27,6 +27,14 @@ function Categories({ setShowingPosts }) {
       />
     );
   });
+  categoryComponents.unshift(
+    <Category
+      key='all'
+      category='all'
+      setShowingPosts={setShowingPosts}
+      categoryPosts={allPosts}
+    />
+  );
   // TODO add all category
 
   return <ul id='categories'>{categoryComponents}</ul>;

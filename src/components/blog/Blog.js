@@ -17,6 +17,7 @@ function Blog() {
   }, [dispatch]);
 
   // TODO use showingPosts to create modals to show
+  console.log(showingPosts);
 
   return (
     <div className='blog'>
