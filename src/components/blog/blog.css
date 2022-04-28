@@ -40,6 +40,7 @@ h1.blogHeading {
 div.blog hr {
   background-color: white;
 }
+
 /* div.modal {
   height: 20rem;
   width: 20rem;
@@ -76,12 +77,16 @@ div.modal:before {
   }
 }
 
-@media (max-width: 499px) {
+@media (max-width: 500px) {
   h1.blogHeading {
     font-size: 4rem;
   }
   div.blog::before {
     background-size: 275%;
+  }
+  div.blog hr {
+    top: 5rem;
+    width: 50vw;
   }
 }
 
@@ -90,12 +95,18 @@ div.modal:before {
     left: 1rem;
     top: calc(50% - 123px);
     font-size: 4rem;
+    text-shadow: 4px 0 0 black, 0 4px 0 black, -4px 0 0 black, 0 -4px 0 black;
   }
   h1.blogHeading p {
     margin: -2px;
   }
   div.blog hr {
-    display: none;
+    position: fixed;
+    margin: 0;
+    left: 6rem;
+    top: calc(50% - 151px);
+    height: 300px;
+    width: 2px;
   }
 }
 
@@ -103,5 +114,12 @@ div.modal:before {
   h1.blogHeading {
     top: calc(50% - 155px);
     font-size: 5rem;
+  }
+  div.blog hr {
+    position: fixed;
+    left: 6rem;
+    top: calc(50% - 176px);
+    height: 350px;
+    width: 2px;
   }
 }

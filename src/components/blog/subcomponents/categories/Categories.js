@@ -1,11 +1,11 @@
 import './categories.css';
 import Category from '../category/Category';
 import { useSelector } from 'react-redux';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 function Categories({ setShowingPosts }) {
-  const [categories, setCategories] = useState([]);
   const allPosts = useSelector((state) => state.posts.value);
+  const [categories, setCategories] = useState([]);
 
   useEffect(() => {
     const allCategories = allPosts.map(({ category }) => category);
@@ -28,7 +28,7 @@ function Categories({ setShowingPosts }) {
     );
   });
 
-  return <ul className='categories'>{categoryComponents}</ul>;
+  return <ul id='categories'>{categoryComponents}</ul>;
 }
 
 export default Categories;

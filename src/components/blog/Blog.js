@@ -17,7 +17,6 @@ function Blog() {
   }, [dispatch]);
 
   // TODO use showingPosts to create modals to show
-  console.log(showingPosts);
 
   return (
     <div className='blog'>
@@ -28,7 +27,7 @@ function Blog() {
         <p>g</p>
       </h1>
       <hr />
-      {/* <Categories setShowingPosts={setShowingPosts} /> */}
+      <Categories setShowingPosts={setShowingPosts} />
     </div>
   );
 }

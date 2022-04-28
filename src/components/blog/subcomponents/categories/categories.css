@@ -1,16 +1,18 @@
-ul.categories {
+#categories {
+  position: fixed;
   display: flex;
-  padding: 0.5rem 1rem;
-  border: 2px solid white;
-  background-color: black;
-  color: red;
-  z-index: 0;
+  /* background-color: black; */
 }
 
 /* TODO create media queries dependent on what the navbar does */
 
 @media (min-width: 800px) {
-  ul.categories {
+  #categories {
+    flex-direction: column;
+    justify-content: center;
     margin-top: 4.5rem;
+    height: 100vh;
+    bottom: 0;
+    left: 7rem;
   }
 }
