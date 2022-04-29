@@ -1,8 +1,10 @@
 import './blog.css';
-import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useEffect, useState } from 'react';
 import Categories from './subcomponents/categories/Categories';
 import { setCurrentPage } from '../../store/slices/currentPage';
+
+import BlogPostTile from './subcomponents/blogPostTile/BlogPostTile';
 
 function Blog() {
   const [showingPosts, setShowingPosts] = useState([]);
@@ -28,6 +30,38 @@ function Blog() {
       </h1>
       <hr />
       <Categories setShowingPosts={setShowingPosts} />
+      <div className='blogPostContainer'>
+        <BlogPostTile />
+        <BlogPostTile />
+        <BlogPostTile />
+        <BlogPostTile />
+        <BlogPostTile />
+        <BlogPostTile />
+        <BlogPostTile />
+        <BlogPostTile />
+        <BlogPostTile />
+        <BlogPostTile />
+        <BlogPostTile />
+        <BlogPostTile />
+        <BlogPostTile />
+        <BlogPostTile />
+        <BlogPostTile />
+        <BlogPostTile />
+        <BlogPostTile />
+        <BlogPostTile />
+        <BlogPostTile />
+        <BlogPostTile />
+        <BlogPostTile />
+        <BlogPostTile />
+        <BlogPostTile />
+        <BlogPostTile />
+        <BlogPostTile />
+        <BlogPostTile />
+        <BlogPostTile />
+        <BlogPostTile />
+        <BlogPostTile />
+        <BlogPostTile />
+      </div>
     </div>
   );
 }
