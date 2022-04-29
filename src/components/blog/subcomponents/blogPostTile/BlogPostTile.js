@@ -1,9 +1,10 @@
 import './blogPostTile.css';
 import { useDispatch, useSelector } from 'react-redux';
 
+// function BlogPostTile() {
 function BlogPostTile({ title, date, category }) {
-  const newDate = new Date(date);
-  const month = newDate.toISOString();
+  // const newDate = new Date(date);
+  // const month = newDate.toISOString();
   // console.log(month);
   return (
     <div className='blogPostTile'>
