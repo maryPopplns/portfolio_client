@@ -29,6 +29,11 @@ li.category:hover {
   background-color: white;
   border-color: black;
 }
+li.selectedCategory {
+  color: #32a893;
+  border-color: #32a893;
+  background-color: black;
+}
 
 @media (max-width: 799px) {
   li.category {

@@ -27,6 +27,7 @@ function Categories({ setShowingPosts }) {
       />
     );
   });
+  // all categories
   categoryComponents.unshift(
     <Category
       key='all'
@@ -35,7 +36,6 @@ function Categories({ setShowingPosts }) {
       categoryPosts={allPosts}
     />
   );
-  // TODO add all category
 
   return <ul id='categories'>{categoryComponents}</ul>;
 }
