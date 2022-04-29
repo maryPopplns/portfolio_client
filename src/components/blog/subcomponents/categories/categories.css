@@ -1,7 +1,6 @@
 #categories {
   position: fixed;
   display: flex;
-  /* background-color: black; */
 }
 
 /* TODO create media queries dependent on what the navbar does */
@@ -29,7 +28,7 @@
     height: 100vh;
     bottom: 0;
     left: 6rem;
-    max-width: 12rem;
+    width: 10rem;
   }
 }
 

@@ -13,7 +13,6 @@ function Categories({ setShowingPosts }) {
     setCategories(uniqueCategories);
   }, [allPosts]);
 
-  // create components
   const categoryComponents = categories.map((category) => {
     const categoryPosts = allPosts.filter(
       ({ category: postCategory }) => category === postCategory
@@ -27,7 +26,7 @@ function Categories({ setShowingPosts }) {
       />
     );
   });
-  // all categories
+  // add all category
   categoryComponents.unshift(
     <Category
       key='all'
@@ -36,6 +35,8 @@ function Categories({ setShowingPosts }) {
       categoryPosts={allPosts}
     />
   );
+
+  // TODO limit the length of the category bar for tablet/mobile view
 
   return <ul id='categories'>{categoryComponents}</ul>;
 }

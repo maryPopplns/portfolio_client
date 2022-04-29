@@ -1,12 +1,13 @@
 import './blog.css';
-import { useDispatch } from 'react-redux';
 import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Categories from './subcomponents/categories/Categories';
 import { setCurrentPage } from '../../store/slices/currentPage';
 
 import BlogPostTile from './subcomponents/blogPostTile/BlogPostTile';
 
 function Blog() {
+  const allPosts = useSelector((state) => state.posts.value);
   const [showingPosts, setShowingPosts] = useState([]);
   const dispatch = useDispatch();
 
@@ -15,10 +16,13 @@ function Blog() {
     const navbar = document.getElementById('navbar');
     navbar.classList.add('show_navbar');
 
+    setShowingPosts(allPosts);
     dispatch(setCurrentPage('blog'));
-  }, [dispatch]);
+  }, [dispatch, allPosts]);
 
-  // TODO use showingPosts to create modals to show
+  const posts = showingPosts.map(({ _id, title, date, category }) => (
+    <BlogPostTile title={title} date={date} category={category} key={_id} />
+  ));
 
   return (
     <div className='blog'>
@@ -30,27 +34,7 @@ function Blog() {
       </h1>
       <hr />
       <Categories setShowingPosts={setShowingPosts} />
-      <div className='blogPostContainer'>
-        <BlogPostTile />
-        <BlogPostTile />
-        <BlogPostTile />
-        <BlogPostTile />
-        <BlogPostTile />
-        <BlogPostTile />
-        <BlogPostTile />
-        <BlogPostTile />
-        <BlogPostTile />
-        <BlogPostTile />
-        <BlogPostTile />
-        <BlogPostTile />
-        <BlogPostTile />
-        <BlogPostTile />
-        <BlogPostTile />
-        <BlogPostTile />
-        <BlogPostTile />
-        <BlogPostTile />
-        <BlogPostTile />
-      </div>
+      <ul className='blogPostContainer'>{posts}</ul>
     </div>
   );
 }

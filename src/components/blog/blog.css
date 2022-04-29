@@ -41,7 +41,7 @@ h1.blogHeading {
 div.blog hr {
   background-color: white;
 }
-div.blogPostContainer {
+ul.blogPostContainer {
   position: fixed;
   display: flex;
   flex-wrap: wrap;
@@ -65,7 +65,7 @@ div.blogPostContainer {
     top: 6rem;
     width: 50vw;
   }
-  div.blogPostContainer {
+  ul.blogPostContainer {
     top: 11rem;
     height: calc(100vh - 14.5rem);
     width: 100vw;
@@ -83,7 +83,7 @@ div.blogPostContainer {
     top: 5rem;
     width: 50vw;
   }
-  div.blogPostContainer {
+  ul.blogPostContainer {
     top: 10rem;
     height: calc(100vh - 13.5rem);
     width: 100vw;
@@ -108,11 +108,11 @@ div.blogPostContainer {
     height: 300px;
     width: 2px;
   }
-  div.blogPostContainer {
+  ul.blogPostContainer {
     top: 4rem;
-    left: 300px;
+    left: 256px;
     height: calc(100vh - 5rem);
-    width: calc(100vw - 305px);
+    width: calc(100vw - 256px);
   }
 }
 
@@ -128,10 +128,10 @@ div.blogPostContainer {
     height: 350px;
     width: 2px;
   }
-  div.blogPostContainer {
+  ul.blogPostContainer {
     top: 4rem;
-    left: 320px;
+    left: 272px;
     height: calc(100vh - 5rem);
-    width: calc(100vw - 325px);
+    width: calc(100vw - 272px);
   }
 }
