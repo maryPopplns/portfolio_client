@@ -50,17 +50,6 @@ function Blog() {
         <BlogPostTile />
         <BlogPostTile />
         <BlogPostTile />
-        <BlogPostTile />
-        <BlogPostTile />
-        <BlogPostTile />
-        <BlogPostTile />
-        <BlogPostTile />
-        <BlogPostTile />
-        <BlogPostTile />
-        <BlogPostTile />
-        <BlogPostTile />
-        <BlogPostTile />
-        <BlogPostTile />
       </div>
     </div>
   );
