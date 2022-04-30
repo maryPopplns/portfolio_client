@@ -9,13 +9,19 @@ import BlogPostTile from './subcomponents/blogPostTile/BlogPostTile';
 function Blog() {
   const allPosts = useSelector((state) => state.posts.value);
   const [showingPosts, setShowingPosts] = useState([]);
+  const [categories, setCategories] = useState([]);
   const dispatch = useDispatch();
 
   useEffect(() => {
+    // isolate unique categories
+    const allCategories = allPosts.map(({ category }) => category);
+    const uniqueCategories = Array.from(new Set(allCategories));
+    setCategories(uniqueCategories);
+
     // show navbar
     const navbar = document.getElementById('navbar');
     navbar.classList.add('show_navbar');
-
+    // set default blog category
     setShowingPosts(allPosts);
     dispatch(setCurrentPage('blog'));
   }, [dispatch, allPosts]);
@@ -33,7 +39,7 @@ function Blog() {
         <p>g</p>
       </h1>
       <hr />
-      <Categories setShowingPosts={setShowingPosts} />
+      <Categories setShowingPosts={setShowingPosts} categories={categories} />
       <ul className='blogPostContainer'>{posts}</ul>
     </div>
   );

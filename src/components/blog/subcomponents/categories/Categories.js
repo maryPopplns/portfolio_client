@@ -1,44 +1,52 @@
 import './categories.css';
-import Category from '../category/Category';
 import { useSelector } from 'react-redux';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import Category from '../category/Category';
 
-function Categories({ setShowingPosts }) {
+function Categories({ setShowingPosts, categories }) {
+  const [posts, setPosts] = useState([]);
+  const [width, setWidth] = useState(0);
   const allPosts = useSelector((state) => state.posts.value);
-  const [categories, setCategories] = useState([]);
+  const containerRef = useRef(null);
 
   useEffect(() => {
-    const allCategories = allPosts.map(({ category }) => category);
-    const uniqueCategories = Array.from(new Set(allCategories));
-    setCategories(uniqueCategories);
-  }, [allPosts]);
+    setWidth(containerRef.current.clientWidth);
+  }, [posts]);
 
-  const categoryComponents = categories.map((category) => {
-    const categoryPosts = allPosts.filter(
-      ({ category: postCategory }) => category === postCategory
-    );
-    return (
+  console.log(width);
+
+  useEffect(() => {
+    const categoryComponents = categories.map((category) => {
+      const categoryPosts = allPosts.filter(
+        ({ category: postCategory }) => category === postCategory
+      );
+      return (
+        <Category
+          key={category.toString()}
+          category={category}
+          setShowingPosts={setShowingPosts}
+          categoryPosts={categoryPosts}
+        />
+      );
+    });
+
+    // add all category
+    categoryComponents.unshift(
       <Category
-        key={category.toString()}
-        category={category}
+        key='all'
+        category='all'
         setShowingPosts={setShowingPosts}
-        categoryPosts={categoryPosts}
+        categoryPosts={allPosts}
       />
     );
-  });
-  // add all category
-  categoryComponents.unshift(
-    <Category
-      key='all'
-      category='all'
-      setShowingPosts={setShowingPosts}
-      categoryPosts={allPosts}
-    />
+    setPosts(categoryComponents);
+  }, [categories, allPosts, setShowingPosts]);
+
+  return (
+    <ul ref={containerRef} id='categories'>
+      {posts}
+    </ul>
   );
-
-  // TODO limit the length of the category bar for tablet/mobile view
-
-  return <ul id='categories'>{categoryComponents}</ul>;
 }
 
 export default Categories;
