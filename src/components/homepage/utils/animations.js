@@ -94,7 +94,10 @@ export function contactAnimation() {
   const hr = document.getElementById('header_contact_divisor');
   const form = document.getElementById('contact_form_container');
   function contactHandler() {
-    if (window.innerHeight + window.pageYOffset >= document.body.offsetHeight) {
+    if (
+      window.innerHeight + window.pageYOffset + 1 >=
+      document.body.offsetHeight
+    ) {
       hr.classList.remove('header_contact_divisor_shrink');
       form.classList.add('form_shrink');
     } else {

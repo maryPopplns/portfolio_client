@@ -19,8 +19,13 @@ import {
 function Homepage() {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(setCurrentPage('homepage'));
-  }, [dispatch]);
+    // animations
+    sectionWipe();
+    traitsAnimation();
+    pageDivisonAnimation();
+    skillsAnimation();
+    contactAnimation();
+  }, []);
 
   useEffect(() => {
     // hide navbar
@@ -33,13 +38,8 @@ function Homepage() {
   }, []);
 
   useEffect(() => {
-    // animations
-    sectionWipe();
-    traitsAnimation();
-    pageDivisonAnimation();
-    skillsAnimation();
-    contactAnimation();
-  }, []);
+    dispatch(setCurrentPage('homepage'));
+  }, [dispatch]);
 
   return (
     <div className='homepageContainer'>
