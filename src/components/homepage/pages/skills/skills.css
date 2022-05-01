@@ -26,10 +26,9 @@ main.skills h1 {
 #title_skills_divisor {
   background-color: white;
 }
-main.skills .title_skills_divisor_shrink {
-  height: 0rem;
+main.skills hr.title_skills_divisor_shrink {
   background-color: black;
-  border-color: black;
+  border: 0px solid black;
 }
 main.skills img {
   opacity: 1;
@@ -62,7 +61,7 @@ main.skills img.technology_icon_fade {
     width: 60vw;
     transition: all 1s;
   }
-  main.skills .title_skills_divisor_shrink {
+  main.skills hr.title_skills_divisor_shrink {
     width: 0rem;
   }
   main.skills ul {

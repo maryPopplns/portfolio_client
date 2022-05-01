@@ -41,16 +41,14 @@ export function traitsAnimation() {
 // page border animations
 export function pageDivisonAnimation() {
   const skillsPage = Array.from(document.getElementsByClassName('skills'))[0];
-  const placeholderPage = Array.from(
-    document.getElementsByClassName('contact')
-  )[0];
+  const contactPage = Array.from(document.getElementsByClassName('contact'))[0];
   function pageDivisionHandler() {
-    const placeholderTop = placeholderPage.getBoundingClientRect().top;
+    const placeholderTop = contactPage.getBoundingClientRect().top;
     const skillsTop = skillsPage.getBoundingClientRect().top;
     if (placeholderTop < 2) {
-      placeholderPage.classList.add('hide_page_division');
+      contactPage.classList.add('hide_page_division');
     } else {
-      placeholderPage.classList.remove('hide_page_division');
+      contactPage.classList.remove('hide_page_division');
     }
     if (skillsTop === 0) {
       skillsPage.classList.add('hide_page_division');
