@@ -27,6 +27,7 @@ main.skills h1 {
   background-color: white;
 }
 main.skills .title_skills_divisor_shrink {
+  height: 0rem;
   background-color: black;
   border-color: black;
 }

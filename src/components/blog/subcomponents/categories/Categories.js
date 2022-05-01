@@ -5,15 +5,25 @@ import Category from '../category/Category';
 
 function Categories({ setShowingPosts, categories }) {
   const [posts, setPosts] = useState([]);
-  const [width, setWidth] = useState(0);
+  const [categoriesWidth, setCategoriesWidth] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(0);
   const allPosts = useSelector((state) => state.posts.value);
   const containerRef = useRef(null);
 
   useEffect(() => {
-    setWidth(containerRef.current.clientWidth);
-  }, [posts]);
+    function resizeHandler({ target }) {
+      setWindowWidth(window.innerWidth);
+    }
+    window.addEventListener('resize', resizeHandler);
+    return () => {
+      window.removeEventListener('resize', resizeHandler);
+    };
+  }, []);
 
-  console.log(width);
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+    setCategoriesWidth(containerRef.current.clientWidth);
+  }, [posts]);
 
   useEffect(() => {
     const categoryComponents = categories.map((category) => {
@@ -41,6 +51,9 @@ function Categories({ setShowingPosts, categories }) {
     );
     setPosts(categoryComponents);
   }, [categories, allPosts, setShowingPosts]);
+
+  console.log(categoriesWidth);
+  console.log(windowWidth);
 
   return (
     <ul ref={containerRef} id='categories'>
