@@ -23,12 +23,13 @@ main.hide_page_division {
 main.skills h1 {
   font-family: archivoRegular;
 }
-#title_skills_divisor {
+main.skills hr {
   background-color: white;
 }
 main.skills hr.title_skills_divisor_shrink {
   background-color: black;
-  border: 0px solid black;
+  border-color: black;
+  width: 0;
 }
 main.skills img {
   opacity: 1;
