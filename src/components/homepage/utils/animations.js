@@ -113,7 +113,10 @@ export function navbarAnimation() {
   let oldPosition = 0;
   function navbarHandler(event) {
     const newPosition = window.pageYOffset;
-    if (oldPosition - newPosition < 0) {
+    if (
+      oldPosition - newPosition < 0 ||
+      window.innerHeight + window.scrollY >= document.body.offsetHeight
+    ) {
       navbar.classList.add('show_navbar');
     } else if (oldPosition - newPosition > 0) {
       navbar.classList.remove('show_navbar');
