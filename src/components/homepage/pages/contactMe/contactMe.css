@@ -163,7 +163,7 @@ main.contact .contact_form_icons {
   main.contact .contact_form_icons {
     display: flex;
     justify-content: center;
-    margin-top: 3rem;
+    margin-top: 2rem;
   }
   .contact_form_icons img {
     margin: 0 1rem;
@@ -186,6 +186,27 @@ main.contact .contact_form_icons {
   }
   main.contact hr {
     top: 5rem;
+  }
+}
+
+@media (max-height: 500px) {
+  main.contact form {
+    border: none;
+  }
+  main.contact .contact_form_icons {
+    display: none;
+  }
+  label {
+    display: none;
+  }
+  #email {
+    height: 1.5rem;
+  }
+  #message {
+    height: 1.5rem;
+  }
+  button {
+    display: none;
   }
 }
 
