@@ -13,7 +13,7 @@ function Skills() {
   return (
     <main className='skills page'>
       {/* TODO change to proficency */}
-      <h1>skills</h1>
+      <h1>tech_skills</h1>
       <hr id='title_skills_divisor'></hr>
       <ul>
         {/* mobile */}

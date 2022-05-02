@@ -29,7 +29,6 @@ main.skills hr {
 main.skills hr.title_skills_divisor_shrink {
   background-color: black;
   border-color: black;
-  width: 0;
 }
 main.skills img {
   opacity: 1;
@@ -53,7 +52,7 @@ main.skills img.technology_icon_fade {
     position: absolute;
     top: 1rem;
     margin-bottom: 0.5rem;
-    font-size: 5rem;
+    /* font-size: 5rem; */
     text-transform: uppercase;
   }
   main.skills hr {
@@ -86,7 +85,7 @@ main.skills img.technology_icon_fade {
 /* mobile: after 799 on purpose */
 @media (max-width: 500px) {
   main.skills h1 {
-    font-size: 4rem;
+    /* font-size: 4rem; */
   }
   main.skills hr {
     top: 5rem;
@@ -119,9 +118,6 @@ main.skills img.technology_icon_fade {
   main.skills h1 {
     font-size: 3rem;
     margin-right: 3rem;
-  }
-  main.skills h1::before {
-    content: 'tech_';
   }
   main.skills hr {
     margin: 0 1.5rem;

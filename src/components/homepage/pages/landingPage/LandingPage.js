@@ -3,8 +3,7 @@ import './landingPage.css';
 function LandingPage() {
   return (
     <main className='landing_page page'>
-      <h1 className='name_heading first_name_heading'>spencer</h1>
-      <h1 className='name_heading last_name_heading'>knight</h1>
+      <h1 className='name_heading'>spencer_knight</h1>
       <hr id='name_trait_divisor'></hr>
       <ul className='personal_description'>
         <li id='personal_description_web_developer'>Web Developer</li>

@@ -14,6 +14,7 @@ main.contact {
   background-color: black;
   border-top: 5px solid white;
   color: white;
+  font-family: archivoThin;
 }
 main.contact hr {
   background-color: white;
@@ -26,9 +27,6 @@ main.contact hr.header_contact_divisor_shrink {
 }
 main.hide_page_division {
   border-top: 5px solid black;
-}
-main.contact {
-  font-family: archivoThin;
 }
 main.contact h1 {
   font-family: archivoRegular;
@@ -106,6 +104,7 @@ main.contact .contact_form_icons {
 /* mobile */
 @media (max-width: 799px) {
   main.contact {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -114,7 +113,7 @@ main.contact .contact_form_icons {
   main.contact h1 {
     position: absolute;
     top: 1rem;
-    font-size: 5rem;
+    /* font-size: 5rem; */
     text-transform: uppercase;
   }
   main.contact hr {
@@ -182,7 +181,7 @@ main.contact .contact_form_icons {
 
 @media (max-width: 500px) {
   main.contact h1 {
-    font-size: 4rem;
+    /* font-size: 4rem; */
   }
   main.contact hr {
     top: 5rem;
@@ -220,9 +219,6 @@ main.contact .contact_form_icons {
   main.contact h1 {
     font-size: 3rem;
     margin-left: 1rem;
-  }
-  main.contact h1::after {
-    content: '_me';
   }
   main.contact hr {
     margin: 0 1.5rem;

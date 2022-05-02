@@ -55,7 +55,7 @@ function ContactMe() {
 
   return (
     <main className='contact page'>
-      <h1>contact</h1>
+      <h1>contact_me</h1>
       <hr id='header_contact_divisor' />
       <div id='contact_form_container'>
         <form onSubmit={submitHandler}>

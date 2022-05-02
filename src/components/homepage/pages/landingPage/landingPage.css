@@ -47,15 +47,10 @@ div.homepage_down_arrow {
     text-align: center;
   }
   h1.name_heading {
+    margin-top: 2rem;
+    /* font-size: 3rem; */
     line-height: 5rem;
     text-transform: uppercase;
-  }
-  h1.first_name_heading {
-    margin-top: 2rem;
-    font-size: 3rem;
-  }
-  h1.last_name_heading {
-    font-size: 4.5rem;
   }
   main.landing_page hr {
     width: 60vw;
@@ -113,14 +108,8 @@ div.homepage_down_arrow {
     text-align: center;
     line-height: 1.2rem;
   }
-  h1.first_name_heading {
+  h1.name_heading {
     font-size: 3rem;
-  }
-  h1.last_name_heading {
-    font-size: 3rem;
-  }
-  h1.last_name_heading::before {
-    content: '_';
   }
   main.landing_page hr {
     margin: 0 1.5rem;
@@ -162,10 +151,7 @@ div.homepage_down_arrow {
 
 /* desktop */
 @media (min-width: 1000px) {
-  h1.first_name_heading {
-    font-size: 4rem;
-  }
-  h1.last_name_heading {
+  h1.name_heading {
     font-size: 4rem;
   }
   ul.personal_description > li {
@@ -175,10 +161,7 @@ div.homepage_down_arrow {
 
 /* extra large */
 @media (min-width: 1500px) {
-  h1.first_name_heading {
-    font-size: 5.5rem;
-  }
-  h1.last_name_heading {
+  h1.name_heading {
     font-size: 5.5rem;
   }
   ul.personal_description > li {
