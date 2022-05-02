@@ -112,7 +112,7 @@ main.contact .contact_form_icons {
   }
   main.contact h1 {
     position: absolute;
-    top: 1rem;
+    top: 4rem;
     /* font-size: 5rem; */
     text-transform: uppercase;
   }
@@ -181,10 +181,11 @@ main.contact .contact_form_icons {
 
 @media (max-width: 500px) {
   main.contact h1 {
-    /* font-size: 4rem; */
+    top: 5rem;
+    /* font-size: 5rem; */
   }
   main.contact hr {
-    top: 5rem;
+    top: 6rem;
   }
 }
 

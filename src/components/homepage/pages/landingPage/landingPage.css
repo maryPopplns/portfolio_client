@@ -17,7 +17,6 @@ main.landing_page {
 }
 h1.name_heading {
   font-family: 'archivoRegular';
-  line-height: 5rem;
 }
 ul.personal_description li {
   font-family: 'archivoThin';
@@ -41,27 +40,27 @@ div.homepage_down_arrow {
 /* mobile */
 @media (max-width: 799px) {
   main.landing_page {
+    position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
   }
   h1.name_heading {
-    margin-top: 2rem;
+    position: absolute;
+    top: 5rem;
     /* font-size: 3rem; */
-    line-height: 5rem;
     text-transform: uppercase;
   }
   main.landing_page hr {
+    position: absolute;
+    top: 7rem;
     width: 60vw;
     transition: all 1s;
     background-color: white;
   }
   /* personal descriptions */
-  ul.personal_description {
-    margin-top: 20vh;
-    height: 100vh;
-  }
   ul.personal_description > li {
     margin: 1rem 0;
     font-size: 1.5rem;
@@ -92,9 +91,13 @@ div.homepage_down_arrow {
   }
 }
 
-@media (max-width: 499px) {
+@media (max-width: 500px) {
+  h1.name_heading {
+    top: 5rem;
+  }
   main.landing_page hr {
     width: 70vw;
+    top: 6rem;
   }
 }
 

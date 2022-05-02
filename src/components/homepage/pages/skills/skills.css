@@ -50,7 +50,7 @@ main.skills img.technology_icon_fade {
   /* skills header */
   main.skills h1 {
     position: absolute;
-    top: 1rem;
+    top: 4rem;
     margin-bottom: 0.5rem;
     /* font-size: 5rem; */
     text-transform: uppercase;
@@ -85,10 +85,10 @@ main.skills img.technology_icon_fade {
 /* mobile: after 799 on purpose */
 @media (max-width: 500px) {
   main.skills h1 {
-    /* font-size: 4rem; */
+    top: 5rem;
   }
   main.skills hr {
-    top: 5rem;
+    top: 6rem;
     width: 70%;
   }
   main.skills ul {
