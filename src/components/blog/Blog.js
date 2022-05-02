@@ -1,16 +1,13 @@
 import './blog.css';
 import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Categories from './subcomponents/categories/Categories';
-import { setCurrentPage } from '../../store/slices/currentPage';
-
 import BlogPostTile from './subcomponents/blogPostTile/BlogPostTile';
 
 function Blog() {
   const allPosts = useSelector((state) => state.posts.value);
   const [showingPosts, setShowingPosts] = useState([]);
   const [categories, setCategories] = useState([]);
-  const dispatch = useDispatch();
 
   useEffect(() => {
     // isolate unique categories
@@ -23,8 +20,7 @@ function Blog() {
     navbar.classList.add('show_navbar');
     // set default blog category
     setShowingPosts(allPosts);
-    dispatch(setCurrentPage('blog'));
-  }, [dispatch, allPosts]);
+  }, [allPosts]);
 
   const posts = showingPosts.map(({ _id, title, date, category }) => (
     <BlogPostTile title={title} date={date} category={category} key={_id} />
