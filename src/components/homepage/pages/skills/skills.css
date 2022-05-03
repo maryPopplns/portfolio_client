@@ -50,14 +50,14 @@ main.skills img.technology_icon_fade {
   /* skills header */
   main.skills h1 {
     position: absolute;
-    top: 4rem;
-    /* font-size: 5rem; */
+    top: 6rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
   }
   main.skills hr {
     position: absolute;
-    top: 6rem;
-    width: 60vw;
+    top: 8.5rem;
+    width: 350px;
     transition: all 1s;
   }
   main.skills hr.title_skills_divisor_shrink {
@@ -89,7 +89,7 @@ main.skills img.technology_icon_fade {
   }
   main.skills hr {
     top: 7rem;
-    width: 90%;
+    width: 290px;
   }
   main.skills ul {
     margin-top: 10rem;

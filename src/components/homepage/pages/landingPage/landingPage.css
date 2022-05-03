@@ -49,14 +49,14 @@ div.homepage_down_arrow {
   }
   h1.name_heading {
     position: absolute;
-    top: calc(4rem + 5px);
-    /* font-size: 3rem; */
+    top: calc(6rem + 5px);
+    font-size: 2.5rem;
     text-transform: uppercase;
   }
   main.landing_page hr {
     position: absolute;
-    top: calc(6rem + 5px);
-    width: 60vw;
+    top: calc(8.5rem + 5px);
+    width: 450px;
     transition: all 1s;
     background-color: white;
   }
@@ -97,7 +97,7 @@ div.homepage_down_arrow {
     font-size: 2rem;
   }
   main.landing_page hr {
-    width: 90vw;
+    width: 380px;
     top: calc(7rem + 5px);
   }
 }
