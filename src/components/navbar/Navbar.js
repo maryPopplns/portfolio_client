@@ -6,6 +6,7 @@ import { setPosts } from '../../store/slices/posts';
 
 function Navbar() {
   const dispatch = useDispatch();
+  // set posts
   useEffect(() => {
     fetch('https://whispering-depths-29284.herokuapp.com/post')
       .then((result) => result.json())
@@ -21,8 +22,6 @@ function Navbar() {
           <rect y='30' width='100' height='15'></rect>
           <rect y='60' width='100' height='15'></rect>
         </svg>
-        {/* sk symbol */}
-        {/* hamburger menu */}
       </nav>
       <Outlet />
     </>

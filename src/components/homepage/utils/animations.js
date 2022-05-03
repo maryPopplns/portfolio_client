@@ -110,16 +110,12 @@ export function contactAnimation() {
 
 export function navbarAnimation() {
   const navbar = document.getElementById('navbar');
-  let oldPosition = 0;
   function navbarHandler(event) {
-    const newPosition = window.pageYOffset;
-    if (oldPosition - newPosition < 0) {
-      navbar.classList.add('show_navbar');
-    } else if (oldPosition - newPosition > 0) {
+    const scrollY = window.scrollY;
+    console.log(scrollY);
+    if (scrollY === 0) {
       navbar.classList.remove('show_navbar');
-    }
-    oldPosition = newPosition;
-    if (window.innerHeight + window.scrollY + 5 >= document.body.offsetHeight) {
+    } else {
       navbar.classList.add('show_navbar');
     }
   }
