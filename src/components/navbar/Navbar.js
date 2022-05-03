@@ -5,6 +5,7 @@ import { setPosts } from '../../store/slices/posts';
 import { useSelector, useDispatch } from 'react-redux';
 
 import closeButton from './closeButton.png';
+import Cursor from '../homepage/cursor/Cursor';
 
 function Navbar() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -24,6 +25,7 @@ function Navbar() {
 
   return (
     <>
+      <Cursor />
       <nav id='navbar'>
         <p>s_k</p>
         <svg

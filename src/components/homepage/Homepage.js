@@ -1,6 +1,5 @@
 import './homepage.css';
 import { useEffect } from 'react';
-import Cursor from './cursor/Cursor';
 import { useDispatch } from 'react-redux';
 import Skills from './pages/skills/Skills';
 import { setCurrentPage } from '../../store/slices/currentPage';
@@ -47,7 +46,6 @@ function Homepage() {
       <LandingPage />
       <Skills />
       <ContactMe />
-      <Cursor />
     </div>
   );
 }

@@ -120,4 +120,7 @@ img[alt='close menu']:hover {
     margin: 1rem 0;
     font-size: 3rem;
   }
+  .mobile_nav_modal {
+    cursor: none;
+  }
 }

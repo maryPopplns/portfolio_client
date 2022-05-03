@@ -89,7 +89,7 @@ main.contact .contact_form_icons {
 } */
 #homepage_linkedin_icon,
 #homepage_github_icon {
-  cursor: crosshair;
+  cursor: pointer;
 }
 .contact_form_response_modal {
   box-sizing: border-box;
@@ -266,7 +266,7 @@ main.contact .contact_form_icons {
     font-size: 1.4rem;
   }
   main.contact button:hover {
-    cursor: crosshair;
+    cursor: pointer;
   }
   main.contact .contact_form_icons {
     display: flex;
