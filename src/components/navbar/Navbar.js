@@ -28,6 +28,7 @@ function Navbar() {
         <p>s_k</p>
         <svg
           onClick={() => setModalOpen(true)}
+          className='hamburger_icon'
           viewBox='0 0 100 80'
           width='40'
           height='40'
@@ -37,8 +38,8 @@ function Navbar() {
           <rect y='60' width='100' height='15'></rect>
         </svg>
       </nav>
-      {/* mobile modal */}
 
+      {/* mobile modal */}
       <div
         className={`mobile_nav_modal ${modalOpen && 'mobile_nav_modal_open'}`}
       >
