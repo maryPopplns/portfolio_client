@@ -1,7 +1,9 @@
 import './homepage.css';
 import { useEffect } from 'react';
 import Cursor from './cursor/Cursor';
+import { useDispatch } from 'react-redux';
 import Skills from './pages/skills/Skills';
+import { setCurrentPage } from '../../store/slices/currentPage';
 import ContactMe from './pages/contactMe/ContactMe';
 import LandingPage from './pages/landingPage/LandingPage';
 
@@ -23,6 +25,12 @@ function Homepage() {
     skillsAnimation();
     contactAnimation();
   }, []);
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    // set page
+    dispatch(setCurrentPage('home'));
+  }, [dispatch]);
 
   useEffect(() => {
     // hide navbar

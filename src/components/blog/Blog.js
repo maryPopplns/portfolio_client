@@ -1,13 +1,20 @@
 import './blog.css';
 import { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import Categories from './subcomponents/categories/Categories';
+import { setCurrentPage } from '../../store/slices/currentPage';
 import BlogPostTile from './subcomponents/blogPostTile/BlogPostTile';
 
 function Blog() {
   const allPosts = useSelector((state) => state.posts.value);
   const [showingPosts, setShowingPosts] = useState([]);
   const [categories, setCategories] = useState([]);
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    // set page
+    dispatch(setCurrentPage('blog'));
+  }, [dispatch]);
 
   useEffect(() => {
     // isolate unique categories

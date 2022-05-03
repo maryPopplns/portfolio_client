@@ -112,7 +112,6 @@ export function navbarAnimation() {
   const navbar = document.getElementById('navbar');
   function navbarHandler(event) {
     const scrollY = window.scrollY;
-    console.log(scrollY);
     if (scrollY === 0) {
       navbar.classList.remove('show_navbar');
     } else {
