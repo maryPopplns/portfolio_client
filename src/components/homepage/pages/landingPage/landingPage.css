@@ -49,13 +49,13 @@ div.homepage_down_arrow {
   }
   h1.name_heading {
     position: absolute;
-    top: 5rem;
+    top: calc(4rem + 5px);
     /* font-size: 3rem; */
     text-transform: uppercase;
   }
   main.landing_page hr {
     position: absolute;
-    top: 7rem;
+    top: calc(6rem + 5px);
     width: 60vw;
     transition: all 1s;
     background-color: white;
@@ -93,11 +93,12 @@ div.homepage_down_arrow {
 
 @media (max-width: 500px) {
   h1.name_heading {
-    top: 5rem;
+    top: calc(5rem + 5px);
+    font-size: 2rem;
   }
   main.landing_page hr {
-    width: 70vw;
-    top: 6rem;
+    width: 90vw;
+    top: calc(7rem + 5px);
   }
 }
 

@@ -84,9 +84,9 @@ main.contact button:hover {
 main.contact .contact_form_icons {
   width: 100%;
 }
-.contact_form_icons a {
-  cursor: none;
-}
+/* .contact_form_icons a {
+  cursor: auto;
+} */
 #homepage_linkedin_icon,
 #homepage_github_icon {
   cursor: crosshair;
@@ -164,6 +164,10 @@ main.contact .contact_form_icons {
     justify-content: center;
     margin-top: 2rem;
   }
+  #homepage_linkedin_icon,
+  #homepage_github_icon {
+    cursor: pointer;
+  }
   .contact_form_icons img {
     margin: 0 1rem;
     height: 5rem;
@@ -182,10 +186,14 @@ main.contact .contact_form_icons {
 @media (max-width: 500px) {
   main.contact h1 {
     top: 5rem;
-    /* font-size: 5rem; */
+    font-size: 2rem;
   }
   main.contact hr {
-    top: 6rem;
+    top: 7rem;
+    width: 90%;
+  }
+  #contact_form_container {
+    margin-top: 5rem;
   }
 }
 
@@ -264,6 +272,9 @@ main.contact .contact_form_icons {
     display: flex;
     justify-content: center;
     margin-top: 3rem;
+  }
+  .contact_form_icons a {
+    cursor: none;
   }
   .contact_form_icons img {
     margin: 0 2rem;

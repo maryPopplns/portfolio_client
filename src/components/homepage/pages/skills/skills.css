@@ -51,7 +51,6 @@ main.skills img.technology_icon_fade {
   main.skills h1 {
     position: absolute;
     top: 4rem;
-    margin-bottom: 0.5rem;
     /* font-size: 5rem; */
     text-transform: uppercase;
   }
@@ -86,13 +85,14 @@ main.skills img.technology_icon_fade {
 @media (max-width: 500px) {
   main.skills h1 {
     top: 5rem;
+    font-size: 2rem;
   }
   main.skills hr {
-    top: 6rem;
-    width: 70%;
+    top: 7rem;
+    width: 90%;
   }
   main.skills ul {
-    margin-top: 6rem;
+    margin-top: 10rem;
   }
   main.skills ul li {
     width: 50%;
@@ -117,7 +117,6 @@ main.skills img.technology_icon_fade {
   }
   main.skills h1 {
     font-size: 3rem;
-    margin-right: 3rem;
   }
   main.skills hr {
     margin: 0 1.5rem;
