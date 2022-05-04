@@ -29,14 +29,13 @@ function Blog() {
     setShowingPosts(allPosts);
   }, [allPosts]);
 
-  const posts = showingPosts.map(({ _id, title, date, category }) => (
-    <BlogPostTile title={title} date={date} category={category} key={_id} />
-  ));
+  const posts = showingPosts.map(({ _id, title, date }) => (
+    <BlogPostTile title={title} date={date} key={_id} />
+  )); // TODO reverse the array to have most recent ones first
 
   return (
     <div className='blog'>
       <h1 className='blogHeading'>blog</h1>
-      {/* <hr /> */}
       <Categories setShowingPosts={setShowingPosts} categories={categories} />
       <ul className='blogPostContainer'>{posts}</ul>
     </div>

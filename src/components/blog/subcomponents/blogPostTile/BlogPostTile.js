@@ -1,17 +1,29 @@
 import './blogPostTile.css';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
-// function BlogPostTile() {
-function BlogPostTile({ title, date, category }) {
-  // const newDate = new Date(date);
-  // const month = newDate.toISOString();
-  // console.log(month);
+function BlogPostTile({ title, date: inputDate }) {
+  const [date, setDate] = useState();
+  useEffect(() => {
+    const newDate = new Date(inputDate);
+    const month = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(
+      newDate
+    );
+    const year = newDate.getFullYear();
+    const day = newDate.getDate();
+    setDate(`${day} ${month} ${year}`);
+  }, [inputDate]);
+
+  console.log(date);
   return (
-    <div className='blogPostTile'>
-      <div>{title}</div>
-      {/* <div>{date}</div> */}
-      <div>{category}</div>
-    </div>
+    <Link to='' className='blogPostTile'>
+      <h2>{title}</h2>
+      <p>{date}</p>
+      <div className='blogPostTileContainer'>
+        <button>read ></button>
+      </div>
+    </Link>
   );
 }
 

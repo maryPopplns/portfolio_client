@@ -52,9 +52,6 @@ function Categories({ setShowingPosts, categories }) {
     setPosts(categoryComponents);
   }, [categories, allPosts, setShowingPosts]);
 
-  console.log(categoriesWidth);
-  console.log(windowWidth);
-
   return (
     <ul ref={containerRef} id='categories'>
       {posts}
