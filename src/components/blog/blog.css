@@ -78,9 +78,6 @@ ul.blogPostContainer::-webkit-scrollbar-thumb {
     margin-top: 2rem;
     font-size: 5rem;
   }
-  h1.blogHeading p {
-    /* margin: -2px; */
-  }
 }
 
 @media (min-width: 1100px) {

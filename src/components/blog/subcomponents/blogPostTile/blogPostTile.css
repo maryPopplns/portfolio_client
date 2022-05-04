@@ -26,6 +26,7 @@ a.blogPostTile {
 }
 a.blogPostTile h2 {
   font-family: archivoRegular;
+  line-height: 2.25rem;
 }
 a.blogPostTile h2::first-letter {
   text-transform: capitalize;
@@ -60,7 +61,7 @@ a.blogPostTile button:hover {
 @media (max-width: 799px) {
   a.blogPostTile {
     height: 15rem;
-    width: 90%;
+    width: 90vw;
     max-width: 450px;
   }
   a.blogPostTile h2 {
@@ -89,7 +90,7 @@ a.blogPostTile button:hover {
 
 @media (min-width: 800px) {
   a.blogPostTile {
-    width: 45%;
+    width: 45vw;
   }
   a.blogPostTile h2 {
     font-size: 1.75rem;
@@ -97,5 +98,14 @@ a.blogPostTile button:hover {
   a.blogPostTile p {
     font-size: 1rem;
     margin-top: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  a.blogPostTile {
+    width: 30vw;
+  }
+  a.blogPostTile h2 {
+    font-size: 2rem;
   }
 }
