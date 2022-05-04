@@ -7,8 +7,8 @@ function Category({ category, setShowingPosts, categoryPosts }) {
   const dispatch = useDispatch();
   const isSelected = currentCategory === category;
   const currentlySelected = {
-    color: '#32a893',
-    borderColor: '#32a893',
+    color: '#00A36C',
+    borderColor: '#00A36C',
     backgroundColor: 'black',
   };
   function clickHandler() {

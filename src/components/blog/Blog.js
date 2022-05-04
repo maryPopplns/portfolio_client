@@ -35,13 +35,8 @@ function Blog() {
 
   return (
     <div className='blog'>
-      <h1 className='blogHeading'>
-        <p>b</p>
-        <p>l</p>
-        <p>o</p>
-        <p>g</p>
-      </h1>
-      <hr />
+      <h1 className='blogHeading'>blog</h1>
+      {/* <hr /> */}
       <Categories setShowingPosts={setShowingPosts} categories={categories} />
       <ul className='blogPostContainer'>{posts}</ul>
     </div>

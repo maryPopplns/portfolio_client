@@ -17,12 +17,13 @@ li.category {
   cursor: pointer;
   border: 3px solid white;
   background-color: black;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   font-family: archivoThin;
   text-transform: uppercase;
   text-align: center;
   transition: all 1s;
   user-select: none;
+  margin: 0.25rem 0.5rem;
 }
 li.category:hover {
   color: black;
@@ -32,19 +33,12 @@ li.category:hover {
 
 @media (max-width: 799px) {
   li.category {
-    margin: 0.25rem 0.5rem;
     font-size: 0.9rem;
   }
 }
 @media (max-width: 499px) {
   li.category {
     font-size: 0.8rem;
-  }
-}
-
-@media (min-width: 800px) {
-  li.category {
-    margin: 0.5rem 0;
   }
 }
 

@@ -25,12 +25,6 @@ li#personal_description_veteran {
   display: flex;
   justify-content: center;
 }
-li#personal_description_veteran div:nth-child(1) {
-  color: rgb(255, 135, 157);
-}
-li#personal_description_veteran div:nth-child(3) {
-  color: rgb(159, 135, 255);
-}
 div.homepage_down_arrow {
   display: inline-block;
   border: solid white;

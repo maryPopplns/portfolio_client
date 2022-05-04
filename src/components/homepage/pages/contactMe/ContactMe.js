@@ -10,8 +10,8 @@ function ContactMe() {
   const [response, setResponse] = useState(0);
 
   const responseStyle = {
-    border: response === 200 ? '3px solid green' : '3px solid red',
-    color: response === 200 ? 'green' : 'red',
+    border: response === 200 ? '3px solid #00A36C' : '3px solid #b22234',
+    color: response === 200 ? '#00A36C' : '#b22234',
     display: 'flex',
   };
 
@@ -36,6 +36,7 @@ function ContactMe() {
         setMessage('');
       }, 3000);
     }
+
     fetch('https://whispering-depths-29284.herokuapp.com/contact', {
       method: 'POST',
       headers: {
