@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
-function BlogPostTile({ title, date: inputDate }) {
+function BlogPostTile({ title, date: inputDate, id }) {
   const [date, setDate] = useState();
   useEffect(() => {
     const newDate = new Date(inputDate);
@@ -15,9 +15,8 @@ function BlogPostTile({ title, date: inputDate }) {
     setDate(`${day} ${month} ${year}`);
   }, [inputDate]);
 
-  console.log(date);
   return (
-    <Link to='' className='blogPostTile'>
+    <Link to={id} className='blogPostTile'>
       <h2>{title}</h2>
       <p>{date}</p>
       <div className='blogPostTileContainer'>

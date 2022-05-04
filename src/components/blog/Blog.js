@@ -30,7 +30,7 @@ function Blog() {
   }, [allPosts]);
 
   const posts = showingPosts.map(({ _id, title, date }) => (
-    <BlogPostTile title={title} date={date} key={_id} />
+    <BlogPostTile title={title} date={date} key={_id} id={_id} />
   )); // TODO reverse the array to have most recent ones first
 
   return (
