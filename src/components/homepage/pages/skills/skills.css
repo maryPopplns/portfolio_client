@@ -13,9 +13,10 @@
 main.skills {
   height: 100vh;
   margin-bottom: 75vh;
-  background-color: black;
   color: white;
   border-top: 5px solid white;
+  background-color: #2d3c40;
+  background-image: linear-gradient(0deg, #2a2e2e 0%, #000000 100%);
 }
 main.hide_page_division {
   border-top: 5px solid black;

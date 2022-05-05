@@ -7,6 +7,7 @@ import Blog from './components/blog/Blog';
 import Navbar from './components/navbar/Navbar';
 import reportWebVitals from './reportWebVitals';
 import Homepage from './components/homepage/Homepage';
+import ReadBlog from './components/readBlog/ReadBlog';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 ReactDOM.render(
@@ -17,6 +18,7 @@ ReactDOM.render(
           <Route path='/' element={<Navbar />}>
             <Route index element={<Homepage />} />
             <Route path='blog' element={<Blog />} />
+            <Route path='blog/:blogID' element={<ReadBlog />} />
           </Route>
         </Routes>
       </BrowserRouter>

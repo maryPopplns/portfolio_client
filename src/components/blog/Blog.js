@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Categories from './subcomponents/categories/Categories';
 import { setCurrentPage } from '../../store/slices/currentPage';
+import { setCurrentCategory } from '../../store/slices/currentCategory';
 import BlogPostTile from './subcomponents/blogPostTile/BlogPostTile';
 
 function Blog() {
@@ -14,6 +15,8 @@ function Blog() {
   useEffect(() => {
     // set page
     dispatch(setCurrentPage('blog'));
+    // set category
+    dispatch(setCurrentCategory('all'));
   }, [dispatch]);
 
   useEffect(() => {

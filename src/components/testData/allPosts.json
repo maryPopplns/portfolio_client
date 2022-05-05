@@ -3,7 +3,6 @@
     "_id": "62609162365618a9b57359f5",
     "title": "new post title 2",
     "body": "new post body 2",
-    "likes": 0,
     "comments": [],
     "category": "fitness",
     "showing": false,
@@ -14,7 +13,6 @@
     "_id": "62609173365618a9b57359f8",
     "title": "asdfsa",
     "body": "fsadfsadf",
-    "likes": 0,
     "comments": [],
     "category": "testing",
     "showing": false,
@@ -25,12 +23,11 @@
     "_id": "6260740fc3125c4a6d10c5da",
     "title": "post title",
     "body": "post body",
-    "likes": 0,
+
     "comments": [
       {
         "_id": "6260c83d0af77f766f04879d",
         "comment": "this comment is going to be really long. this will hopefully show what it will look like when the text needs to wrap for the mobile view. first comment.",
-        "likes": 0,
         "post": "6260740fc3125c4a6d10c5da",
         "user": "6260907da456ced03c9415e9",
         "date": "2022-04-21T02:58:05.798Z",
@@ -39,7 +36,6 @@
       {
         "_id": "6260c85b0af77f766f0487a2",
         "comment": "this comment is going to be really long. this will hopefully show what it will look like when the text needs to wrap for the mobile view. second comment.",
-        "likes": 0,
         "post": "6260740fc3125c4a6d10c5da",
         "user": "6260907da456ced03c9415e9",
         "date": "2022-04-21T02:58:35.813Z",
@@ -48,7 +44,6 @@
       {
         "_id": "6260c85c0af77f766f0487a7",
         "comment": "this comment is going to be really long. this will hopefully show what it will look like when the text needs to wrap for the mobile view. third comment.",
-        "likes": 0,
         "post": "6260740fc3125c4a6d10c5da",
         "user": "6260907da456ced03c9415e9",
         "date": "2022-04-21T02:58:36.995Z",
@@ -57,7 +52,6 @@
       {
         "_id": "6260c85e0af77f766f0487ac",
         "comment": "this comment is going to be really long. this will hopefully show what it will look like when the text needs to wrap for the mobile view. fourth comment.",
-        "likes": 0,
         "post": "6260740fc3125c4a6d10c5da",
         "user": "6260907da456ced03c9415e9",
         "date": "2022-04-21T02:58:38.037Z",
