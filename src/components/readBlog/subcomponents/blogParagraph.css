@@ -1,0 +1,14 @@
+/* font */
+@font-face {
+  font-family: 'archivoThin';
+  src: url('../../../fonts/ArchivoNarrow-VariableFont_wght.ttf')
+    format('truetype');
+}
+
+.blogPostParagraph {
+  display: flex;
+  color: white;
+  margin-top: 0.5rem;
+  text-indent: 2rem;
+  font-family: archivoThin;
+}

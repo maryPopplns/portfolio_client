@@ -1,13 +1,13 @@
-.homepageContainer {
-  user-select: none;
-}
-
 ::-webkit-scrollbar {
   width: 10px;
   background: white;
 }
 ::-webkit-scrollbar-thumb {
   background: black;
+}
+
+.homepageContainer {
+  user-select: none;
 }
 
 @media (min-width: 800px) {
