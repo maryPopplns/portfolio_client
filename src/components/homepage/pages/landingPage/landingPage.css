@@ -102,6 +102,17 @@ div.homepage_down_arrow {
     top: calc(7rem + 5px);
   }
 }
+@media (max-height: 500px) and (max-width: 799px) {
+  h1.name_heading {
+    top: 4rem;
+  }
+  main.landing_page hr {
+    top: 6.5rem;
+  }
+  main.landing_page .personal_description {
+    margin-top: 5rem;
+  }
+}
 
 /* tablet */
 @media (min-width: 800px) {
