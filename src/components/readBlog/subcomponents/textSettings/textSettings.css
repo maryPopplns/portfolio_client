@@ -1,0 +1,33 @@
+.settingsContainer {
+  display: none;
+  justify-content: space-around;
+  width: 100vw;
+  height: 0;
+  padding: 1rem;
+  background-color: black;
+  box-sizing: border-box;
+  transition: all 1s;
+}
+.settingsContainerOpen {
+  display: flex;
+  height: auto;
+}
+
+.settingsContainer ul,
+.settingsContainer ul li label,
+.settingsContainer ul li input {
+  display: inherit;
+  align-items: center;
+}
+.setting {
+  display: inherit;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 500px) {
+  .settingsContainer label {
+    font-size: 0.8rem;
+  }
+}

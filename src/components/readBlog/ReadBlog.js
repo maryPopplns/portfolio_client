@@ -5,13 +5,14 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import BlogParagraph from './subcomponents/BlogParagraph';
+import TextSettings from './subcomponents/textSettings/TextSettings';
 
 function ReadBlog() {
   const allPosts = useSelector((state) => state.posts.value);
   const { blogID } = useParams();
   const [date, setDate] = useState();
   const [color, setColor] = useState('white');
-  const [fontSize, setFontSize] = useState(18);
+  const [fontSize, setFontSize] = useState(16);
   const [lineHeight, setLineHeight] = useState(24);
   const [backgroundColor, setBackgroundColor] = useState('black');
   const {
@@ -25,6 +26,12 @@ function ReadBlog() {
     .filter((paragraph) => paragraph !== '');
 
   useEffect(() => {
+    // show navbar
+    const navbar = document.getElementById('navbar');
+    navbar.classList.add('show_navbar');
+  }, []);
+
+  useEffect(() => {
     const newDate = new Date(inputDate);
     const month = new Intl.DateTimeFormat('en-US', { month: 'long' }).format(
       newDate
@@ -33,11 +40,7 @@ function ReadBlog() {
     const day = newDate.getDate();
     setDate(`${day} ${month} ${year}`);
   }, [inputDate]);
-  useEffect(() => {
-    // show navbar
-    const navbar = document.getElementById('navbar');
-    navbar.classList.add('show_navbar');
-  }, []);
+
   useEffect(() => {
     const conversion = (fontSize * 3) / 2;
     setLineHeight(conversion);
@@ -57,6 +60,11 @@ function ReadBlog() {
 
   return (
     <div style={{ backgroundColor }} className='readBlog'>
+      <TextSettings
+        setColor={setColor}
+        setFontSize={setFontSize}
+        setBackgroundColor={setBackgroundColor}
+      />
       <h1>{title}</h1>
       <p className='readBlogDate'>- {date} -</p>
       <div className='bodyParagraphs' style={bodyParagraphsStyle}>

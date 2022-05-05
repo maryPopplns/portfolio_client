@@ -10,14 +10,13 @@
   align-items: center;
   color: white;
   font-family: archivoRegular;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .readBlog h1 {
-  margin: 2rem 0;
+  margin-top: 2rem;
   text-align: center;
   text-transform: capitalize;
-}
-.readBlogDate {
-  margin: 2rem 0;
 }
 .bodyParagraphs {
   width: 100vw;
@@ -43,6 +42,9 @@
     font-size: 2rem;
     line-height: 2.5rem;
   }
+  .readBlogDate {
+    margin: 3rem 0;
+  }
   .bodyParagraphs {
     min-height: calc(100vh - 3rem);
   }
@@ -52,6 +54,9 @@
   .readBlog {
     margin-top: 3.5rem;
     min-height: calc(100vh - 3.5rem);
+  }
+  .readBlogDate {
+    margin: 3rem 0;
   }
 }
 
@@ -63,6 +68,9 @@
     font-size: 3rem;
     line-height: 3.5rem;
     max-width: 1200px;
+  }
+  .readBlogDate {
+    margin: 4rem 0;
   }
   .bodyParagraphs {
     padding-left: 1rem;
