@@ -108,6 +108,15 @@ main.skills img.technology_icon_fade {
   }
 }
 
+@media (max-height: 500px) and (max-width: 799px) {
+  main.skills h1 {
+    top: 4rem;
+  }
+  main.skills hr {
+    top: 6.5rem;
+  }
+}
+
 /* tablet */
 @media (min-width: 800px) {
   main.skills {

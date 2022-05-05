@@ -166,10 +166,6 @@ main.contact .contact_form_icons {
     justify-content: center;
     margin-top: 2rem;
   }
-  #homepage_linkedin_icon,
-  #homepage_github_icon {
-    cursor: pointer;
-  }
   .contact_form_icons img {
     margin: 0 1rem;
     height: 5rem;
@@ -199,7 +195,8 @@ main.contact .contact_form_icons {
   }
 }
 
-@media (max-height: 500px) {
+/* mobile view when keyboard is open */
+@media (max-height: 500px) and (max-width: 500px) {
   main.contact form {
     border: none;
   }
@@ -217,6 +214,29 @@ main.contact .contact_form_icons {
   }
   button {
     display: none;
+  }
+}
+
+/* landscape */
+@media (max-height: 500px) and (max-width: 799px) {
+  main.contact h1 {
+    top: 4rem;
+  }
+  main.contact hr {
+    top: 6.5rem;
+  }
+  main.contact form {
+    margin-top: 4rem;
+    border: none;
+  }
+  main.contact label {
+    display: none;
+  }
+  main.contact .contact_form_icons {
+    margin: 0;
+  }
+  main.contact .contact_form_icons img {
+    height: 3rem;
   }
 }
 
@@ -291,6 +311,22 @@ main.contact .contact_form_icons {
     color: white;
     background-color: black;
     font-size: 1.5rem;
+  }
+}
+
+/* long landscape */
+@media (max-height: 500px) and (min-width: 800px) {
+  #message {
+    height: 1.5rem;
+  }
+  main.contact form {
+    margin-top: 3rem;
+  }
+  main.contact .contact_form_icons {
+    margin-top: 0.5rem;
+  }
+  main.contact .contact_form_icons img {
+    height: 3rem;
   }
 }
 

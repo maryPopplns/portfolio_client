@@ -102,6 +102,7 @@ div.homepage_down_arrow {
     top: calc(7rem + 5px);
   }
 }
+/* landscape */
 @media (max-height: 500px) and (max-width: 799px) {
   h1.name_heading {
     top: 4rem;
@@ -110,7 +111,7 @@ div.homepage_down_arrow {
     top: 6.5rem;
   }
   main.landing_page .personal_description {
-    margin-top: 5rem;
+    margin-top: 4rem;
   }
 }
 
