@@ -1,12 +1,23 @@
+/* fonts */
+@font-face {
+  font-family: 'archivoRegular';
+  src: url('../../../../fonts/ArchivoBlack-Regular.ttf') format('truetype');
+}
+
+.settingsButton {
+  color: white;
+  background-color: black;
+  border: 2px solid white;
+  padding: 1rem 5rem;
+  font-family: archivoRegular;
+}
+
 .settingsContainer {
   display: none;
-  justify-content: space-around;
   width: 100vw;
   height: 0;
   padding: 1rem;
-  background-color: black;
   box-sizing: border-box;
-  transition: all 1s;
 }
 .settingsContainerOpen {
   display: flex;
@@ -26,8 +37,40 @@
   align-items: center;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 799px) {
+  .settingsContainer {
+    justify-content: center;
+    gap: 2rem;
+  }
   .settingsContainer label {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .settingsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .setting {
+    flex-direction: row;
+    width: 60%;
+  }
+  .settingsContainer label {
+    width: 50%;
     font-size: 0.8rem;
+  }
+  .settingsContainer input {
+    width: 50%;
+  }
+}
+
+@media (min-width: 800px) {
+  .settingsContainer {
+    justify-content: center;
+    gap: 3rem;
+  }
+  .settingsContainer label {
+    margin-bottom: 0.5rem;
   }
 }

@@ -22,7 +22,6 @@ function TextSettings({ setBackgroundColor, setFontSize, setColor }) {
 
   return (
     <>
-      <button onClick={() => setIsOpen((prev) => !prev)}>settings</button>
       <ul className={`settingsContainer ${isOpen && 'settingsContainerOpen'}`}>
         <li className='setting'>
           <label htmlFor='backgroundColor'>background-color</label>
