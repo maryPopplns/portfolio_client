@@ -16,14 +16,17 @@ p.postComment::first-letter {
   text-transform: capitalize;
 }
 
+p.postComment {
+  font-family: archivoThin;
+}
 p.postDate {
+  font-family: archivoThin;
   margin-top: 0.5rem;
 }
 
 @media (max-width: 500px) {
   p.postComment {
     font-size: 1.2rem;
-    font-family: archivoThin;
   }
   p.postDate {
     font-size: 0.6rem;
@@ -33,7 +36,6 @@ p.postDate {
 @media (min-width: 501px) {
   p.postComment {
     font-size: 1.5rem;
-    font-family: archivoThin;
   }
   p.postDate {
     font-size: 0.8rem;
