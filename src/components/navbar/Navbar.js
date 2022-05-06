@@ -34,6 +34,7 @@ function Navbar() {
           viewBox='0 0 100 80'
           width='40'
           height='40'
+          data-testid='hamburgerMenuIcon'
         >
           <rect width='100' height='15'></rect>
           <rect y='30' width='100' height='15'></rect>
@@ -41,8 +42,8 @@ function Navbar() {
         </svg>
       </nav>
 
-      {/* mobile modal */}
       <div
+        data-testid='navigationModal'
         className={`mobile_nav_modal ${modalOpen && 'mobile_nav_modal_open'}`}
       >
         <ul>

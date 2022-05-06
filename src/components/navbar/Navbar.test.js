@@ -51,78 +51,47 @@ describe('navbar', () => {
   afterEach(() => server.resetHandlers());
   afterAll(() => server.close());
 
-  describe('button text', () => {
-    test('blog link', () => {
-      setup();
-      const blogLink = screen.getByRole('link', { name: /blog/i });
-      expect(blogLink).toBeInTheDocument();
-    });
-    test('projects link', () => {
-      setup();
-      const projectsLink = screen.getByRole('link', { name: /projects/i });
-      expect(projectsLink).toBeInTheDocument();
-    });
-  });
-  describe('blog hover effects', () => {
-    test('adds hovered class when hovered', () => {
-      setup();
-      const blogLink = screen.getByRole('link', { name: /blog/i });
-      userEvent.hover(blogLink);
-      expect(blogLink).toHaveClass('navbarHovered');
-    });
-    test('should remove hovered class when unhovered', () => {
-      setup();
-      const blogLink = screen.getByRole('link', { name: /blog/i });
-      userEvent.hover(blogLink);
-      expect(blogLink).toHaveClass('navbarHovered');
-      userEvent.unhover(blogLink);
-      expect(blogLink).not.toHaveClass('navbarHovered');
-    });
-  });
-  describe('projects hover effects', () => {
-    test('adds hovered class when hovered', () => {
-      setup();
-      const projectsLink = screen.getByRole('link', { name: /projects/i });
-      userEvent.hover(projectsLink);
-      expect(projectsLink).toHaveClass('navbarHovered');
-    });
-    test('should remove hovered class when unhovered', () => {
-      setup();
-      const projectsLink = screen.getByRole('link', { name: /projects/i });
-      userEvent.hover(projectsLink);
-      expect(projectsLink).toHaveClass('navbarHovered');
-      userEvent.unhover(projectsLink);
-      expect(projectsLink).not.toHaveClass('navbarHovered');
-    });
-  });
-  describe('home hover effects', () => {
-    test('adds hovered class when hovered', async () => {
-      setup();
-      const blogLink = screen.getByRole('link', { name: /blog/i });
-      userEvent.click(blogLink);
+  test('menu modal opens', () => {
+    setup();
+    const hamburgerIcon = screen.getByTestId('hamburgerMenuIcon');
+    userEvent.click(hamburgerIcon);
 
-      const homeLink = screen.getByRole('link', { name: 'home' });
-      expect(homeLink).toBeInTheDocument();
-      userEvent.hover(homeLink);
-      expect(homeLink).toHaveClass('navbarHovered');
-    });
-    test('should remove hovered class when unhovered', () => {
-      setup();
-      const blogLink = screen.getByRole('link', { name: /blog/i });
-      userEvent.click(blogLink);
-
-      const homeLink = screen.getByRole('link', { name: 'home' });
-      userEvent.hover(homeLink);
-      expect(homeLink).toHaveClass('navbarHovered');
-      userEvent.unhover(homeLink);
-      expect(homeLink).not.toHaveClass('navbarHovered');
-    });
+    const menu = screen.getByTestId('navigationModal');
+    expect(menu).toHaveClass('mobile_nav_modal_open');
   });
-  describe('data', () => {
-    test.skip('pulls data from api', () => {
-      setup();
-      // TODO finish test once blog component is complete
-      // just load component, click blog link ,data is loaded at top of file, then just assert that the title is present
+  test('close button closes modal', () => {
+    setup();
+    const hamburgerIcon = screen.getByTestId('hamburgerMenuIcon');
+    userEvent.click(hamburgerIcon);
+
+    const closeButton = screen.getByAltText('close menu');
+    userEvent.click(closeButton);
+
+    const menu = screen.getByTestId('navigationModal');
+    expect(menu).not.toHaveClass('mobile_nav_modal_open');
+  });
+  test('clicking link closes modal', () => {
+    setup();
+    const hamburgerIcon = screen.getByTestId('hamburgerMenuIcon');
+    userEvent.click(hamburgerIcon);
+
+    const homeLink = screen.getByRole('link', { name: '- home -' });
+    userEvent.click(homeLink);
+
+    const menu = screen.getByTestId('navigationModal');
+    expect(menu).not.toHaveClass('mobile_nav_modal_open');
+  });
+  test('updated allPosts', async () => {
+    setup();
+    const hamburgerIcon = screen.getByTestId('hamburgerMenuIcon');
+    userEvent.click(hamburgerIcon);
+
+    const blogLink = screen.getByRole('link', { name: '- blog -' });
+    userEvent.click(blogLink);
+
+    await waitFor(() => {
+      const heading = screen.getByRole('heading', { name: 'test title' });
+      expect(heading).toBeInTheDocument();
     });
   });
 });
