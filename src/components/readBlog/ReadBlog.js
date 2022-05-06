@@ -11,10 +11,10 @@ function ReadBlog() {
   const allPosts = useSelector((state) => state.posts.value);
   const { blogID } = useParams();
   const [date, setDate] = useState();
-  const [color, setColor] = useState('white');
+  const [color, setColor] = useState('#FFFFFF');
   const [fontSize, setFontSize] = useState(16);
   const [lineHeight, setLineHeight] = useState(24);
-  const [backgroundColor, setBackgroundColor] = useState('black');
+  const [backgroundColor, setBackgroundColor] = useState('#000000');
   const {
     title,
     body,

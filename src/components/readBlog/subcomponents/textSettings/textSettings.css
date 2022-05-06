@@ -13,15 +13,10 @@
 }
 
 .settingsContainer {
-  display: none;
+  display: flex;
   width: 100vw;
-  height: 0;
   padding: 1rem;
   box-sizing: border-box;
-}
-.settingsContainerOpen {
-  display: flex;
-  height: auto;
 }
 
 .settingsContainer ul,
@@ -54,14 +49,13 @@
   }
   .setting {
     flex-direction: row;
-    width: 60%;
+    width: 80%;
   }
   .settingsContainer label {
     width: 50%;
-    font-size: 0.8rem;
   }
   .settingsContainer input {
-    width: 50%;
+    width: 30%;
   }
 }
 
