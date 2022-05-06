@@ -37,6 +37,7 @@
 @media (max-width: 500px) {
   .readBlog {
     margin-top: 3rem;
+    min-height: calc(100vh - 3rem);
   }
   .readBlog h1 {
     font-size: 2rem;
@@ -44,9 +45,6 @@
   }
   .readBlogDate {
     margin: 3rem 0;
-  }
-  .bodyParagraphs {
-    min-height: calc(100vh - 3rem);
   }
 }
 

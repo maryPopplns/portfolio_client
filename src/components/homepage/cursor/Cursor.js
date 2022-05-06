@@ -9,7 +9,6 @@ function Cursor() {
       cursor.style.top = e.clientY + 'px';
     });
   }, []);
-  // TODO make cursor global
   return <div id='cursor'></div>;
 }
 

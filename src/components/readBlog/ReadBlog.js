@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
+import Comments from './subcomponents/comments/Comments';
 import BlogParagraph from './subcomponents/BlogParagraph';
 import TextSettings from './subcomponents/textSettings/TextSettings';
 
@@ -65,11 +66,14 @@ function ReadBlog() {
         setFontSize={setFontSize}
         setBackgroundColor={setBackgroundColor}
       />
-      <h1>{title}</h1>
-      <p className='readBlogDate'>- {date} -</p>
+      <h1 style={{ color }}>{title}</h1>
+      <p style={{ color }} className='readBlogDate'>
+        - {date} -
+      </p>
       <div className='bodyParagraphs' style={bodyParagraphsStyle}>
         {bodyComponents}
       </div>
+      <Comments blogID={blogID} />
     </div>
   );
 }

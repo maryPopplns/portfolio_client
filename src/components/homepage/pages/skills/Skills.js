@@ -12,11 +12,9 @@ import figma from './icons/figma.svg';
 function Skills() {
   return (
     <main className='skills page'>
-      {/* TODO change to proficency */}
       <h1 id='skills_heading'>tech_skills</h1>
       <hr id='title_skills_divisor'></hr>
       <ul>
-        {/* mobile */}
         <li>
           <img className='technology_icon' src={js} alt='javascript icon'></img>
         </li>
@@ -41,7 +39,6 @@ function Skills() {
         <li>
           <img className='technology_icon' src={jest} alt='jest icon'></img>
         </li>
-        {/* tablet */}
         <li>
           <img
             className='technology_icon figma_icon'

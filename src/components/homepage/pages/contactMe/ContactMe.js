@@ -54,6 +54,8 @@ function ContactMe() {
       .catch(() => errorResponse());
   }
 
+  // TODO spinner for form submission
+
   return (
     <main className='contact page'>
       <h1 id='contact_heading'>contact_me</h1>
