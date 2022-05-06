@@ -1,7 +1,7 @@
 [
   {
     "_id": "62609162365618a9b57359f5",
-    "title": "new post title 2",
+    "title": "fitness title",
     "body": "new post body 2",
     "comments": [],
     "category": "fitness",
@@ -11,7 +11,7 @@
   },
   {
     "_id": "62609173365618a9b57359f8",
-    "title": "asdfsa",
+    "title": "testing title",
     "body": "fsadfsadf",
     "comments": [],
     "category": "testing",
@@ -21,7 +21,7 @@
   },
   {
     "_id": "6260740fc3125c4a6d10c5da",
-    "title": "post title",
+    "title": "tech title",
     "body": "post body",
 
     "comments": [
