@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import urlencoded from '../../../../helpers/urlencoded';
 import { setPosts } from '../../../../store/slices/posts';
 
-function Comments({ blogID, comments }) {
+function Comments({ blogID, comments, color }) {
   const [comment, setComment] = useState('');
   const [response, setResponse] = useState(0);
 
@@ -55,7 +55,7 @@ function Comments({ blogID, comments }) {
       }
     )
       .then(({ status }) => {
-        if (status === 200) {
+        if (status === 201 || status === 202) {
           successResponse();
         } else {
           errorResponse();
@@ -64,14 +64,18 @@ function Comments({ blogID, comments }) {
       .catch(() => errorResponse());
   }
 
-  const commentComponents = comments.map((comment) => (
-    <Comment comment={comment} key={comment._id} />
-  ));
+  const commentComponents = comments
+    .map((comment) => (
+      <Comment comment={comment} key={comment._id} color={color} />
+    ))
+    .reverse();
 
   return (
     <>
       <div className='comments'>
-        <h1 className='commentsHeading'>Comments</h1>
+        <h1 style={{ color }} className='commentsHeading'>
+          Comments
+        </h1>
         <form onSubmit={formHandler}>
           <label htmlFor='commentInput'></label>
           <textarea
@@ -84,7 +88,9 @@ function Comments({ blogID, comments }) {
             value={comment}
             required
           ></textarea>
-          <button type='submit'>submit</button>
+          <button style={{ color, borderColor: color }} type='submit'>
+            submit
+          </button>
         </form>
       </div>
       <ul className='postCommentsContainer'>{commentComponents}</ul>
