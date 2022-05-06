@@ -1,8 +1,11 @@
 import './comments.css';
 import { useState } from 'react';
+import Comment from '../comment/Comment';
+import { useDispatch } from 'react-redux';
 import urlencoded from '../../../../helpers/urlencoded';
+import { setPosts } from '../../../../store/slices/posts';
 
-function Comments({ blogID }) {
+function Comments({ blogID, comments }) {
   const [comment, setComment] = useState('');
   const [response, setResponse] = useState(0);
 
@@ -11,6 +14,14 @@ function Comments({ blogID }) {
     color: response === 200 ? '#00A36C' : '#b22234',
     display: 'flex',
   };
+
+  const dispatch = useDispatch();
+  function getPosts() {
+    // set posts
+    fetch('https://whispering-depths-29284.herokuapp.com/post')
+      .then((result) => result.json())
+      .then((posts) => dispatch(setPosts(posts)));
+  }
 
   function formHandler(event) {
     event.preventDefault();
@@ -25,6 +36,7 @@ function Comments({ blogID }) {
     }
     function successResponse() {
       setResponse(200);
+      getPosts();
       // modal timeout
       setTimeout(() => {
         setResponse(0);
@@ -52,22 +64,30 @@ function Comments({ blogID }) {
       .catch(() => errorResponse());
   }
 
+  const commentComponents = comments.map((comment) => (
+    <Comment comment={comment} key={comment._id} />
+  ));
+
   return (
     <>
       <div className='comments'>
+        <h1 className='commentsHeading'>Comments</h1>
         <form onSubmit={formHandler}>
           <label htmlFor='commentInput'></label>
           <textarea
             onChange={({ target }) => setComment(target.value)}
             id='commentInput'
             name='commentInput'
-            placeholder='leave a comment!'
+            placeholder={
+              comments.length ? 'leave a comment!' : 'be the first to comment!'
+            }
             value={comment}
             required
           ></textarea>
           <button type='submit'>submit</button>
         </form>
       </div>
+      <ul className='postCommentsContainer'>{commentComponents}</ul>
       <div
         style={response ? responseStyle : { display: 'none' }}
         className='comment_form_response_modal'

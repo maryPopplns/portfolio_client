@@ -8,6 +8,11 @@ div.comments {
   margin-top: 5rem;
 }
 
+div.comments .commentsHeading {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 div.comments form {
   display: flex;
   flex-direction: column;
@@ -16,6 +21,7 @@ div.comments form {
 
 div.comments button {
   margin-top: 1rem;
+  margin-bottom: 1rem;
   font-family: archivoRegular;
   color: white;
   border: 2px solid white;
@@ -58,6 +64,11 @@ div.comments button:hover {
   font-family: archivoRegular;
   border-radius: 0.5rem;
   text-transform: uppercase;
+}
+
+.postCommentsContainer {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 @media (max-width: 799px) {

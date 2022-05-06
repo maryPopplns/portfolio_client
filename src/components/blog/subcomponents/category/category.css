@@ -19,7 +19,7 @@ li.category {
   background-color: black;
   border-radius: 1.5rem;
   font-family: archivoThin;
-  text-transform: uppercase;
+  text-transform: capitalize;
   text-align: center;
   transition: all 1s;
   user-select: none;

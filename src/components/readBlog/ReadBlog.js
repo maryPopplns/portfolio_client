@@ -73,7 +73,7 @@ function ReadBlog() {
       <div className='bodyParagraphs' style={bodyParagraphsStyle}>
         {bodyComponents}
       </div>
-      <Comments blogID={blogID} />
+      <Comments blogID={blogID} comments={comments} />
     </div>
   );
 }

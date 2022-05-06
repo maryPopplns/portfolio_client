@@ -23,7 +23,9 @@ function TextSettings({ setBackgroundColor, setFontSize, setColor }) {
   return (
     <ul className='settingsContainer'>
       <li className='setting'>
-        <label htmlFor='backgroundColor'>background-color</label>
+        <label style={{ color: currentColor }} htmlFor='backgroundColor'>
+          background-color
+        </label>
         <input
           type='color'
           id='backgroundColor'
@@ -33,7 +35,9 @@ function TextSettings({ setBackgroundColor, setFontSize, setColor }) {
         ></input>
       </li>
       <li className='setting'>
-        <label htmlFor='color'>text-color</label>
+        <label style={{ color: currentColor }} htmlFor='color'>
+          text-color
+        </label>
         <input
           type='color'
           id='color'
@@ -43,7 +47,9 @@ function TextSettings({ setBackgroundColor, setFontSize, setColor }) {
         ></input>
       </li>
       <li className='setting'>
-        <label htmlFor='textSize'>text-size</label>
+        <label style={{ color: currentColor }} htmlFor='textSize'>
+          text-size
+        </label>
         <input
           type='range'
           id='textSize'
