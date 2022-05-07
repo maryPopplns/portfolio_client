@@ -10,9 +10,9 @@ function Comments({ blogID, comments, color }) {
   const [response, setResponse] = useState(0);
 
   const responseStyle = {
-    border: response === 200 ? '3px solid #00A36C' : '3px solid #b22234',
-    color: response === 200 ? '#00A36C' : '#b22234',
     display: 'flex',
+    color: response === 201 ? '#00A36C' : '#b22234',
+    border: response === 201 ? '3px solid #00A36C' : '3px solid #b22234',
   };
 
   const dispatch = useDispatch();
@@ -35,7 +35,7 @@ function Comments({ blogID, comments, color }) {
       }, 3000);
     }
     function successResponse() {
-      setResponse(200);
+      setResponse(201);
       getPosts();
       // modal timeout
       setTimeout(() => {
@@ -88,7 +88,7 @@ function Comments({ blogID, comments, color }) {
             value={comment}
             required
           ></textarea>
-          <button style={{ color, borderColor: color }} type='submit'>
+          <button style={{ borderColor: color }} type='submit'>
             submit
           </button>
         </form>
@@ -99,7 +99,7 @@ function Comments({ blogID, comments, color }) {
         className='comment_form_response_modal'
         data-testid='comment_form_response_modal'
       >
-        {response === 200 ? 'success' : 'retry'}
+        {response === 201 ? 'success' : 'retry'}
       </div>
     </>
   );

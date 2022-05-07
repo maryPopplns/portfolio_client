@@ -19,6 +19,11 @@ main.landing_page {
 h1.name_heading {
   font-family: 'archivoRegular';
 }
+main.landing_page .name_trait_divisor_shrink {
+  visibility: hidden;
+  background-color: black;
+  border-color: black;
+}
 ul.personal_description li {
   font-family: 'archivoThin';
 }
@@ -33,9 +38,13 @@ li#personal_description_veteran div:nth-child(3) {
   color: #3c3b6e;
 }
 div.homepage_down_arrow {
+  position: absolute;
   display: inline-block;
   border: solid white;
   transform: rotate(45deg);
+  border-width: 0 3px 3px 0;
+  padding: 1rem;
+  bottom: 2rem;
 }
 
 /* mobile */
@@ -80,15 +89,6 @@ div.homepage_down_arrow {
   /* hr animation */
   main.landing_page .name_trait_divisor_shrink {
     width: 0rem;
-    background-color: black;
-    border-color: black;
-  }
-  /* down arrow */
-  div.homepage_down_arrow {
-    position: absolute;
-    border-width: 0 3px 3px 0;
-    padding: 1rem;
-    bottom: 2rem;
   }
 }
 
@@ -158,11 +158,6 @@ div.homepage_down_arrow {
   /* hr animation */
   main.landing_page .name_trait_divisor_shrink {
     height: 0rem;
-    background-color: black;
-    border-color: black;
-  }
-  div.homepage_down_arrow {
-    display: none;
   }
 }
 

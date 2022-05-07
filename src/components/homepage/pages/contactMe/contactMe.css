@@ -23,6 +23,7 @@ main.contact hr {
 }
 /* header animation */
 main.contact hr.header_contact_divisor_shrink {
+  visibility: hidden;
   background-color: black;
   border-color: black;
 }
@@ -259,6 +260,7 @@ main.contact .contact_form_icons {
     transition: all 1s;
   }
   main.contact .header_contact_divisor_shrink {
+    visibility: hidden;
     height: 0%;
     background-color: black;
     border-color: black;

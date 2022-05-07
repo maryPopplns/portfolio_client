@@ -36,14 +36,27 @@ describe('navbar', () => {
       return res(ctx.json(allPosts));
     }
   );
+  const commentBlog = rest.post(
+    'https://whispering-depths-29284.herokuapp.com/post/comment/62609173365618a9b57359f8',
+    (req, res, ctx) => {
+      const comment = req.body.split('=')[1];
+      if (comment === 'test') {
+        return res(ctx.status(201));
+      } else {
+        return res(ctx.status(400));
+      }
+    }
+  );
 
-  const server = new setupServer(blogPosts);
+  const servers = [blogPosts, commentBlog];
+
+  const server = new setupServer(...servers);
 
   beforeAll(() => server.listen());
   afterEach(() => server.resetHandlers());
   afterAll(() => server.close());
 
-  test('updated allPosts', async () => {
+  test('clicking blog post renders readblog component', async () => {
     setup();
 
     const blogLink = screen.getByRole('link', { name: '- blog -' });
@@ -61,10 +74,77 @@ describe('navbar', () => {
       });
       expect(testingHeading).toBeInTheDocument();
     });
-    // click test category
-    // await userEvent.click(testingTab);
-    // await waitFor(() => {
-    //   expect(testingTab).toHaveStyle('color: #00A36C');
-    // });
+  });
+  test('submitting comment renders success modal', async () => {
+    setup();
+
+    const blogLink = screen.getByRole('link', { name: '- blog -' });
+    userEvent.click(blogLink);
+
+    let testingPost;
+    await waitFor(() => {
+      testingPost = screen.getByText('testing title');
+    });
+    await userEvent.click(testingPost);
+
+    let commentInput;
+    await waitFor(() => {
+      commentInput = screen.getByPlaceholderText('be the first to comment!');
+      expect(commentInput).toBeInTheDocument();
+    });
+
+    await userEvent.type(commentInput, 'test');
+
+    const submitButton = screen.getByRole('button', { name: 'submit' });
+    await userEvent.click(submitButton);
+
+    await waitFor(() => {
+      const modal = screen.getByTestId('comment_form_response_modal');
+      expect(modal).toHaveStyle('color: #00A36C');
+    });
+
+    await waitFor(
+      () => {
+        const modal = screen.getByTestId('comment_form_response_modal');
+        expect(modal).not.toHaveStyle('color: #00A36C');
+      },
+      { timeout: 4000 }
+    );
+  });
+  test('error submitting form renders retry modal', async () => {
+    setup();
+
+    const blogLink = screen.getByRole('link', { name: '- blog -' });
+    userEvent.click(blogLink);
+
+    let testingPost;
+    await waitFor(() => {
+      testingPost = screen.getByText('testing title');
+    });
+    await userEvent.click(testingPost);
+
+    let commentInput;
+    await waitFor(() => {
+      commentInput = screen.getByPlaceholderText('be the first to comment!');
+      expect(commentInput).toBeInTheDocument();
+    });
+
+    await userEvent.type(commentInput, 'test failure');
+
+    const submitButton = screen.getByRole('button', { name: 'submit' });
+    await userEvent.click(submitButton);
+
+    await waitFor(() => {
+      const modal = screen.getByTestId('comment_form_response_modal');
+      expect(modal).toHaveStyle('color: #b22234');
+    });
+
+    await waitFor(
+      () => {
+        const modal = screen.getByTestId('comment_form_response_modal');
+        expect(modal).not.toHaveStyle('color: #b22234');
+      },
+      { timeout: 4000 }
+    );
   });
 });

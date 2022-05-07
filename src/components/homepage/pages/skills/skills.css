@@ -28,6 +28,7 @@ main.skills hr {
   background-color: white;
 }
 main.skills hr.title_skills_divisor_shrink {
+  visibility: hidden;
   background-color: black;
   border-color: black;
 }
