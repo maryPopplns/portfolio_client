@@ -32,6 +32,7 @@ function TextSettings({ setBackgroundColor, setFontSize, setColor }) {
           name='backgroundColor'
           value={currentBackgroundColor}
           onChange={backgroundColorHandler}
+          data-testid='background_color'
         ></input>
       </li>
       <li className='setting'>
@@ -44,6 +45,7 @@ function TextSettings({ setBackgroundColor, setFontSize, setColor }) {
           name='color'
           value={currentColor}
           onChange={colorHandler}
+          data-testid='color'
         ></input>
       </li>
       <li className='setting'>
@@ -58,6 +60,7 @@ function TextSettings({ setBackgroundColor, setFontSize, setColor }) {
           name='textSize'
           value={currentFontSize}
           onChange={fontSizeHandler}
+          data-testid='text_size'
         ></input>
       </li>
     </ul>
