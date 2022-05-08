@@ -62,19 +62,22 @@ export function pageDivisonAnimation() {
 
 // skills page animation
 export function aboutAnimation() {
-  const skillsPage = Array.from(document.getElementsByClassName('about'))[0];
+  const aboutPage = Array.from(document.getElementsByClassName('about'))[0];
   const contactPage = Array.from(document.getElementsByClassName('contact'))[0];
+  const aboutMeParagraph = document.getElementById('about_me_paragraph');
 
   function aboutHandler() {
-    const skillsTop = skillsPage.getBoundingClientRect().top;
+    const aboutTop = aboutPage.getBoundingClientRect().top;
     const contactTop = contactPage.getBoundingClientRect().top;
-    const skillsBottom = skillsPage.getBoundingClientRect().bottom;
+    const skillsBottom = aboutPage.getBoundingClientRect().bottom;
 
     const hr = document.getElementById('title_about_divisor');
 
-    if (skillsTop === 0 && skillsBottom < contactTop) {
+    if (aboutTop === 0 && skillsBottom < contactTop) {
+      aboutMeParagraph.classList.remove('about_me_fade');
       hr.classList.remove('title_about_divisor_shrink');
     } else if (hr) {
+      aboutMeParagraph.classList.add('about_me_fade');
       hr.classList.add('title_about_divisor_shrink');
     }
   }

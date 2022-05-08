@@ -33,6 +33,14 @@ main.about hr.title_about_divisor_shrink {
   border-color: black;
 }
 
+main.about p {
+  opacity: 1;
+  transition: all 1s;
+}
+main.about p.about_me_fade {
+  opacity: 0;
+}
+
 /* mobile */
 @media (max-width: 799px) {
   main.about {
@@ -42,7 +50,7 @@ main.about hr.title_about_divisor_shrink {
     justify-content: center;
     align-items: center;
   }
-  /* skills header */
+  /* about header */
   main.about h1 {
     position: absolute;
     top: 6rem;
