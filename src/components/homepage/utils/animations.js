@@ -40,20 +40,20 @@ export function traitsAnimation() {
 
 // page border animations
 export function pageDivisonAnimation() {
-  const skillsPage = Array.from(document.getElementsByClassName('skills'))[0];
+  const aboutPage = Array.from(document.getElementsByClassName('about'))[0];
   const contactPage = Array.from(document.getElementsByClassName('contact'))[0];
   function pageDivisionHandler() {
     const placeholderTop = contactPage.getBoundingClientRect().top;
-    const skillsTop = skillsPage.getBoundingClientRect().top;
+    const skillsTop = aboutPage.getBoundingClientRect().top;
     if (placeholderTop < 2) {
       contactPage.classList.add('hide_page_division');
     } else {
       contactPage.classList.remove('hide_page_division');
     }
     if (skillsTop === 0) {
-      skillsPage.classList.add('hide_page_division');
+      aboutPage.classList.add('hide_page_division');
     } else {
-      skillsPage.classList.remove('hide_page_division');
+      aboutPage.classList.remove('hide_page_division');
     }
   }
 
@@ -61,33 +61,25 @@ export function pageDivisonAnimation() {
 }
 
 // skills page animation
-export function skillsAnimation() {
-  const skillsPage = Array.from(document.getElementsByClassName('skills'))[0];
+export function aboutAnimation() {
+  const skillsPage = Array.from(document.getElementsByClassName('about'))[0];
   const contactPage = Array.from(document.getElementsByClassName('contact'))[0];
-  const technologyIcons = Array.from(
-    document.getElementsByClassName('technology_icon')
-  );
-  function skillsHandler() {
+
+  function aboutHandler() {
     const skillsTop = skillsPage.getBoundingClientRect().top;
     const contactTop = contactPage.getBoundingClientRect().top;
     const skillsBottom = skillsPage.getBoundingClientRect().bottom;
 
-    const hr = document.getElementById('title_skills_divisor');
+    const hr = document.getElementById('title_about_divisor');
 
     if (skillsTop === 0 && skillsBottom < contactTop) {
-      technologyIcons.forEach((icon) =>
-        icon.classList.remove('technology_icon_fade')
-      );
-      hr.classList.remove('title_skills_divisor_shrink');
+      hr.classList.remove('title_about_divisor_shrink');
     } else if (hr) {
-      technologyIcons.forEach((icon) =>
-        icon.classList.add('technology_icon_fade')
-      );
-      hr.classList.add('title_skills_divisor_shrink');
+      hr.classList.add('title_about_divisor_shrink');
     }
   }
 
-  window.addEventListener('scroll', skillsHandler);
+  window.addEventListener('scroll', aboutHandler);
 }
 
 export function contactAnimation() {
