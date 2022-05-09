@@ -1,58 +1,17 @@
 import { render, screen } from '@testing-library/react';
-import Skills from './Skills';
+import AboutMe from './AboutMe';
 
-// describe('skills page', () => {
-//   test('header includes first name', () => {
-//     render(<Skills />);
-//     const header = screen.getByRole('heading', { name: /skills/i });
-//     expect(header).toBeInTheDocument();
-//   });
-//   // tech icons
-//   describe('icons', () => {
-//     test('JavaScript icon', () => {
-//       render(<Skills />);
-//       const jsIcon = screen.getByAltText('javascript icon');
-//       expect(jsIcon).toBeInTheDocument();
-//     });
-//     test('react icon', () => {
-//       render(<Skills />);
-//       const reactIcon = screen.getByAltText('react icon');
-//       expect(reactIcon).toBeInTheDocument();
-//     });
-//     test('git icon', () => {
-//       render(<Skills />);
-//       const reactIcon = screen.getByAltText('git icon');
-//       expect(reactIcon).toBeInTheDocument();
-//     });
-//     test('css icon', () => {
-//       render(<Skills />);
-//       const cssIcon = screen.getByAltText('css icon');
-//       expect(cssIcon).toBeInTheDocument();
-//     });
-//     test('html icon', () => {
-//       render(<Skills />);
-//       const htmlIcon = screen.getByAltText('html icon');
-//       expect(htmlIcon).toBeInTheDocument();
-//     });
-//     test('sass icon', () => {
-//       render(<Skills />);
-//       const sassIcon = screen.getByAltText('sass icon');
-//       expect(sassIcon).toBeInTheDocument();
-//     });
-//     test('node icon', () => {
-//       render(<Skills />);
-//       const nodeIcon = screen.getByAltText('node icon');
-//       expect(nodeIcon).toBeInTheDocument();
-//     });
-//     test('jest icon', () => {
-//       render(<Skills />);
-//       const jestIcon = screen.getByAltText('jest icon');
-//       expect(jestIcon).toBeInTheDocument();
-//     });
-//     test('figma icon', () => {
-//       render(<Skills />);
-//       const figmaIcon = screen.getByAltText('figma icon');
-//       expect(figmaIcon).toBeInTheDocument();
-//     });
-//   });
-// });
+describe('about me', () => {
+  test('includes "about_me" header', () => {
+    render(<AboutMe />);
+    const header = screen.getByRole('heading', { name: 'about_me' });
+    expect(header).toBeInTheDocument();
+  });
+  test('includes about me paragraph', () => {
+    render(<AboutMe />);
+    const aboutMeParagraph = screen.getByText(
+      "Hello! My name is Spencer Knight, I am a US Navy veteran, fitness enthusiast, and full stack JavaScript developer. Solving problems whether it's aircraft, fitness, or software related is what I like to do. Front-end development is my current passion, but am confident I will thrive in any environment. Checkout my blog/projects and tell me what you think!"
+    );
+    expect(aboutMeParagraph).toBeInTheDocument();
+  });
+});

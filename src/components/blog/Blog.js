@@ -25,9 +25,6 @@ function Blog() {
     const uniqueCategories = Array.from(new Set(allCategories));
     setCategories(uniqueCategories);
 
-    // show navbar
-    // const navbar = document.getElementById('navbar');
-    // navbar.classList.add('show_navbar');
     // set default blog category
     setShowingPosts(allPosts);
   }, [allPosts]);

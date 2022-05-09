@@ -97,6 +97,9 @@ main.about p.about_me_fade {
   main.about hr {
     top: 6.5rem;
   }
+  main.about p {
+    margin-top: 5rem;
+  }
 }
 
 /* tablet */
