@@ -9,10 +9,9 @@ import LandingPage from './pages/landingPage/LandingPage';
 import {
   sectionWipe,
   traitsAnimation,
-  pageDivisonAnimation,
+  pageDivisionAnimation,
   aboutAnimation,
   contactAnimation,
-  navbarAnimation,
 } from './utils/animations';
 
 function Homepage() {
@@ -20,19 +19,11 @@ function Homepage() {
     // animations
     sectionWipe();
     traitsAnimation();
-    pageDivisonAnimation();
+    pageDivisionAnimation();
     aboutAnimation();
     contactAnimation();
   }, []);
-  useEffect(() => {
-    // hide navbar
-    const navbar = document.getElementById('navbar');
-    navbar.classList.remove('show_navbar');
-    // remove scroll handler upon dismount
-    const scrollHandler = navbarAnimation();
-    window.addEventListener('scroll', scrollHandler);
-    return () => window.removeEventListener('scroll', scrollHandler);
-  }, []);
+
   const dispatch = useDispatch();
   useEffect(() => {
     // set page

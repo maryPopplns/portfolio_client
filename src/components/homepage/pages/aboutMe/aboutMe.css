@@ -34,6 +34,7 @@ main.about hr.title_about_divisor_shrink {
 }
 
 main.about p {
+  font-family: archivoThin;
   opacity: 1;
   transition: all 1s;
 }
@@ -66,6 +67,12 @@ main.about p.about_me_fade {
   main.about hr.title_about_divisor_shrink {
     width: 0rem;
   }
+  main.about p {
+    text-align: center;
+    font-size: 1.4rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 
 /* mobile: after 799 on purpose */
@@ -77,6 +84,9 @@ main.about p.about_me_fade {
   main.about hr {
     top: 7rem;
     width: 265px;
+  }
+  main.about p {
+    font-size: 1.3rem;
   }
 }
 
@@ -109,6 +119,13 @@ main.about p.about_me_fade {
   main.about .title_about_divisor_shrink {
     height: 0rem;
   }
+  main.about p {
+    width: 500px;
+    text-align: center;
+    font-size: 1.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
 }
 
 /* desktop */
@@ -116,10 +133,20 @@ main.about p.about_me_fade {
   main.about h1 {
     font-size: 4rem;
   }
+  main.about p {
+    width: 500px;
+    text-align: center;
+    font-size: 1.75rem;
+  }
 }
 
 @media (min-width: 1500px) {
   main.about h1 {
     font-size: 5.5rem;
+  }
+  main.about p {
+    width: 750px;
+    text-align: center;
+    font-size: 2.5rem;
   }
 }

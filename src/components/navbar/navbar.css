@@ -73,7 +73,6 @@ img[alt='close menu']:hover {
 @media (max-width: 799px) {
   #navbar {
     height: 3.5rem;
-    transform: translateY(-3.5rem);
   }
   #navbar p {
     font-size: 2rem;
@@ -91,7 +90,6 @@ img[alt='close menu']:hover {
 @media (max-width: 500px) {
   #navbar {
     height: 3rem;
-    transform: translateY(-3.5rem);
   }
   #navbar p {
     font-size: 1.5rem;
@@ -103,7 +101,6 @@ img[alt='close menu']:hover {
   #navbar {
     height: 3.5rem;
     cursor: none;
-    transform: translateX(0);
   }
   #navbar p {
     font-size: 2rem;

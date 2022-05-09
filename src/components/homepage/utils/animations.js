@@ -39,7 +39,7 @@ export function traitsAnimation() {
 }
 
 // page border animations
-export function pageDivisonAnimation() {
+export function pageDivisionAnimation() {
   const aboutPage = Array.from(document.getElementsByClassName('about'))[0];
   const contactPage = Array.from(document.getElementsByClassName('contact'))[0];
   function pageDivisionHandler() {
@@ -101,17 +101,4 @@ export function contactAnimation() {
     }
   }
   window.addEventListener('scroll', contactHandler);
-}
-
-export function navbarAnimation() {
-  const navbar = document.getElementById('navbar');
-  function navbarHandler(event) {
-    const scrollY = window.scrollY;
-    if (scrollY === 0) {
-      navbar.classList.remove('show_navbar');
-    } else {
-      navbar.classList.add('show_navbar');
-    }
-  }
-  return navbarHandler;
 }
