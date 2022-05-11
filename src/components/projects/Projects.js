@@ -13,14 +13,26 @@ function Projects() {
     dispatch(setCurrentPage('projects'));
   }, [dispatch]);
 
-  const projectTiles = projects.map(({ title }) => (
-    <ProjectTile title={title} />
-  ));
+  const projectTiles = projects.map(
+    ({ title, description, technologies, live, github, complete }) => (
+      <ProjectTile
+        title={title}
+        technologies={technologies}
+        description={description}
+        key={title}
+        live={live}
+        github={github}
+        complete={complete}
+      />
+    )
+  );
+
+  // TODO once tests are complete update the % in projects.json for portfolio
 
   return (
     <main className='projects'>
       <h1 className='projectsHeading'>projects</h1>
-      <ul>{projectTiles}</ul>
+      <ul className='projectTilesContainer'>{projectTiles}</ul>
     </main>
   );
 }

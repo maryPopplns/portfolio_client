@@ -60,7 +60,7 @@ describe('contact page', () => {
     // submit button
     test('form includes submit button', () => {
       render(<ContactMe />);
-      const button = screen.getByRole('button', 'submit');
+      const button = screen.getByText('submit');
       expect(button).toBeInTheDocument();
     });
 
@@ -105,7 +105,8 @@ describe('contact page', () => {
       userEvent.type(emailInput, 'test@test.com');
       userEvent.type(messageInput, 'this is the message');
 
-      const submitButton = screen.getByRole('button', { name: /submit/i });
+      // const submitButton = screen.getByRole('button', { name: /submit/i });
+      const submitButton = screen.getByText('submit');
 
       userEvent.click(submitButton);
 
@@ -132,7 +133,7 @@ describe('contact page', () => {
       userEvent.type(emailInput, 'test@test1.com');
       userEvent.type(messageInput, 'this is the message');
 
-      const submitButton = screen.getByRole('button', { name: /submit/i });
+      const submitButton = screen.getByText('submit');
 
       userEvent.click(submitButton);
 

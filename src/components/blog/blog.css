@@ -59,7 +59,7 @@ ul.blogPostContainer::-webkit-scrollbar-thumb {
     height: calc(100vh - 3rem);
   }
   h1.blogHeading {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   div.blog::before {
     background-size: 275%;

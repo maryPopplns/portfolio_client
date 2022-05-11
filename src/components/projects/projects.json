@@ -1,8 +1,42 @@
 [
-  { "title": "string", "technologies": ["strings"], "description": "string" },
+  {
+    "title": "Blog API",
+    "technologies": ["Node", "MongoDB", "Supertest", "Jest"],
+    "description": "REST API for creation, editing, and deletion of my portfolios blog posts, comments, and users. Integration tests were conducted with supertest and jest resulting in 94.9% line coverage.",
+    "live": "",
+    "github": "https://github.com/maryPopplns/portfolio_api2",
+    "complete": true
+  },
+  {
+    "title": "Blog CMS",
+    "technologies": ["React", "Redux", "React Testing Library", "Jest"],
+    "description": "User interface for managing my portfolios blog content. Unit tests were conducted with jest, react testing library, and msw resulting in 96.5% line coverage.",
+    "live": "https://whispering-depths-29284.herokuapp.com/",
+    "github": "https://github.com/maryPopplns/portfolio_blog_cms",
+    "complete": true
+  },
+  {
+    "title": "Portfolio",
+    "technologies": ["React", "Redux", "React Testing Library", "Jest"],
+    "description": "Webpage for displaying my work and contact information (the site you are currently on). Unit tests were conducted with jest, react testing library, and msw resulting in 96.5% line coverage.",
+    "live": "https://www.spencerknightdev.com/",
+    "github": "https://github.com/maryPopplns/portfolio_client",
+    "complete": true
+  },
   {
     "title": "Battleship",
-    "technologies": ["html", "css", "JavaScript", "webpack", "jest"],
-    "description": "Recreation of the game battleship. "
+    "technologies": ["HTML", "CSS", "JavaScript", "webpack", "Jest"],
+    "description": "Recreation of the board game Battleship. Game logic was created utilizing test driven development. Tests conducted using jest resulting in 100% line coverage.",
+    "live": "https://marypopplns.github.io/battleship/",
+    "github": "https://github.com/maryPopplns/battleship",
+    "complete": true
+  },
+  {
+    "title": "Chair Fit",
+    "technologies": [],
+    "description": "Fitness/nutrition application for people that sit in chairs all day. Under construction, click the link below to follow my progress!",
+    "live": "",
+    "github": "",
+    "complete": false
   }
 ]

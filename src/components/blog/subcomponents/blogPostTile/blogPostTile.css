@@ -40,7 +40,7 @@ a.blogPostTile .blogPostTileContainer {
   justify-content: center;
   bottom: 1rem;
 }
-a.blogPostTile button {
+a.blogPostTile .readBlogButton {
   padding: 0.5rem 1rem;
   color: white;
   font-family: archivoRegular;
@@ -48,10 +48,10 @@ a.blogPostTile button {
   border: 2px solid white;
   border-radius: 0.25rem;
   background-image: linear-gradient(0deg, #2a2e2e 0%, #000000 100%);
-  transition: all 1s;
   cursor: pointer;
+  transition: all 1s;
 }
-a.blogPostTile button:hover {
+a.blogPostTile .readBlogButton:hover {
   color: black;
   background-color: white;
   background-image: none;
@@ -70,11 +70,6 @@ a.blogPostTile button:hover {
   a.blogPostTile p {
     font-size: 1rem;
     margin-top: 1rem;
-  }
-  a.blogPostTile button {
-    padding: 0.5rem 1rem;
-    font-size: 1.2rem;
-    border-radius: 0.25rem;
   }
 }
 

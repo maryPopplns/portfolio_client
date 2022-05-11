@@ -20,7 +20,7 @@ function BlogPostTile({ title, date: inputDate, id }) {
       <h2>{title}</h2>
       <p>{date}</p>
       <div className='blogPostTileContainer'>
-        <button>read ></button>
+        <div className='readBlogButton'>read ></div>
       </div>
     </Link>
   );

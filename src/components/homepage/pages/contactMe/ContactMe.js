@@ -8,6 +8,7 @@ function ContactMe() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [response, setResponse] = useState(0);
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   const responseStyle = {
     border: response === 200 ? '3px solid #00A36C' : '3px solid #b22234',
@@ -17,10 +18,12 @@ function ContactMe() {
 
   function submitHandler(event) {
     event.preventDefault();
+    setFormSubmitted(true);
 
     const contactInfo = urlencoded({ email, message });
 
     function errorResponse() {
+      setFormSubmitted(false);
       setResponse(500);
       // modal timeout
       setTimeout(() => {
@@ -88,7 +91,15 @@ function ContactMe() {
             ></textarea>
           </div>
           <div className='submit_contact_container'>
-            <button>submit</button>
+            <button disabled={formSubmitted}>
+              <div
+                className={`submitCommentButton ${
+                  formSubmitted && 'formSubmitted'
+                }`}
+              >
+                submit
+              </div>
+            </button>
           </div>
         </form>
         {/* social media icons */}

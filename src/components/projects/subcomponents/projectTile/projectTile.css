@@ -3,14 +3,19 @@
   font-family: 'archivoRegular';
   src: url('../../../../fonts/ArchivoBlack-Regular.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'archivoThin';
+  src: url('../../../../fonts/ArchivoNarrow-VariableFont_wght.ttf')
+    format('truetype');
+}
 
 li.projectTile {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 1rem;
   padding: 1rem;
-  height: 18rem;
   width: 12rem;
   text-decoration: none;
   color: white;
@@ -18,14 +23,58 @@ li.projectTile {
   border-radius: 0.5rem;
   box-sizing: border-box;
 }
-
 li.projectTile h2 {
   font-family: archivoRegular;
+  margin-bottom: 1rem;
+}
+li.projectTile ul.technologyListContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: archivoThin;
+}
+li.projectTile p {
+  font-family: archivoThin;
+  margin-top: 2rem;
+}
+li.technologyTile {
+  padding: 0.25rem 0.5rem;
+  margin-top: 0.25rem;
+}
+li.technologyTile:nth-child(n) {
+  border-right: 1px solid white;
+}
+li.technologyTile:last-child {
+  border-right: none;
+}
+div.projectTileButtonContainer {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  bottom: 1rem;
+}
+div.projectTileButtonContainer a {
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+  font-family: archivoRegular;
+  font-size: 1.2rem;
+  background-image: linear-gradient(0deg, #2a2e2e 0%, #000000 100%);
+  border: 2px solid white;
+  border-radius: 0.25rem;
+  transition: all 1s;
+}
+div.projectTileButtonContainer a:hover {
+  color: black;
+  background-color: white;
+  background-image: none;
+  box-sizing: border-box;
 }
 
 @media (max-width: 799px) {
   li.projectTile {
-    height: 15rem;
+    height: 18rem;
     width: 90vw;
     max-width: 450px;
   }
@@ -34,7 +83,7 @@ li.projectTile h2 {
 @media (max-width: 500px) {
   li.projectTile {
     padding: 1rem;
-    height: 15rem;
+    height: 20rem;
   }
   li.projectTile h2 {
     font-size: 1.5rem;
@@ -49,6 +98,7 @@ li.projectTile h2 {
 
 @media (min-width: 800px) {
   li.projectTile {
+    height: 18rem;
     width: 450px;
   }
 }
