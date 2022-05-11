@@ -18,6 +18,10 @@
   padding: 1rem;
   box-sizing: border-box;
 }
+.settingsContainer label,
+.settingsContainer input {
+  cursor: pointer;
+}
 
 .settingsContainer ul,
 .settingsContainer ul li label,

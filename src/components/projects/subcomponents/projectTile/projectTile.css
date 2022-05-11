@@ -1,0 +1,60 @@
+/* fonts */
+@font-face {
+  font-family: 'archivoRegular';
+  src: url('../../../../fonts/ArchivoBlack-Regular.ttf') format('truetype');
+}
+
+li.projectTile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
+  height: 18rem;
+  width: 12rem;
+  text-decoration: none;
+  color: white;
+  background-color: rgba(146, 146, 146, 0.1);
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+}
+
+li.projectTile h2 {
+  font-family: archivoRegular;
+}
+
+@media (max-width: 799px) {
+  li.projectTile {
+    height: 15rem;
+    width: 90vw;
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 500px) {
+  li.projectTile {
+    padding: 1rem;
+    height: 15rem;
+  }
+  li.projectTile h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 501px) {
+  li.projectTile h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (min-width: 800px) {
+  li.projectTile {
+    width: 450px;
+  }
+}
+
+@media (min-width: 1100px) {
+  li.projectTile h2 {
+    font-size: 2rem;
+  }
+}

@@ -1,7 +1,36 @@
+/* fonts */
+@font-face {
+  font-family: 'archivoRegular';
+  src: url('../../fonts/ArchivoBlack-Regular.ttf') format('truetype');
+}
+
 main.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: white;
   background-color: #2d3c40;
   background-image: linear-gradient(0deg, #2a2e2e 0%, #000000 100%);
+}
+h1.projectsHeading {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: white;
+  font-family: archivoRegular;
+  text-transform: uppercase;
+}
+main.projects ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  overflow-y: auto;
+}
+
+@media (max-width: 799px) {
+  h1.projectsHeading {
+    font-size: 4rem;
+  }
 }
 
 @media (max-width: 500px) {
@@ -9,11 +38,29 @@ main.projects {
     margin-top: 3rem;
     height: calc(100vh - 3rem);
   }
+  h1.projectsHeading {
+    font-size: 4rem;
+  }
 }
 
 @media (min-width: 501px) {
   main.projects {
     margin-top: 3.5rem;
     height: calc(100vh - 3.5rem);
+  }
+}
+
+@media (min-width: 800px) {
+  main.projects {
+    cursor: none;
+  }
+  h1.projectsHeading {
+    font-size: 5rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  h1.projectsHeading {
+    font-size: 6rem;
   }
 }

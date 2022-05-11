@@ -1,0 +1,8 @@
+[
+  { "title": "string", "technologies": ["strings"], "description": "string" },
+  {
+    "title": "Battleship",
+    "technologies": ["html", "css", "JavaScript", "webpack", "jest"],
+    "description": "Recreation of the game battleship. "
+  }
+]
