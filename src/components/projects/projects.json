@@ -1,18 +1,18 @@
 [
   {
-    "title": "Blog API",
-    "technologies": ["Node", "MongoDB", "Supertest", "Jest"],
-    "description": "REST API for creation, editing, and deletion of my portfolios blog posts, comments, and users. Integration tests were conducted with supertest and jest resulting in 94.9% line coverage.",
-    "live": "",
-    "github": "https://github.com/maryPopplns/portfolio_api2",
-    "complete": true
-  },
-  {
     "title": "Blog CMS",
     "technologies": ["React", "Redux", "React Testing Library", "Jest"],
     "description": "User interface for managing my portfolios blog content. Unit tests were conducted with jest, react testing library, and msw resulting in 96.5% line coverage.",
     "live": "https://whispering-depths-29284.herokuapp.com/",
     "github": "https://github.com/maryPopplns/portfolio_blog_cms",
+    "complete": true
+  },
+  {
+    "title": "Blog API",
+    "technologies": ["Node", "MongoDB", "Supertest", "Jest"],
+    "description": "REST API for creation, editing, and deletion of my portfolios blog posts, comments, and users. Integration tests were conducted with supertest and jest resulting in 94.9% line coverage.",
+    "live": "",
+    "github": "https://github.com/maryPopplns/portfolio_api2",
     "complete": true
   },
   {

@@ -13,7 +13,6 @@ function ProjectTile(props) {
 
   function anchorHandler(event) {
     event.preventDefault();
-    console.log('disabled');
   }
 
   return (
