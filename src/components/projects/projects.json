@@ -18,7 +18,7 @@
   {
     "title": "Portfolio",
     "technologies": ["React", "Redux", "React Testing Library", "Jest"],
-    "description": "Webpage for displaying my work and contact information (the site you are currently on). Unit tests were conducted with jest, react testing library, and msw resulting in 96.5% line coverage.",
+    "description": "Webpage for displaying my work and contact information (the site you are currently on). Unit tests were conducted with jest, react testing library, and msw resulting in 94.7% line coverage.",
     "live": "https://www.spencerknightdev.com/",
     "github": "https://github.com/maryPopplns/portfolio_client",
     "complete": true
