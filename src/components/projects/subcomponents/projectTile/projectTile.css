@@ -34,7 +34,9 @@ li.projectTile ul.technologyListContainer {
   font-family: archivoThin;
 }
 li.projectTile p {
+  text-align: center;
   font-family: archivoThin;
+  font-size: 1.2rem;
   margin-top: 2rem;
 }
 li.technologyTile {
@@ -71,6 +73,24 @@ div.projectTileButtonContainer a:hover {
   background-image: none;
   box-sizing: border-box;
 }
+div.projectTileButtonContainer a.hiddenLink {
+  position: relative;
+}
+div.projectTileButtonContainer a.hiddenLink:hover {
+  color: white;
+  background-image: linear-gradient(0deg, #2a2e2e 0%, #000000 100%);
+  /* cursor: none; */
+}
+.hiddenLink::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(1px);
+}
 
 @media (max-width: 799px) {
   li.projectTile {
@@ -78,12 +98,14 @@ div.projectTileButtonContainer a:hover {
     width: 90vw;
     max-width: 450px;
   }
+  div.projectTileButtonContainer a.hiddenLink:hover {
+    cursor: default;
+  }
 }
 
 @media (max-width: 500px) {
   li.projectTile {
     padding: 1rem;
-    height: 20rem;
   }
   li.projectTile h2 {
     font-size: 1.5rem;
@@ -100,6 +122,9 @@ div.projectTileButtonContainer a:hover {
   li.projectTile {
     height: 18rem;
     width: 450px;
+  }
+  div.projectTileButtonContainer a.hiddenLink:hover {
+    cursor: none;
   }
 }
 

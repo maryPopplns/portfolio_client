@@ -33,7 +33,7 @@
   },
   {
     "title": "Chair Fit",
-    "technologies": [],
+    "technologies": ["react", "node"],
     "description": "Fitness/nutrition application for people that sit in chairs all day. Under construction, click the link below to follow my progress!",
     "live": "",
     "github": "",

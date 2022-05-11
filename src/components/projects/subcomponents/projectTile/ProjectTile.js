@@ -11,16 +11,33 @@ function ProjectTile(props) {
     <Technology technology={technology} key={technology} />
   ));
 
+  function anchorHandler(event) {
+    event.preventDefault();
+    console.log('disabled');
+  }
+
   return (
     <li className='projectTile'>
       <h2>{title}</h2>
       <ul className='technologyListContainer'>{technologyComponents}</ul>
       <p>{description}</p>
       <div className='projectTileButtonContainer'>
-        <a href={live} target='_blank' rel='noreferrer'>
+        <a
+          onClick={!live ? anchorHandler : undefined}
+          className={!live ? 'hiddenLink' : undefined}
+          href={live ? live : ''}
+          target={live && '_blank'}
+          rel='noreferrer'
+        >
           live
         </a>
-        <a href={github} target='_blank' rel='noreferrer'>
+        <a
+          onClick={!github ? anchorHandler : undefined}
+          className={!github ? 'hiddenLink' : undefined}
+          href={github ? github : ''}
+          target={github && '_blank'}
+          rel='noreferrer'
+        >
           code
         </a>
       </div>
