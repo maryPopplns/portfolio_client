@@ -1,18 +1,3 @@
-import ScrollMagic from 'scrollmagic';
-
-export function sectionWipe() {
-  const controller = new ScrollMagic.Controller();
-  const slides = document.getElementsByClassName('page');
-  for (let i = 0; i < slides.length; i++) {
-    new ScrollMagic.Scene({
-      triggerHook: 'onLeave',
-      triggerElement: slides[i],
-    })
-      .setPin(slides[i], { pushFollowers: false })
-      .addTo(controller);
-  }
-}
-
 // landing page animations
 export function traitsAnimation() {
   const webDeveloper = document.getElementById(

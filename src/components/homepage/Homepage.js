@@ -7,19 +7,14 @@ import ContactMe from './pages/contactMe/ContactMe';
 import LandingPage from './pages/landingPage/LandingPage';
 
 import {
-  sectionWipe,
   traitsAnimation,
-  pageDivisionAnimation,
   aboutAnimation,
   contactAnimation,
 } from './utils/animations';
 
 function Homepage() {
   useEffect(() => {
-    // animations
-    sectionWipe();
     traitsAnimation();
-    pageDivisionAnimation();
     aboutAnimation();
     contactAnimation();
   }, []);

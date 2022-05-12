@@ -1,5 +1,13 @@
 [
   {
+    "title": "Chair Fit",
+    "technologies": ["react", "node"],
+    "description": "Fitness/nutrition application for people that sit in chairs all day. Under construction, click the link below to follow my progress!",
+    "live": "",
+    "github": "",
+    "complete": false
+  },
+  {
     "title": "Blog CMS",
     "technologies": ["React", "Redux", "React Testing Library", "Jest"],
     "description": "User interface for managing my portfolios blog content. Unit tests were conducted with jest, react testing library, and msw resulting in 96.5% line coverage.",
@@ -30,13 +38,5 @@
     "live": "https://marypopplns.github.io/battleship/",
     "github": "https://github.com/maryPopplns/battleship",
     "complete": true
-  },
-  {
-    "title": "Chair Fit",
-    "technologies": ["react", "node"],
-    "description": "Fitness/nutrition application for people that sit in chairs all day. Under construction, click the link below to follow my progress!",
-    "live": "",
-    "github": "",
-    "complete": false
   }
 ]

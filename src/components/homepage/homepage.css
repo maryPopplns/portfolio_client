@@ -7,6 +7,11 @@
   border-radius: 1rem;
 }
 
+.page {
+  position: sticky;
+  top: 0;
+}
+
 .homepageContainer {
   user-select: none;
 }

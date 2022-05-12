@@ -50,7 +50,6 @@ div.homepage_down_arrow {
 /* mobile */
 @media (max-width: 799px) {
   main.landing_page {
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
