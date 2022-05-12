@@ -1,0 +1,25 @@
+div.spinner {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background: #fff;
+
+  box-sizing: border-box;
+  box-shadow: -3rem 0 #fff, 3rem 0 #fff;
+  animation: shadowPulse 2s linear infinite;
+}
+
+@keyframes shadowPulse {
+  33% {
+    background: #fff;
+    box-shadow: -3rem 0 #00a36c, 3rem 0 #fff;
+  }
+  66% {
+    background: #00a36c;
+    box-shadow: -3rem 0 #fff, 3rem 0 #fff;
+  }
+  100% {
+    background: #fff;
+    box-shadow: -3rem 0 #fff, 3rem 0 #00a36c;
+  }
+}

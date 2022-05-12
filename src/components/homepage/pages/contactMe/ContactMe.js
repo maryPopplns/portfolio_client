@@ -1,13 +1,15 @@
+import './contactMe.css';
 import { useState } from 'react';
-import urlencoded from '../../../../helpers/urlencoded';
 import github from './icons/github.svg';
 import linkedin from './icons/linkedin.svg';
-import './contactMe.css';
+import Spinner from './subcomponents/spinner/Spinner';
+import urlencoded from '../../../../helpers/urlencoded';
 
 function ContactMe() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [response, setResponse] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   const responseStyle = {
@@ -19,10 +21,12 @@ function ContactMe() {
   function submitHandler(event) {
     event.preventDefault();
     setFormSubmitted(true);
+    setIsLoading(true);
 
     const contactInfo = urlencoded({ email, message });
 
     function errorResponse() {
+      setIsLoading(false);
       setFormSubmitted(false);
       setResponse(500);
       // modal timeout
@@ -31,6 +35,7 @@ function ContactMe() {
       }, 3000);
     }
     function successResponse() {
+      setIsLoading(false);
       setResponse(200);
       // modal timeout
       setTimeout(() => {
@@ -57,81 +62,92 @@ function ContactMe() {
       .catch(() => errorResponse());
   }
 
-  // TODO spinner for form submission
-
   return (
-    <main className='contact page'>
-      <h1 id='contact_heading'>contact_me</h1>
-      <hr id='header_contact_divisor' />
-      <div id='contact_form_container'>
-        <form onSubmit={submitHandler}>
-          {/* user input */}
-          <div className='contact_input_container'>
-            <label htmlFor='email'>email</label>
-            <input
-              onChange={({ target }) => setEmail(target.value)}
-              placeholder='your_email'
-              value={email}
-              type='email'
-              id='email'
-              name='email'
-              required
-            ></input>
+    <>
+      <main className='contact page'>
+        <h1 id='contact_heading'>contact_me</h1>
+        <hr id='header_contact_divisor' />
+        <div id='contact_form_container'>
+          <form onSubmit={submitHandler}>
+            {/* user input */}
+            <div className='contact_input_container'>
+              <label htmlFor='email'>email</label>
+              <input
+                onChange={({ target }) => setEmail(target.value)}
+                placeholder='your_email'
+                value={email}
+                type='email'
+                id='email'
+                name='email'
+                required
+              ></input>
+            </div>
+            <div className='contact_input_container'>
+              <label htmlFor='message'>message</label>
+              <textarea
+                onChange={({ target }) => setMessage(target.value)}
+                placeholder={
+                  formSubmitted ? 'thank you for reach out!' : 'message'
+                }
+                value={message}
+                type='textarea'
+                id='message'
+                name='message'
+                required
+              ></textarea>
+            </div>
+            <div className='submit_contact_container'>
+              {isLoading ? (
+                <Spinner />
+              ) : (
+                <button disabled={formSubmitted}>
+                  <div
+                    className={`submitCommentButton ${
+                      formSubmitted && 'formSubmitted'
+                    }`}
+                  >
+                    submit
+                  </div>
+                </button>
+              )}
+            </div>
+          </form>
+          {/* social media icons */}
+          <div className='contact_form_icons'>
+            <a
+              href='https://www.linkedin.com/in/spencer-knight-dev/'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <img
+                id='homepage_linkedin_icon'
+                src={linkedin}
+                alt='linkedin icon'
+              ></img>
+            </a>
+            <a
+              href='https://github.com/maryPopplns'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <img
+                id='homepage_github_icon'
+                src={github}
+                alt='github icon'
+              ></img>
+            </a>
           </div>
-          <div className='contact_input_container'>
-            <label htmlFor='message'>message</label>
-            <textarea
-              onChange={({ target }) => setMessage(target.value)}
-              placeholder='message'
-              value={message}
-              type='textarea'
-              id='message'
-              name='message'
-              required
-            ></textarea>
-          </div>
-          <div className='submit_contact_container'>
-            <button disabled={formSubmitted}>
-              <div
-                className={`submitCommentButton ${
-                  formSubmitted && 'formSubmitted'
-                }`}
-              >
-                submit
-              </div>
-            </button>
-          </div>
-        </form>
-        {/* social media icons */}
-        <div className='contact_form_icons'>
-          <a
-            href='https://www.linkedin.com/in/spencer-knight-dev/'
-            target='_blank'
-            rel='noreferrer'
-          >
-            <img
-              id='homepage_linkedin_icon'
-              src={linkedin}
-              alt='linkedin icon'
-            ></img>
-          </a>
-          <a
-            href='https://github.com/maryPopplns'
-            target='_blank'
-            rel='noreferrer'
-          >
-            <img id='homepage_github_icon' src={github} alt='github icon'></img>
-          </a>
         </div>
-      </div>
-      <div
-        style={response ? responseStyle : { display: 'none' }}
-        className='contact_form_response_modal'
-        data-testid='contact_form_response_modal'
-      >
-        {response === 200 ? 'success' : 'retry'}
-      </div>
-    </main>
+        <div
+          style={response ? responseStyle : { display: 'none' }}
+          className='contact_form_response_modal'
+          data-testid='contact_form_response_modal'
+        >
+          {response === 200 ? 'success' : 'retry'}
+        </div>
+      </main>
+      {/* {isLoading && <Spinner />} */}
+    </>
   );
 }
 
