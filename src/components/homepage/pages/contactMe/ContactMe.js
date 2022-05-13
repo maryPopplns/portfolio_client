@@ -85,7 +85,7 @@ function ContactMe() {
               <textarea
                 onChange={({ target }) => setMessage(target.value)}
                 placeholder={
-                  formSubmitted ? 'thank you for reach out!' : 'message'
+                  formSubmitted ? 'thank you for reaching out!' : 'message'
                 }
                 value={message}
                 type='textarea'
