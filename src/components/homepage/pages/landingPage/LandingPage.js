@@ -1,6 +1,12 @@
 import './landingPage.css';
+import { useEffect } from 'react';
+import { traitsAnimation } from './animations';
 
 function LandingPage() {
+  useEffect(() => {
+    traitsAnimation();
+  }, []);
+
   return (
     <main className='landing_page page'>
       <h1 className='name_heading'>spencer_knight</h1>

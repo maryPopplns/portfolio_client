@@ -279,13 +279,6 @@ main.contact .formSubmitted:hover {
   }
 }
 
-/* long landscape */
-@media (max-height: 500px) and (min-width: 800px) {
-  #message {
-    height: 30px;
-  }
-}
-
 @media (min-width: 1000px) {
   main.contact h1 {
     font-size: 4rem;

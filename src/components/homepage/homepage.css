@@ -7,13 +7,12 @@
   border-radius: 1rem;
 }
 
-.page {
-  position: sticky;
-  top: 0;
-}
-
 .homepageContainer {
   user-select: none;
+}
+.landing_page {
+  position: sticky;
+  top: 0;
 }
 
 @media (min-width: 800px) {
