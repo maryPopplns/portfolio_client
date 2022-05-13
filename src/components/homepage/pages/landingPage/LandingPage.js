@@ -9,13 +9,13 @@ function LandingPage() {
 
   return (
     <main className='landing_page page'>
-      <h1 className='name_heading'>spencer_knight</h1>
+      <h1 className='name_heading'>Spencer Knight</h1>
       <hr id='name_trait_divisor'></hr>
       <ul className='personal_description'>
-        <li id='personal_description_web_developer'>Web Developer</li>
-        <li id='personal_description_fitness'>Fitness 🤍</li>
+        <li id='personal_description_web_developer'>web developer</li>
+        <li id='personal_description_fitness'>fitness 🤍</li>
         <li id='personal_description_veteran'>
-          <div>V</div>
+          <div>v</div>
           <div>e</div>
           <div>teran</div>
         </li>

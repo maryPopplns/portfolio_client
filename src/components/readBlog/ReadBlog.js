@@ -40,7 +40,7 @@ function ReadBlog() {
   }, [inputDate]);
 
   useEffect(() => {
-    const conversion = (fontSize * 3) / 2;
+    const conversion = (fontSize * 6) / 5;
     setLineHeight(conversion);
     // TODO ensure these values are correct
   }, [fontSize]);

@@ -1,7 +1,9 @@
 import './contactMe.css';
-import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useState, useEffect } from 'react';
 import urlencoded from '../../helpers/urlencoded';
 import Spinner from './subcomponents/spinner/Spinner';
+import { setCurrentPage } from '../../store/slices/currentPage';
 
 function ContactMe() {
   const [email, setEmail] = useState('');
@@ -15,6 +17,12 @@ function ContactMe() {
     color: response === 200 ? '#00A36C' : '#b22234',
     display: 'flex',
   };
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    // set page
+    dispatch(setCurrentPage('contactMe'));
+  }, [dispatch]);
 
   function submitHandler(event) {
     event.preventDefault();
@@ -63,6 +71,7 @@ function ContactMe() {
   return (
     <>
       <main className='contact page'>
+        <h1 id='contact_heading'>contact_me</h1>
         <div id='contact_form_container'>
           <form onSubmit={submitHandler}>
             {/* user input */}

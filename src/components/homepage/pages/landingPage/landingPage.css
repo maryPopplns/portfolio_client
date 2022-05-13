@@ -59,14 +59,10 @@ div.homepage_down_arrow {
   h1.name_heading {
     position: absolute;
     top: calc(5rem + 5px);
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
   main.landing_page hr {
-    position: absolute;
-    top: calc(7.5rem + 5px);
-    width: 355px;
-    transition: all 1s;
-    background-color: white;
+    display: none;
   }
   /* personal descriptions */
   ul.personal_description > li {
@@ -93,11 +89,10 @@ div.homepage_down_arrow {
 @media (max-width: 500px) {
   h1.name_heading {
     top: calc(4rem + 5px);
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   main.landing_page hr {
-    width: 290px;
-    top: calc(6rem + 5px);
+    display: none;
   }
 }
 /* landscape */

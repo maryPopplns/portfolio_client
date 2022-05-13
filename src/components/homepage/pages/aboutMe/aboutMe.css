@@ -12,6 +12,9 @@
 /* global */
 main.about {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   color: white;
   border-top: 5px solid white;
@@ -25,16 +28,11 @@ main.about p {
 
 /* mobile */
 @media (max-width: 799px) {
-  main.about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
   main.about p {
+    margin-top: 3.5rem;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
+    line-height: 1.9rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
@@ -42,40 +40,21 @@ main.about p {
 
 /* mobile: after 799 on purpose */
 @media (max-width: 500px) {
-  main.about h1 {
-    top: 5rem;
-    font-size: 2rem;
-  }
-  main.about hr {
-    top: 7rem;
-    width: 265px;
-  }
   main.about p {
-    font-size: 1.3rem;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    line-height: 1.6rem;
   }
 }
 
 /* tablet */
 @media (min-width: 800px) {
-  main.about {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    align-items: center;
-  }
-  main.about hr {
-    margin: 0 1.5rem;
-    height: 60vh;
-    width: 2px;
-    transition: all 1s;
-  }
-  main.about .title_about_divisor_shrink {
-    height: 0rem;
-  }
   main.about p {
-    width: 500px;
+    margin-top: 3.5rem;
+    max-width: 800px;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2.1rem;
+    line-height: 2.2rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
@@ -84,15 +63,14 @@ main.about p {
 /* desktop */
 @media (min-width: 1000px) {
   main.about p {
-    width: 500px;
     text-align: center;
-    font-size: 1.75rem;
+    font-size: 2.4rem;
+    line-height: 2.5rem;
   }
 }
 
 @media (min-width: 1500px) {
   main.about p {
-    width: 750px;
     text-align: center;
     font-size: 2.5rem;
   }
