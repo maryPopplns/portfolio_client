@@ -74,6 +74,15 @@ function Navbar() {
           >
             - projects -
           </Link>
+          <Link
+            className={
+              currentPage === 'contactMe' ? 'mobile_nav_selected' : undefined
+            }
+            onClick={linkHandler}
+            to='contactMe'
+          >
+            - contact me -
+          </Link>
         </ul>
         <img
           src={closeButton}

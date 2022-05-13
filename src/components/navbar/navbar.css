@@ -19,9 +19,9 @@
   width: 100vw;
   top: 0rem;
   padding: 1rem;
-  background-color: white;
   font-family: archivoRegular;
   transition: transform 0.5s;
+  background-color: white;
   z-index: 1;
 }
 #navbar.show_navbar {

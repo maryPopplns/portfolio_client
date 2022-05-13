@@ -1,7 +1,7 @@
 import './contactMe.css';
 import { useState } from 'react';
+import urlencoded from '../../helpers/urlencoded';
 import Spinner from './subcomponents/spinner/Spinner';
-import urlencoded from '../../../../helpers/urlencoded';
 
 function ContactMe() {
   const [email, setEmail] = useState('');
@@ -63,8 +63,6 @@ function ContactMe() {
   return (
     <>
       <main className='contact page'>
-        <h1 id='contact_heading'>contact_me</h1>
-        <hr id='header_contact_divisor' />
         <div id='contact_form_container'>
           <form onSubmit={submitHandler}>
             {/* user input */}
