@@ -1,7 +1,5 @@
 import './contactMe.css';
 import { useState } from 'react';
-import github from './icons/github.svg';
-import linkedin from './icons/linkedin.svg';
 import Spinner from './subcomponents/spinner/Spinner';
 import urlencoded from '../../../../helpers/urlencoded';
 
@@ -112,31 +110,6 @@ function ContactMe() {
               )}
             </div>
           </form>
-          {/* social media icons */}
-          <div className='contact_form_icons'>
-            <a
-              href='https://www.linkedin.com/in/spencer-knight-dev/'
-              target='_blank'
-              rel='noreferrer'
-            >
-              <img
-                id='homepage_linkedin_icon'
-                src={linkedin}
-                alt='linkedin icon'
-              ></img>
-            </a>
-            <a
-              href='https://github.com/maryPopplns'
-              target='_blank'
-              rel='noreferrer'
-            >
-              <img
-                id='homepage_github_icon'
-                src={github}
-                alt='github icon'
-              ></img>
-            </a>
-          </div>
         </div>
         <div
           style={response ? responseStyle : { display: 'none' }}

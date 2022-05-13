@@ -60,12 +60,11 @@ div.homepage_down_arrow {
     position: absolute;
     top: calc(6rem + 5px);
     font-size: 2.5rem;
-    text-transform: uppercase;
   }
   main.landing_page hr {
     position: absolute;
     top: calc(8.5rem + 5px);
-    width: 450px;
+    width: 355px;
     transition: all 1s;
     background-color: white;
   }
@@ -97,7 +96,7 @@ div.homepage_down_arrow {
     font-size: 2rem;
   }
   main.landing_page hr {
-    width: 345px;
+    width: 290px;
     top: calc(7rem + 5px);
   }
 }
