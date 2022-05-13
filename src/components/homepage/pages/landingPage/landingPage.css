@@ -129,7 +129,7 @@ div.homepage_down_arrow {
   main.landing_page hr {
     margin: 0 1.5rem;
     width: 2px;
-    height: 60vh;
+    height: 50vh;
     background-color: white;
     transition: all 1s;
   }

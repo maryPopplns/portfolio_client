@@ -241,11 +241,10 @@ main.contact .formSubmitted:hover {
   }
   main.contact h1 {
     font-size: 3rem;
-    /* margin-left: 1rem; */
   }
   main.contact hr {
     margin: 0 1.5rem;
-    height: 65%;
+    height: 50vh;
     width: 2px;
     transition: all 1s;
   }
@@ -264,10 +263,12 @@ main.contact .formSubmitted:hover {
   }
   #email {
     width: 40vw;
+    max-width: 500px;
     height: 1.75rem;
   }
   #message {
     width: 40vw;
+    max-width: 500px;
     height: 8rem;
   }
   main.contact .submit_contact_container {
@@ -308,10 +309,10 @@ main.contact .formSubmitted:hover {
   main.contact h1 {
     font-size: 4rem;
   }
-  #email {
-    max-width: 40vw;
-  }
-  #message {
-    max-width: 40vw;
+}
+
+@media (min-width: 1500px) {
+  main.contact h1 {
+    font-size: 5.5rem;
   }
 }
