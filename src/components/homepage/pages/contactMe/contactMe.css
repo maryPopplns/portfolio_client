@@ -63,11 +63,13 @@ main.contact form {
   border-radius: 0.25rem;
 }
 main.contact #contact_form_container {
-  transform: scale(0);
+  /* transform: scale(0); */
+  opacity: 0;
   transition: all 1s;
 }
 main.contact #contact_form_container.form_shrink {
-  transform: scale(1);
+  opacity: 1;
+  /* transform: scale(1); */
 }
 
 main.contact button {
@@ -264,7 +266,7 @@ main.contact .contact_form_icons {
   }
   main.contact h1 {
     font-size: 3rem;
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
   }
   main.contact hr {
     margin: 0 1.5rem;
@@ -358,23 +360,5 @@ main.contact .contact_form_icons {
   }
   #message {
     max-width: 40vw;
-  }
-}
-
-@media (min-width: 1000px) {
-  main.contact h1 {
-    margin-left: 4rem;
-  }
-}
-
-@media (min-width: 1300px) {
-  main.contact h1 {
-    margin-left: 5rem;
-  }
-}
-
-@media (min-width: 1500px) {
-  main.contact h1 {
-    font-size: 5.5rem;
   }
 }

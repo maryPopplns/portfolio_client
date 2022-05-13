@@ -75,7 +75,7 @@ export function contactAnimation() {
   const form = document.getElementById('contact_form_container');
   function contactHandler() {
     if (
-      window.innerHeight + window.pageYOffset + 2 >=
+      window.innerHeight + window.pageYOffset + 40 >=
       document.body.offsetHeight
     ) {
       hr.classList.remove('header_contact_divisor_shrink');
