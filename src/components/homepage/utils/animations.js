@@ -73,11 +73,13 @@ export function aboutAnimation() {
 export function contactAnimation() {
   const hr = document.getElementById('header_contact_divisor');
   const form = document.getElementById('contact_form_container');
+  // if the top of contact page is at the top of the screen
   function contactHandler() {
-    if (
-      window.innerHeight + window.pageYOffset + 40 >=
-      document.body.offsetHeight
-    ) {
+    const contactPage = Array.from(
+      document.getElementsByClassName('contact')
+    )[0];
+    const { top } = contactPage.getClientRects()[0];
+    if (top < 0) {
       hr.classList.remove('header_contact_divisor_shrink');
       form.classList.add('form_shrink');
     } else {
