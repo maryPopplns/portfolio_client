@@ -14,16 +14,12 @@ main.landing_page {
   position: sticky;
   top: 0;
   color: white;
-  background-color: #2d3c40;
-  background-image: linear-gradient(0deg, #2a2e2e 0%, #000000 100%);
 }
 h1.name_heading {
   font-family: 'archivoRegular';
 }
 main.landing_page .name_trait_divisor_shrink {
   visibility: hidden;
-  background-color: black;
-  border-color: black;
 }
 ul.personal_description li {
   font-family: 'archivoThin';
@@ -32,12 +28,7 @@ li#personal_description_veteran {
   display: flex;
   justify-content: center;
 }
-li#personal_description_veteran div:nth-child(1) {
-  color: #b22234;
-}
-li#personal_description_veteran div:nth-child(3) {
-  color: #3c3b6e;
-}
+
 div.homepage_down_arrow {
   position: absolute;
   display: inline-block;

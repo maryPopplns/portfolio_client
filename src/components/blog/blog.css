@@ -14,14 +14,13 @@ div.blog {
   align-items: center;
   height: calc(100vh - 3.5rem);
   width: 100vw;
-  background-color: #2d3c40;
-  background-image: linear-gradient(0deg, #2a2e2e 0%, #000000 100%);
+  background-image: linear-gradient(to right, #7760c3, #2ebfbd);
 }
 
 h1.blogHeading {
   color: white;
   font-family: archivoRegular;
-  text-transform: uppercase;
+  text-transform: capitalize;
   user-select: none;
 }
 ul.blogPostContainer {
@@ -31,13 +30,6 @@ ul.blogPostContainer {
   align-content: flex-start;
   overflow-y: auto;
   z-index: 0;
-}
-ul.blogPostContainer::-webkit-scrollbar {
-  width: 10px;
-  background: none;
-}
-ul.blogPostContainer::-webkit-scrollbar-thumb {
-  background-color: white;
 }
 
 @media (max-width: 799px) {

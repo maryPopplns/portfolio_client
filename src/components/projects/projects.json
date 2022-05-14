@@ -34,7 +34,7 @@
   {
     "title": "Battleship",
     "technologies": ["HTML", "CSS", "JavaScript", "webpack", "Jest"],
-    "description": "Recreation of the board game Battleship. Game logic was created utilizing test driven development. Tests conducted using jest resulting in 100% line coverage.",
+    "description": "Recreation of the board game Battleship. Game logic was developed using the test driven development methodology. Tests conducted using jest resulting in 100% line coverage.",
     "live": "https://marypopplns.github.io/battleship/",
     "github": "https://github.com/maryPopplns/battleship",
     "complete": true

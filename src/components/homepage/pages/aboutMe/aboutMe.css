@@ -17,8 +17,6 @@ main.about {
   align-items: center;
   color: white;
   border-top: 5px solid white;
-  background-color: #2d3c40;
-  background-image: linear-gradient(0deg, #2a2e2e 0%, #000000 100%);
 }
 
 main.about p {
