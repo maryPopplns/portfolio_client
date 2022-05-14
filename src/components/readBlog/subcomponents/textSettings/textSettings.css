@@ -22,6 +22,9 @@
 .settingsContainer input {
   cursor: pointer;
 }
+.setting {
+  color: black;
+}
 
 .settingsContainer ul,
 .settingsContainer ul li label,

@@ -1,11 +1,11 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './textSettings.css';
 
 function TextSettings({ setBackgroundColor, setFontSize, setColor }) {
   const [currentBackgroundColor, setCurrentBackgroundColor] =
     useState('#000000');
   const [currentFontSize, setCurrentFontSize] = useState('16');
-  const [currentColor, setCurrentColor] = useState('#FFFFFF');
+  const [currentColor, setCurrentColor] = useState('#000000');
 
   function backgroundColorHandler({ target }) {
     setCurrentBackgroundColor(target.value);

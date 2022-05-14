@@ -13,9 +13,9 @@ function ReadBlog() {
   const { blogID } = useParams();
   const [date, setDate] = useState();
   const [fontSize, setFontSize] = useState(16);
-  const [color, setColor] = useState('#FFFFFF');
+  const [color, setColor] = useState('#00000');
   const [lineHeight, setLineHeight] = useState(24);
-  const [backgroundColor, setBackgroundColor] = useState('#000000');
+  const [backgroundColor, setBackgroundColor] = useState('');
   const {
     title,
     body,
@@ -23,11 +23,9 @@ function ReadBlog() {
     comments,
   } = allPosts.filter(({ _id }) => _id === blogID)[0];
 
-  useEffect(() => {
-    // show navbar
-    const navbar = document.getElementById('navbar');
-    navbar.classList.add('show_navbar');
-  }, []);
+  const backgroundGradient = {
+    backgroundImage: `linear-gradient(to right, ${backgroundColor}, ${backgroundColor})`,
+  };
 
   useEffect(() => {
     const newDate = new Date(inputDate);
@@ -60,7 +58,7 @@ function ReadBlog() {
   });
 
   return (
-    <div style={{ backgroundColor }} className='readBlog'>
+    <div style={backgroundGradient} className='readBlog'>
       <TextSettings
         setColor={setColor}
         setFontSize={setFontSize}

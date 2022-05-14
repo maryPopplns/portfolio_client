@@ -63,7 +63,6 @@
   color: white;
 }
 img[alt='close menu'] {
-  color: black;
   position: fixed;
   top: 2rem;
   filter: invert(1);

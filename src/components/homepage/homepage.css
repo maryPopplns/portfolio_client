@@ -11,11 +11,6 @@
     cursor: none;
   }
 }
-@media (max-width: 799px) {
-  .page {
-    background-image: linear-gradient(to right, #7760c3, #2ebfbd);
-  }
-}
 
 @media (min-width: 501px) {
   .homepageContainer {

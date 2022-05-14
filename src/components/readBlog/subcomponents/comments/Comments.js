@@ -8,6 +8,7 @@ import { setPosts } from '../../../../store/slices/posts';
 function Comments({ blogID, comments, color }) {
   const [comment, setComment] = useState('');
   const [response, setResponse] = useState(0);
+  const [isInverted, setIsInverted] = useState(false);
 
   const responseStyle = {
     display: 'flex',
@@ -21,6 +22,13 @@ function Comments({ blogID, comments, color }) {
     fetch('https://whispering-depths-29284.herokuapp.com/post')
       .then((result) => result.json())
       .then((posts) => dispatch(setPosts(posts)));
+  }
+
+  function buttonEnterHandler() {
+    setIsInverted(true);
+  }
+  function buttonLeaveHandler() {
+    setIsInverted(false);
   }
 
   function formHandler(event) {
@@ -88,7 +96,16 @@ function Comments({ blogID, comments, color }) {
             value={comment}
             required
           ></textarea>
-          <button style={{ borderColor: color }} type='submit'>
+          <button
+            style={{
+              color: color,
+              borderColor: color,
+              filter: `invert(${isInverted ? '1' : '0'})`,
+            }}
+            onMouseEnter={buttonEnterHandler}
+            onMouseLeave={buttonLeaveHandler}
+            type='submit'
+          >
             submit
           </button>
         </form>
