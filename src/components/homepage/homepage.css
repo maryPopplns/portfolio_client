@@ -2,11 +2,11 @@
   position: fixed;
   overflow-y: auto;
 }
+.page {
+  background-image: linear-gradient(to right, #7760c3, #2ebfbd);
+}
 
 @media (min-width: 800px) {
-  .page {
-    background-image: linear-gradient(to right, #7760c3, #2ebfbd);
-  }
   .homepageContainer {
     cursor: none;
   }
