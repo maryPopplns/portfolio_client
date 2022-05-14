@@ -21,8 +21,17 @@
   padding: 1rem;
   font-family: archivoRegular;
   transition: transform 0.5s;
-  background-color: white;
+  background-image: linear-gradient(to right, #7760c3, #2ebfbd);
   z-index: 1;
+}
+#navbar::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  height: 100%;
+  width: 100vw;
+  background-color: rgba(63, 63, 63, 0.3);
+  z-index: -1;
 }
 .mobile_nav_modal {
   display: flex;
