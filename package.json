@@ -46,7 +46,7 @@
   },
   "jest": {
     "coveragePathIgnorePatterns": [
-      "<rootDir>/src/components/homepage/utils",
+      "<rootDir>/src/components/homepage/pages/landingPage/animations.js",
       "<rootDir>/src/reportWebVitals",
       "<rootDir>/src/store/slices",
       "<rootDir>/src/helpers",

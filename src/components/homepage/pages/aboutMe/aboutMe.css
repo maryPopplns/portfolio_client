@@ -15,7 +15,6 @@ main.about {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
   color: white;
   border-top: 5px solid white;
   background-color: #2d3c40;
@@ -28,8 +27,10 @@ main.about p {
 
 /* mobile */
 @media (max-width: 799px) {
+  main.about {
+    height: calc(100vh - 3.5rem);
+  }
   main.about p {
-    margin-top: 3.5rem;
     text-align: center;
     font-size: 1.8rem;
     line-height: 1.9rem;
@@ -40,8 +41,10 @@ main.about p {
 
 /* mobile: after 799 on purpose */
 @media (max-width: 500px) {
+  main.about {
+    height: calc(100vh - 3rem);
+  }
   main.about p {
-    margin-top: 3rem;
     font-size: 1.5rem;
     line-height: 1.6rem;
   }
@@ -49,8 +52,10 @@ main.about p {
 
 /* tablet */
 @media (min-width: 800px) {
+  main.about {
+    height: calc(100vh - 3.5rem);
+  }
   main.about p {
-    margin-top: 3.5rem;
     max-width: 800px;
     text-align: center;
     font-size: 2.1rem;

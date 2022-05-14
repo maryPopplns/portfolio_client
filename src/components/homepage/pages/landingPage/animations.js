@@ -6,8 +6,12 @@ export function traitsAnimation() {
   const fitness = document.getElementById('personal_description_fitness');
   const veteran = document.getElementById('personal_description_veteran');
   const hr = document.getElementById('name_trait_divisor');
+  const homepageContainer = Array.from(
+    document.getElementsByClassName('homepageContainer')
+  )[0];
   function webHandler() {
-    if (window.scrollY > 0) {
+    const top = homepageContainer.scrollTop;
+    if (top > 0) {
       webDeveloper.classList.add('hidden_descriptions_1');
       fitness.classList.add('hidden_descriptions_2');
       veteran.classList.add('hidden_descriptions_3');
@@ -20,5 +24,5 @@ export function traitsAnimation() {
     }
   }
 
-  window.addEventListener('scroll', webHandler);
+  homepageContainer.addEventListener('scroll', webHandler);
 }

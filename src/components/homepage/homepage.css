@@ -1,19 +1,36 @@
 ::-webkit-scrollbar {
   width: 10px;
-  background: white;
+  background-color: #2d3c40;
+  background-image: linear-gradient(0deg, #2a2e2e 0%, #000000 100%);
 }
 ::-webkit-scrollbar-thumb {
-  background: black;
+  background: white;
   border-radius: 1rem;
 }
 
-.landing_page {
-  position: sticky;
-  top: 0;
+.homepageContainer {
+  position: fixed;
+  overflow-y: auto;
 }
 
 @media (min-width: 800px) {
   .homepageContainer {
     cursor: none;
+  }
+}
+
+@media (min-width: 501px) {
+  .homepageContainer {
+    top: 3.5rem;
+    height: calc(100vh - 3.5rem);
+    width: 100vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .homepageContainer {
+    top: 3rem;
+    height: calc(100vh - 3rem);
+    width: 100vw;
   }
 }
