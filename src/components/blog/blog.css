@@ -18,7 +18,7 @@ div.blog {
 }
 
 h1.blogHeading {
-  color: white;
+  color: black;
   font-family: archivoRegular;
   text-transform: capitalize;
   user-select: none;

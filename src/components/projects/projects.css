@@ -8,13 +8,12 @@ main.projects {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: white;
+  color: black;
   background-image: linear-gradient(to right, #7760c3, #2ebfbd);
 }
 h1.projectsHeading {
   margin-top: 2rem;
   margin-bottom: 1rem;
-  color: white;
   font-family: archivoRegular;
   text-transform: capitalize;
 }

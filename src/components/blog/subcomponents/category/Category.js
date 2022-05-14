@@ -7,9 +7,8 @@ function Category({ category, setShowingPosts, categoryPosts }) {
   const dispatch = useDispatch();
   const isSelected = currentCategory === category;
   const currentlySelected = {
-    color: '#00A36C',
-    borderColor: '#00A36C',
-    backgroundColor: 'black',
+    color: 'white',
+    borderColor: 'white',
   };
   function clickHandler() {
     setShowingPosts(categoryPosts);

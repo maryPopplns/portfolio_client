@@ -9,11 +9,9 @@
 
 /* global */
 main.contact {
-  /* position: relative; */
   height: 100vh;
-  color: white;
-  background-color: #2d3c40;
-  background-image: linear-gradient(0deg, #2a2e2e 0%, #000000 100%);
+  color: black;
+  background-image: linear-gradient(to right, #7760c3, #2ebfbd);
 }
 main.contact form {
   border-radius: 0.25rem;
@@ -25,10 +23,6 @@ main.contact form {
 }
 main.contact label {
   font-family: archivoThin;
-}
-#email:focus,
-#message:focus {
-  outline: 5px solid white;
 }
 #email {
   border: none;
@@ -54,16 +48,14 @@ main.contact button {
 }
 main.contact .submitCommentButton {
   font-family: archivoRegular;
-  color: white;
-  border: 2px solid white;
-  border-radius: 0.25rem;
-  transition: all 1s;
-  background-image: linear-gradient(0deg, #2a2e2e 0%, #000000 100%);
-}
-main.contact .submitCommentButton:hover {
-  background-color: white;
   color: black;
   border: 2px solid black;
+  border-radius: 1.5rem;
+  transition: all 1s;
+}
+main.contact .submitCommentButton:hover {
+  color: white;
+  border: 2px solid white;
   background-image: none;
 }
 main.contact .formSubmitted:hover {

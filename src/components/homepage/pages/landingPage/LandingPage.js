@@ -13,7 +13,7 @@ function LandingPage() {
       <hr id='name_trait_divisor'></hr>
       <ul className='personal_description'>
         <li id='personal_description_web_developer'>web developer</li>
-        <li id='personal_description_fitness'>fitness 🤍</li>
+        <li id='personal_description_fitness'>{'fitness <3'}</li>
         <li id='personal_description_veteran'>
           <div>v</div>
           <div>e</div>

@@ -13,10 +13,10 @@ li.category {
   display: flex;
   justify-content: center;
   padding: 0.5rem 1rem;
-  color: white;
+  color: black;
   cursor: pointer;
-  border: 3px solid white;
-  background-color: black;
+  border: 3px solid black;
+  background-color: rgba(63, 63, 63, 0.2);
   border-radius: 1.5rem;
   font-family: archivoThin;
   text-transform: capitalize;
@@ -26,9 +26,8 @@ li.category {
   margin: 0.25rem 0.5rem;
 }
 li.category:hover {
-  color: black;
-  background-color: white;
-  border-color: black;
+  color: white;
+  border-color: white;
 }
 
 @media (max-width: 799px) {
