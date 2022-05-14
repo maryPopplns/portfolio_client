@@ -24,13 +24,6 @@ function Comments({ blogID, comments, color }) {
       .then((posts) => dispatch(setPosts(posts)));
   }
 
-  function buttonEnterHandler() {
-    setIsInverted(true);
-  }
-  function buttonLeaveHandler() {
-    setIsInverted(false);
-  }
-
   function formHandler(event) {
     event.preventDefault();
 
@@ -73,17 +66,13 @@ function Comments({ blogID, comments, color }) {
   }
 
   const commentComponents = comments
-    .map((comment) => (
-      <Comment comment={comment} key={comment._id} color={color} />
-    ))
+    .map((comment) => <Comment comment={comment} key={comment._id} />)
     .reverse();
 
   return (
     <>
       <div className='comments'>
-        <h1 style={{ color }} className='commentsHeading'>
-          Comments
-        </h1>
+        <h1 className='commentsHeading'>Comments</h1>
         <form onSubmit={formHandler}>
           <label htmlFor='commentInput'></label>
           <textarea
@@ -96,18 +85,7 @@ function Comments({ blogID, comments, color }) {
             value={comment}
             required
           ></textarea>
-          <button
-            style={{
-              color: color,
-              borderColor: color,
-              filter: `invert(${isInverted ? '1' : '0'})`,
-            }}
-            onMouseEnter={buttonEnterHandler}
-            onMouseLeave={buttonLeaveHandler}
-            type='submit'
-          >
-            submit
-          </button>
+          <button type='submit'>submit</button>
         </form>
       </div>
       <ul className='postCommentsContainer'>{commentComponents}</ul>

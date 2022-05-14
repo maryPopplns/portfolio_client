@@ -12,20 +12,14 @@ function ReadBlog() {
   const allPosts = useSelector((state) => state.posts.value);
   const { blogID } = useParams();
   const [date, setDate] = useState();
-  const [fontSize, setFontSize] = useState(16);
-  const [color, setColor] = useState('#00000');
-  const [lineHeight, setLineHeight] = useState(24);
-  const [backgroundColor, setBackgroundColor] = useState('');
+  const [fontSize, setFontSize] = useState(24);
+  const [lineHeight, setLineHeight] = useState(29);
   const {
     title,
     body,
     date: inputDate,
     comments,
   } = allPosts.filter(({ _id }) => _id === blogID)[0];
-
-  const backgroundGradient = {
-    backgroundImage: `linear-gradient(to right, ${backgroundColor}, ${backgroundColor})`,
-  };
 
   useEffect(() => {
     const newDate = new Date(inputDate);
@@ -54,24 +48,18 @@ function ReadBlog() {
     .filter((paragraph) => paragraph !== '');
   const bodyComponents = bodyParagraphs.map((paragraph) => {
     const key = v4();
-    return <BlogParagraph text={paragraph} key={key} color={color} />;
+    return <BlogParagraph text={paragraph} key={key} />;
   });
 
   return (
-    <div style={backgroundGradient} className='readBlog'>
-      <TextSettings
-        setColor={setColor}
-        setFontSize={setFontSize}
-        setBackgroundColor={setBackgroundColor}
-      />
-      <h1 style={{ color }}>{title}</h1>
-      <p style={{ color }} className='readBlogDate'>
-        - {date} -
-      </p>
+    <div className='readBlog'>
+      <TextSettings setFontSize={setFontSize} />
+      <h1>{title}</h1>
+      <p className='readBlogDate'>- {date} -</p>
       <div className='bodyParagraphs' style={bodyParagraphsStyle}>
         {bodyComponents}
       </div>
-      <Comments blogID={blogID} comments={comments} color={color} />
+      <Comments blogID={blogID} comments={comments} />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import './comment.css';
 import { useEffect, useState } from 'react';
 
-function Comment({ comment: postComment, color }) {
+function Comment({ comment: postComment }) {
   const { date, comment } = postComment;
   const [commentDate, setCommentDate] = useState();
 
@@ -16,11 +16,9 @@ function Comment({ comment: postComment, color }) {
   }, [date]);
 
   return (
-    <li style={{ borderColor: color }} className='postCommentContainer'>
-      <p style={{ color }} className='postComment'>
-        {comment}
-      </p>
-      <p style={{ color }} className='postDate'>{`-${commentDate}`}</p>
+    <li className='postCommentContainer'>
+      <p className='postComment'>{comment}</p>
+      <p className='postDate'>{`-${commentDate}`}</p>
     </li>
   );
 }
