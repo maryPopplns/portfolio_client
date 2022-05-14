@@ -65,30 +65,29 @@ div.projectTileButtonContainer a {
   border: 2px solid black;
   border-radius: 1.5rem;
   transition: all 1s;
+  box-sizing: border-box;
 }
 div.projectTileButtonContainer a:hover {
   color: white;
   border-color: white;
+  /* box-sizing: border-box; */
+}
+.hiddenLink {
+  position: absolute;
+  padding: 0.5rem 1rem;
+  top: 0px;
+  left: 0px;
+  border: 2px solid black;
+  border-radius: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.9);
   box-sizing: border-box;
 }
 div.projectTileButtonContainer a.hiddenLink {
   position: relative;
 }
 div.projectTileButtonContainer a.hiddenLink:hover {
-  color: white;
+  color: black;
   border-color: black;
-  background-image: linear-gradient(0deg, #2a2e2e 0%, #000000 100%);
-}
-.hiddenLink::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  border-radius: 1.5rem;
-  background-color: rgba(0, 0, 0, 0.9);
-  backdrop-filter: blur(1px);
 }
 
 @media (max-width: 799px) {
