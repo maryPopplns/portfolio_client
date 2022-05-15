@@ -9,196 +9,68 @@
 
 /* global */
 main.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
   color: black;
   background-image: linear-gradient(to right, #7760c3, #2ebfbd);
 }
+main.contact label {
+  visibility: hidden;
+}
 main.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border-radius: 0.25rem;
 }
 .contact_input_container {
   display: flex;
   flex-direction: column;
-  margin: 1rem 0;
 }
 main.contact label {
   font-family: archivoThin;
 }
+/* main.contact input {
+} */
 #email {
+  padding: 0.125rem 0.25rem;
+  height: 1.5rem;
+  width: 90vw;
+  max-width: 400px;
+  font-family: archivoThin;
+  text-indent: 0.25rem;
+  font-size: 1.2rem;
   border: none;
   border-radius: 0.25rem;
-  font-size: 1.05rem;
-  font-family: archivoThin;
-  text-indent: 0.25rem;
 }
 #message {
+  padding: 0.125rem 0.25rem;
   box-shadow: none;
+  height: 3rem;
+  width: 90vw;
+  max-width: 400px;
   resize: none;
-  font-size: 1.1rem;
   font-family: archivoThin;
   text-indent: 0.25rem;
+  font-size: 1.2rem;
   border: none;
   border-radius: 0.25rem;
 }
 
 main.contact button {
-  padding: 0;
-  border: none;
-  background: none;
-}
-main.contact .submitCommentButton {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
   font-family: archivoRegular;
-  color: black;
   border: 2px solid black;
   border-radius: 1.5rem;
+  background: none;
   transition: all 1s;
 }
-main.contact .submitCommentButton:hover {
+main.contact button:hover {
   color: white;
-  border: 2px solid white;
-  background-image: none;
-}
-main.contact .formSubmitted:hover {
-  color: white;
-  border: 2px solid white;
-  background-image: linear-gradient(0deg, #2a2e2e 0%, #000000 100%);
-  cursor: none;
-}
-
-.contact_form_response_modal {
-  box-sizing: border-box;
-  position: fixed;
-  justify-content: center;
-  align-items: center;
-  font-family: archivoRegular;
-  border-radius: 0.5rem;
-  text-transform: uppercase;
-}
-
-/* mobile */
-@media (max-width: 799px) {
-  main.contact {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  main.contact #contact_form_container {
-    display: flex;
-    flex-direction: column;
-  }
-  main.contact form {
-    padding: 1rem;
-  }
-  .contact_input_container label {
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
-  }
-  #email {
-    width: 70vw;
-    height: 1.75rem;
-  }
-  #message {
-    width: 70vw;
-    height: 8rem;
-  }
-  main.contact .submit_contact_container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-  main.contact .submitCommentButton {
-    padding: 0.5rem 1rem;
-    font-size: 1.2rem;
-  }
-  main.contact .submitCommentButton:hover {
-    cursor: pointer;
-  }
-  main.contact .formSubmitted:hover {
-    cursor: none;
-  }
-  .contact_form_response_modal {
-    top: calc(50% - 3rem);
-    left: calc(50% - 5rem);
-    height: 6rem;
-    width: 10rem;
-    color: white;
-    background-color: black;
-    font-size: 1.5rem;
-  }
-  #contact_form_container {
-    margin-top: 64px;
-  }
-}
-
-@media (max-width: 500px) {
-  #contact_form_container {
-    margin-top: 52px;
-  }
-}
-
-/* landscape */
-@media (max-height: 500px) and (max-width: 799px) {
-  #message {
-    height: 3rem;
-  }
-  main.contact form {
-    margin-top: 3rem;
-    border: none;
-  }
-  main.contact label {
-    display: none;
-  }
-}
-
-/* tablet */
-@media (min-width: 800px) {
-  main.contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  main.contact form {
-    padding: 1.5rem;
-  }
-  main.contact label {
-    margin-bottom: 0.5rem;
-    font-size: 1.3rem;
-  }
-  #email {
-    width: 40vw;
-    max-width: 500px;
-    height: 1.75rem;
-  }
-  #message {
-    width: 40vw;
-    max-width: 500px;
-    height: 8rem;
-  }
-  main.contact .submit_contact_container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-
-  main.contact .submitCommentButton {
-    padding: 0.5rem 1rem;
-    font-size: 1.4rem;
-  }
-  main.contact .submitCommentButton:hover {
-    cursor: pointer;
-  }
-  main.contact .formSubmitted:hover {
-    cursor: none;
-  }
-  .contact_form_response_modal {
-    top: calc(50% - 4.5rem);
-    left: calc(50% - 7.5rem);
-    height: 9rem;
-    width: 15rem;
-    color: white;
-    background-color: black;
-    font-size: 1.5rem;
-  }
+  border-color: white;
 }

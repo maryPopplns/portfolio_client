@@ -1,8 +1,8 @@
 import './contactMe.css';
+import Spinner from '../spinner/Spinner';
 import { useDispatch } from 'react-redux';
 import { useState, useEffect } from 'react';
 import urlencoded from '../../helpers/urlencoded';
-import Spinner from './subcomponents/spinner/Spinner';
 import { setCurrentPage } from '../../store/slices/currentPage';
 
 function ContactMe() {
@@ -50,28 +50,26 @@ function ContactMe() {
         setMessage('');
       }, 3000);
     }
-
-    fetch('https://whispering-depths-29284.herokuapp.com/contact', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      body: contactInfo,
-    })
-      .then(({ status }) => {
-        if (status === 200) {
-          successResponse();
-        } else {
-          errorResponse();
-        }
-      })
-      .catch(() => errorResponse());
+    // fetch('https://whispering-depths-29284.herokuapp.com/contact', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/x-www-form-urlencoded',
+    //   },
+    //   body: contactInfo,
+    // })
+    //   .then(({ status }) => {
+    //     if (status === 200) {
+    //       successResponse();
+    //     } else {
+    //       errorResponse();
+    //     }
+    //   })
+    //   .catch(() => errorResponse());
   }
 
   return (
     <>
       <main className='contact page'>
-        <h1 id='contact_heading'>contact_me</h1>
         <div id='contact_form_container'>
           <form onSubmit={submitHandler}>
             {/* user input */}
@@ -79,7 +77,7 @@ function ContactMe() {
               <label htmlFor='email'>email</label>
               <input
                 onChange={({ target }) => setEmail(target.value)}
-                placeholder='your_email'
+                placeholder='your email'
                 value={email}
                 type='email'
                 id='email'

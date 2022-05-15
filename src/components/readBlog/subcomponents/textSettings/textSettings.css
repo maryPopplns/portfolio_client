@@ -4,74 +4,8 @@
   src: url('../../../../fonts/ArchivoBlack-Regular.ttf') format('truetype');
 }
 
-.settingsButton {
-  color: white;
-  background-color: black;
-  border: 2px solid white;
-  padding: 1rem 5rem;
-  font-family: archivoRegular;
-}
-
-.settingsContainer {
+div.setting {
   display: flex;
-  width: 100vw;
-  padding: 1rem;
-  box-sizing: border-box;
-}
-.settingsContainer label,
-.settingsContainer input {
-  cursor: pointer;
-}
-.setting {
-  color: black;
-}
-
-.settingsContainer ul,
-.settingsContainer ul li label,
-.settingsContainer ul li input {
-  display: inherit;
-  align-items: center;
-}
-.setting {
-  display: inherit;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-@media (max-width: 799px) {
-  .settingsContainer {
-    justify-content: center;
-    gap: 2rem;
-  }
-  .settingsContainer label {
-    margin-bottom: 0.5rem;
-  }
-}
-
-@media (max-width: 500px) {
-  .settingsContainer {
-    flex-direction: column;
-    align-items: center;
-  }
-  .setting {
-    flex-direction: row;
-    width: 80%;
-  }
-  .settingsContainer label {
-    width: 50%;
-  }
-  .settingsContainer input {
-    width: 30%;
-  }
-}
-
-@media (min-width: 800px) {
-  .settingsContainer {
-    justify-content: center;
-    gap: 3rem;
-  }
-  .settingsContainer label {
-    margin-bottom: 0.5rem;
-  }
+  gap: 2rem;
+  margin-top: 1rem;
 }

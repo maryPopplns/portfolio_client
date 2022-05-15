@@ -2,13 +2,14 @@ import './comments.css';
 import { useState } from 'react';
 import Comment from '../comment/Comment';
 import { useDispatch } from 'react-redux';
+import Spinner from '../../../spinner/Spinner';
 import urlencoded from '../../../../helpers/urlencoded';
 import { setPosts } from '../../../../store/slices/posts';
 
 function Comments({ blogID, comments, color }) {
   const [comment, setComment] = useState('');
   const [response, setResponse] = useState(0);
-  const [isInverted, setIsInverted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const responseStyle = {
     display: 'flex',
@@ -26,9 +27,11 @@ function Comments({ blogID, comments, color }) {
 
   function formHandler(event) {
     event.preventDefault();
+    setIsLoading(true);
 
     const readersComment = urlencoded({ comment });
     function errorResponse() {
+      setIsLoading(false);
       setResponse(500);
       // modal timeout
       setTimeout(() => {
@@ -36,6 +39,7 @@ function Comments({ blogID, comments, color }) {
       }, 3000);
     }
     function successResponse() {
+      setIsLoading(false);
       setResponse(201);
       getPosts();
       // modal timeout
@@ -85,7 +89,7 @@ function Comments({ blogID, comments, color }) {
             value={comment}
             required
           ></textarea>
-          <button type='submit'>submit</button>
+          {isLoading ? <Spinner /> : <button type='submit'>submit</button>}
         </form>
       </div>
       <ul className='postCommentsContainer'>{commentComponents}</ul>
