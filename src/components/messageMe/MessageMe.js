@@ -1,32 +1,24 @@
-import './contactMe.css';
+import './messageMe.css';
 import Spinner from '../spinner/Spinner';
 import { useDispatch } from 'react-redux';
 import { useState, useEffect } from 'react';
 import urlencoded from '../../helpers/urlencoded';
 import { setCurrentPage } from '../../store/slices/currentPage';
 
-function ContactMe() {
+function MessageMe() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [response, setResponse] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
-
-  const responseStyle = {
-    border: response === 200 ? '3px solid #00A36C' : '3px solid #b22234',
-    color: response === 200 ? '#00A36C' : '#b22234',
-    display: 'flex',
-  };
 
   const dispatch = useDispatch();
   useEffect(() => {
     // set page
-    dispatch(setCurrentPage('contactMe'));
+    dispatch(setCurrentPage('messageMe'));
   }, [dispatch]);
 
   function submitHandler(event) {
     event.preventDefault();
-    setFormSubmitted(true);
     setIsLoading(true);
 
     const contactInfo = urlencoded({ email, message });
@@ -34,46 +26,43 @@ function ContactMe() {
     function errorResponse() {
       setIsLoading(false);
       setFormSubmitted(false);
-      setResponse(500);
       // modal timeout
-      setTimeout(() => {
-        setResponse(0);
-      }, 3000);
+      setTimeout(() => {}, 3000);
     }
     function successResponse() {
       setIsLoading(false);
-      setResponse(200);
+      setFormSubmitted(true);
       // modal timeout
       setTimeout(() => {
-        setResponse(0);
         setEmail('');
         setMessage('');
       }, 3000);
     }
-    // fetch('https://whispering-depths-29284.herokuapp.com/contact', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/x-www-form-urlencoded',
-    //   },
-    //   body: contactInfo,
-    // })
-    //   .then(({ status }) => {
-    //     if (status === 200) {
-    //       successResponse();
-    //     } else {
-    //       errorResponse();
-    //     }
-    //   })
-    //   .catch(() => errorResponse());
+
+    fetch('https://whispering-depths-29284.herokuapp.com/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: contactInfo,
+    })
+      .then(({ status }) => {
+        if (status === 200) {
+          successResponse();
+        } else {
+          errorResponse();
+        }
+      })
+      .catch(() => errorResponse());
   }
 
   return (
     <>
       <main className='contact page'>
-        <div id='contact_form_container'>
+        <div className='contactCard'>
           <form onSubmit={submitHandler}>
             {/* user input */}
-            <div className='contact_input_container'>
+            <div className='contactInputContainer'>
               <label htmlFor='email'>email</label>
               <input
                 onChange={({ target }) => setEmail(target.value)}
@@ -85,7 +74,7 @@ function ContactMe() {
                 required
               ></input>
             </div>
-            <div className='contact_input_container'>
+            <div className='contactInputContainer'>
               <label htmlFor='message'>message</label>
               <textarea
                 onChange={({ target }) => setMessage(target.value)}
@@ -99,34 +88,25 @@ function ContactMe() {
                 required
               ></textarea>
             </div>
-            <div className='submit_contact_container'>
+            <div>
               {isLoading ? (
                 <Spinner />
               ) : (
-                <button disabled={formSubmitted}>
-                  <div
-                    className={`submitCommentButton ${
-                      formSubmitted && 'formSubmitted'
-                    }`}
-                  >
-                    submit
-                  </div>
+                <button
+                  className={`submitCommentButton${
+                    formSubmitted ? ' disabledButton' : ' enabledButton'
+                  }`}
+                  disabled={formSubmitted}
+                >
+                  <div>submit</div>
                 </button>
               )}
             </div>
           </form>
         </div>
-        <div
-          style={response ? responseStyle : { display: 'none' }}
-          className='contact_form_response_modal'
-          data-testid='contact_form_response_modal'
-        >
-          {response === 200 ? 'success' : 'retry'}
-        </div>
       </main>
-      {/* {isLoading && <Spinner />} */}
     </>
   );
 }
 
-export default ContactMe;
+export default MessageMe;

@@ -76,12 +76,12 @@ function Navbar() {
           </Link>
           <Link
             className={
-              currentPage === 'contactMe' ? 'mobile_nav_selected' : undefined
+              currentPage === 'messageMe' ? 'mobile_nav_selected' : undefined
             }
             onClick={linkHandler}
-            to='contactMe'
+            to='messageMe'
           >
-            - contact me -
+            - message me -
           </Link>
         </ul>
         <img

@@ -17,6 +17,13 @@ main.contact {
   color: black;
   background-image: linear-gradient(to right, #7760c3, #2ebfbd);
 }
+main.contact div.contactCard {
+  background-color: rgba(63, 63, 63, 0.2);
+  padding: 1rem;
+  width: 90%;
+  max-width: 500px;
+  box-sizing: border-box;
+}
 main.contact label {
   visibility: hidden;
 }
@@ -26,7 +33,7 @@ main.contact form {
   align-items: center;
   border-radius: 0.25rem;
 }
-.contact_input_container {
+.contactInputContainer {
   display: flex;
   flex-direction: column;
 }
@@ -36,25 +43,23 @@ main.contact label {
 /* main.contact input {
 } */
 #email {
-  padding: 0.125rem 0.25rem;
+  padding: 0.25rem 0.5rem;
   height: 1.5rem;
-  width: 90vw;
+  width: 80vw;
   max-width: 400px;
   font-family: archivoThin;
-  text-indent: 0.25rem;
   font-size: 1.2rem;
   border: none;
   border-radius: 0.25rem;
 }
 #message {
-  padding: 0.125rem 0.25rem;
+  padding: 0.25rem 0.5rem;
   box-shadow: none;
   height: 3rem;
-  width: 90vw;
+  width: 80vw;
   max-width: 400px;
   resize: none;
   font-family: archivoThin;
-  text-indent: 0.25rem;
   font-size: 1.2rem;
   border: none;
   border-radius: 0.25rem;
@@ -70,7 +75,29 @@ main.contact button {
   background: none;
   transition: all 1s;
 }
-main.contact button:hover {
+main.contact button.enabledButton:hover {
   color: white;
   border-color: white;
 }
+
+/* @media (max-width: 500px) {
+  #email {
+    width: 80vw;
+    max-width: 400px;
+  }
+  #message {
+    width: 80vw;
+    max-width: 400px;
+  }
+}
+
+/* @media (max-width: 500px) {
+  #email {
+    width: 80vw;
+    max-width: 400px;
+  }
+  #message {
+    width: 80vw;
+    max-width: 400px;
+  }
+} */
