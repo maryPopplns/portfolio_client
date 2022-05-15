@@ -27,7 +27,7 @@ main.projects ul.projectTilesContainer {
 
 @media (max-width: 799px) {
   h1.projectsHeading {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 
@@ -37,7 +37,7 @@ main.projects ul.projectTilesContainer {
     height: calc(100vh - 3rem);
   }
   h1.projectsHeading {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
 }
 

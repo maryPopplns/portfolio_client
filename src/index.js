@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import Blog from './components/blog/Blog';
 import Navbar from './components/navbar/Navbar';
 import reportWebVitals from './reportWebVitals';
-import MessageMe from './components/messageMe/MessageMe';
+import Contact from './components/contact/Contact';
 import Projects from './components/projects/Projects';
 import Homepage from './components/homepage/Homepage';
 import ReadBlog from './components/readBlog/ReadBlog';
@@ -22,7 +22,7 @@ ReactDOM.render(
             <Route path='blog' element={<Blog />} />
             <Route path='blog/:blogID' element={<ReadBlog />} />
             <Route path='projects' element={<Projects />} />
-            <Route path='messageMe' element={<MessageMe />} />
+            <Route path='contact' element={<Contact />} />
           </Route>
         </Routes>
       </BrowserRouter>

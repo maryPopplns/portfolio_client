@@ -65,24 +65,32 @@ function Navbar() {
           >
             - blog -
           </Link>
-          <Link
-            className={
-              currentPage === 'projects' ? 'mobile_nav_selected' : undefined
-            }
-            onClick={linkHandler}
-            to='projects'
-          >
-            - projects -
-          </Link>
-          <Link
-            className={
-              currentPage === 'messageMe' ? 'mobile_nav_selected' : undefined
-            }
-            onClick={linkHandler}
-            to='messageMe'
-          >
-            - message me -
-          </Link>
+          {/* <li>
+          </li>
+          <li>
+          </li> */}
+          <li>
+            <Link
+              className={
+                currentPage === 'projects' ? 'mobile_nav_selected' : undefined
+              }
+              onClick={linkHandler}
+              to='projects'
+            >
+              - projects -
+            </Link>
+          </li>
+          <li>
+            <Link
+              className={
+                currentPage === 'contact' ? 'mobile_nav_selected' : undefined
+              }
+              onClick={linkHandler}
+              to='contact'
+            >
+              - contact -
+            </Link>
+          </li>
         </ul>
         <img
           src={closeButton}

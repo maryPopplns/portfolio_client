@@ -38,7 +38,7 @@ ul.blogPostContainer {
   }
   h1.blogHeading {
     margin-top: 2rem;
-    font-size: 4rem;
+    font-size: 3rem;
   }
   ul.blogPostContainer {
     width: 100vw;
@@ -51,7 +51,7 @@ ul.blogPostContainer {
     height: calc(100vh - 3rem);
   }
   h1.blogHeading {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
   }
   div.blog::before {
     background-size: 275%;
