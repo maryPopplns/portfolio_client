@@ -56,25 +56,4 @@ describe('blog', () => {
       expect(testingTab).toHaveStyle('color: white');
     });
   });
-  test.skip('clicking a category renders posts in that category', async () => {
-    setup();
-    // TODO once I have built out the post tiles on the blog homepage, finish this test
-    const blogLink = screen.getByRole('link', { name: 'blog' });
-    userEvent.click(blogLink);
-
-    const fitnessPost = screen.getByRole('heading', { name: 'fitness title' });
-    const techPost = screen.getByRole('heading', { name: 'tech title' });
-
-    let testingTab;
-    await waitFor(() => {
-      testingTab = screen.getByText('testing');
-      expect(testingTab).toBeInTheDocument();
-    });
-    // click test category
-    await userEvent.click(testingTab);
-    await waitFor(() => {
-      expect(fitnessPost).not.toBeInTheDocument();
-      // check if the other headings are in the document
-    });
-  });
 });

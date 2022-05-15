@@ -10,7 +10,7 @@
   {
     "title": "Blog CMS",
     "technologies": ["React", "Redux", "React Testing Library", "Jest"],
-    "description": "User interface for managing my portfolios blog content. Unit tests were conducted with jest, react testing library, and msw resulting in 96.5% line coverage.",
+    "description": "User interface for managing my portfolios blog content. Unit tests were conducted with jest, react testing library, and msw resulting in 95.5% line coverage.",
     "live": "https://whispering-depths-29284.herokuapp.com/",
     "github": "https://github.com/maryPopplns/portfolio_blog_cms",
     "complete": true
@@ -18,7 +18,7 @@
   {
     "title": "Blog API",
     "technologies": ["Node", "MongoDB", "Supertest", "Jest"],
-    "description": "REST API for creation, editing, and deletion of my portfolios blog posts, comments, and users. Integration tests were conducted with supertest and jest resulting in 94.9% line coverage.",
+    "description": "REST API for creation, editing, and deletion of my portfolios blog posts, comments, and users. Integration tests were conducted with supertest and jest resulting in 93.8% line coverage.",
     "live": "",
     "github": "https://github.com/maryPopplns/portfolio_api2",
     "complete": true
@@ -26,7 +26,7 @@
   {
     "title": "Portfolio",
     "technologies": ["React", "Redux", "React Testing Library", "Jest"],
-    "description": "Webpage for displaying my work and contact information (the site you are currently on). Unit tests were conducted with jest, react testing library, and msw resulting in 94.7% line coverage.",
+    "description": "Webpage for displaying my work and contact information (the site you are currently on). Unit tests were conducted with jest, react testing library, and msw resulting in 96.8% line coverage.",
     "live": "https://www.spencerknightdev.com/",
     "github": "https://github.com/maryPopplns/portfolio_client",
     "complete": true
