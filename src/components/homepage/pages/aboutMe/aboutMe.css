@@ -8,10 +8,6 @@
   src: url('../../../../fonts/ArchivoNarrow-VariableFont_wght.ttf')
     format('truetype');
 }
-@font-face {
-  font-family: 'kite';
-  src: url('../../../../fonts/KiteOne-Regular.ttf') format('truetype');
-}
 
 /* global */
 main.about {
@@ -24,7 +20,7 @@ main.about {
 }
 
 main.about p {
-  font-family: kite;
+  font-family: archivoThin;
 }
 
 /* mobile */
