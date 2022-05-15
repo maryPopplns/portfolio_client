@@ -1,42 +1,55 @@
-import { render, screen } from '@testing-library/react';
-import LandingPage from './LandingPage';
+import { rest } from 'msw';
+import Homepage from '../../Homepage';
+import { Provider } from 'react-redux';
+import { setupServer } from 'msw/node';
+import Navbar from '../../../navbar/Navbar';
+import store from '../../../../store/store';
+import { MemoryRouter, Routes, Route } from 'react-router-dom';
+import { render, screen, waitFor, fireEvent } from '@testing-library/react';
+
+import allPostsData from '../../../testData/allPosts.json';
 
 describe('Landing page header', () => {
+  const allPosts = rest.get(
+    'https://whispering-depths-29284.herokuapp.com/post',
+    (req, res, ctx) => {
+      return res(ctx.json(allPostsData));
+    }
+  );
+
+  const server = new setupServer(allPosts);
+
+  beforeAll(() => server.listen());
+  afterEach(() => server.resetHandlers());
+  afterAll(() => server.close());
+
+  const setup = () => {
+    render(
+      <Provider store={store}>
+        <MemoryRouter>
+          <Routes>
+            <Route path='/' element={<Navbar />}>
+              <Route index element={<Homepage />} />
+            </Route>
+          </Routes>
+        </MemoryRouter>
+      </Provider>
+    );
+  };
+
   test('header includes first name', () => {
-    render(<LandingPage />);
+    setup();
     const firstName = screen.getByRole('heading', { name: /spencer/i });
     expect(firstName).toBeInTheDocument();
   });
   test('header includes last name', () => {
-    render(<LandingPage />);
+    setup();
     const lastName = screen.getByRole('heading', { name: /knight/i });
     expect(lastName).toBeInTheDocument();
   });
-  test('landing page includes text "web developer"', () => {
-    render(<LandingPage />);
-    const webdeveloper = screen.getByText(/web developer/i);
-    expect(webdeveloper).toBeInTheDocument();
-  });
-  test('landing page includes text "fitness 🤍"', () => {
-    render(<LandingPage />);
-    const fitness = screen.getByText(/fitness 🤍/i);
+  test('landing page includes text "fitness <3"', () => {
+    setup();
+    const fitness = screen.getByText(/fitness <3/i);
     expect(fitness).toBeInTheDocument();
-  });
-  describe('contains the text veteran', () => {
-    test('includes letter "v"', () => {
-      render(<LandingPage />);
-      const v = screen.getByText(/v$/i);
-      expect(v).toBeInTheDocument();
-    });
-    test('includes letter "e"', () => {
-      render(<LandingPage />);
-      const e = screen.getByText(/e$/i);
-      expect(e).toBeInTheDocument();
-    });
-    test('includes letters "teran"', () => {
-      render(<LandingPage />);
-      const teran = screen.getByText(/teran/i);
-      expect(teran).toBeInTheDocument();
-    });
   });
 });

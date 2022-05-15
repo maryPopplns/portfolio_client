@@ -39,7 +39,7 @@ describe('blog', () => {
       </Provider>
     );
   };
-  test('category button color changes to green when clicked', async () => {
+  test('category button color changes to white when clicked', async () => {
     setup();
 
     const blogLink = screen.getByRole('link', { name: '- blog -' });
@@ -53,7 +53,7 @@ describe('blog', () => {
     // click test category
     await userEvent.click(testingTab);
     await waitFor(() => {
-      expect(testingTab).toHaveStyle('color: #00A36C');
+      expect(testingTab).toHaveStyle('color: white');
     });
   });
   test.skip('clicking a category renders posts in that category', async () => {

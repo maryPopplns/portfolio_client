@@ -11,27 +11,10 @@ const comment = {
 };
 
 describe('text settings', () => {
-  const mockBackgroundColor = jest.fn();
   const mockFontSize = jest.fn();
-  const mockColor = jest.fn();
   function setup() {
-    render(
-      <TextSettings
-        setBackgroundColor={mockBackgroundColor}
-        setFontSize={mockFontSize}
-        setColor={mockColor}
-      />
-    );
+    render(<TextSettings setFontSize={mockFontSize} />);
   }
-  test('fires mockColor when color is changed', async () => {
-    setup();
-    const colorInput = screen.getByTestId('color');
-    fireEvent.change(colorInput, { target: { value: '#00001' } });
-
-    await waitFor(() => {
-      expect(mockColor).toBeCalled();
-    });
-  });
   test('fires mockFontSize when font size is changed', async () => {
     setup();
     const fontSizeInput = screen.getByTestId('text_size');
@@ -39,15 +22,6 @@ describe('text settings', () => {
 
     await waitFor(() => {
       expect(mockFontSize).toBeCalled();
-    });
-  });
-  test('fires mockBackgroundColor when background color is changed', async () => {
-    setup();
-    const backgroundInput = screen.getByTestId('background_color');
-    fireEvent.change(backgroundInput, { target: { value: '#b34444' } });
-
-    await waitFor(() => {
-      expect(mockBackgroundColor).toBeCalled();
     });
   });
 });
