@@ -43,6 +43,10 @@ div.emailContainer p {
 }
 a.iconContainer img {
   filter: invert(1);
+  transition: all 1s;
+}
+a.iconContainer img:hover {
+  filter: invert(0);
 }
 
 @media (max-width: 799px) {
