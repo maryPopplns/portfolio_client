@@ -8,6 +8,10 @@
   src: url('../../../../fonts/ArchivoNarrow-VariableFont_wght.ttf')
     format('truetype');
 }
+@font-face {
+  font-family: 'kite';
+  src: url('../../../../fonts/KiteOne-Regular.ttf') format('truetype');
+}
 
 /* global */
 main.about {
@@ -20,7 +24,7 @@ main.about {
 }
 
 main.about p {
-  font-family: archivoThin;
+  font-family: kite;
 }
 
 /* mobile */
@@ -44,7 +48,7 @@ main.about p {
   }
   main.about p {
     font-size: 1.5rem;
-    line-height: 1.6rem;
+    line-height: 1.7rem;
   }
 }
 
@@ -57,7 +61,7 @@ main.about p {
     max-width: 800px;
     text-align: center;
     font-size: 2.1rem;
-    line-height: 2.2rem;
+    line-height: 2.3rem;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
@@ -68,7 +72,7 @@ main.about p {
   main.about p {
     text-align: center;
     font-size: 2.4rem;
-    line-height: 2.5rem;
+    line-height: 2.6rem;
   }
 }
 
@@ -76,5 +80,6 @@ main.about p {
   main.about p {
     text-align: center;
     font-size: 2.5rem;
+    line-height: 2.7rem;
   }
 }
