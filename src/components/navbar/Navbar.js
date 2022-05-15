@@ -27,7 +27,9 @@ function Navbar() {
     <>
       <Cursor />
       <nav id='navbar'>
-        <p>s_k</p>
+        <Link className='navbarLogo' to=''>
+          <p>s_k</p>
+        </Link>
         <svg
           onClick={() => setModalOpen(true)}
           className='hamburger_icon'
