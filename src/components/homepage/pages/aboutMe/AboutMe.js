@@ -8,7 +8,7 @@ function AboutMe() {
         enthusiast, and a web developer. Solving complex problems with simple
         solutions is what I like to do. Front-end development is my current
         passion, but am confident I can thrive in any environment. Checkout my
-        blog and let me what you think!
+        blog and send me a message if you would like to talk more!
       </p>
     </main>
   );

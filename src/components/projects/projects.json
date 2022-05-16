@@ -18,7 +18,7 @@
   {
     "title": "Blog API",
     "technologies": ["Node", "MongoDB", "Supertest", "Jest"],
-    "description": "REST API for creation, editing, and deletion of my portfolios blog posts, comments, and users. Integration tests were conducted with supertest and jest resulting in 93.8% line coverage.",
+    "description": "REST API for creation, editing, and deletion of my portfolios blog posts, comments, and users. Integration tests were conducted with supertest and jest resulting in 99.4% line coverage.",
     "live": "",
     "github": "https://github.com/maryPopplns/portfolio_api2",
     "complete": true
