@@ -8,10 +8,10 @@ Portfolio client for showcasing my projects and personal blog. Integrated with s
 
 **Client:** React, Redux, React Router.
 
-![homepage](https://i.ibb.co/Vqww9z0/homepage.png)
-![blog](https://i.ibb.co/N6VKtT7/blog.png)
-![projects](https://i.ibb.co/4gwFndf/projects.png)
-![contact](https://i.ibb.co/0D7ccJZ/contact.png)
+![homepage](https://i.ibb.co/styD3jx/home.png)
+![blog](https://i.ibb.co/5h959jz/blog.png)
+![projects](https://i.ibb.co/sgwy743/projects.png)
+![contact](https://i.ibb.co/CwstBWb/contact.png)
 
 ## Tests
 
