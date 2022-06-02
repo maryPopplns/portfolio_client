@@ -4,6 +4,7 @@ import { Link, Outlet } from 'react-router-dom';
 import { setPosts } from '../../store/slices/posts';
 import { useSelector, useDispatch } from 'react-redux';
 
+import resume from './resume.pdf';
 import closeButton from './closeButton.png';
 import Cursor from '../homepage/cursor/Cursor';
 
@@ -93,6 +94,9 @@ function Navbar() {
               - contact -
             </Link>
           </li>
+          <a href={resume} download='resume'>
+            <div>- resume -</div>
+          </a>
         </ul>
         <img
           src={closeButton}

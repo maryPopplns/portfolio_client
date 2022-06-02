@@ -64,7 +64,8 @@
   gap: 1rem;
   align-items: center;
 }
-.mobile_nav_modal a {
+.mobile_nav_modal a,
+.mobile_nav_modal .resumeLink {
   color: black;
   font-family: archivoRegular;
   text-decoration: none;

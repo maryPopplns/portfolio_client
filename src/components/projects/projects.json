@@ -1,10 +1,10 @@
 [
   {
-    "title": "Chair Fit",
-    "technologies": ["react", "node"],
-    "description": "Fitness/nutrition application for people that sit in chairs all day. Under construction, click the link below to follow my progress!",
+    "title": "Crypto Tracker",
+    "technologies": ["Python", "PostgreSQL", "TypeScript", "React"],
+    "description": "Application to track potential loses/gains and view news regarding crypto currencies. Under construction, click the link below to follow my progress!",
     "live": "",
-    "github": "",
+    "github": "https://github.com/maryPopplns/crypto_client",
     "complete": false
   },
   {
@@ -29,14 +29,6 @@
     "description": "Webpage for displaying my work and contact information (the site you are currently on). Unit tests were conducted with jest, react testing library, and msw resulting in 96.8% line coverage.",
     "live": "https://www.spencerknightdev.com/",
     "github": "https://github.com/maryPopplns/portfolio_client",
-    "complete": true
-  },
-  {
-    "title": "Battleship",
-    "technologies": ["HTML", "CSS", "JavaScript", "webpack", "Jest"],
-    "description": "Recreation of the board game Battleship. Game logic was developed using the test driven development methodology. Tests conducted using jest resulting in 100% line coverage.",
-    "live": "https://marypopplns.github.io/battleship/",
-    "github": "https://github.com/maryPopplns/battleship",
     "complete": true
   }
 ]
