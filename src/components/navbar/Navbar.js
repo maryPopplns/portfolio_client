@@ -59,7 +59,7 @@ function Navbar() {
           >
             - home -
           </Link>
-          <Link
+          {/* <Link
             className={
               currentPage === 'blog' ? 'mobile_nav_selected' : undefined
             }
@@ -67,7 +67,7 @@ function Navbar() {
             to='blog'
           >
             - blog -
-          </Link>
+          </Link> */}
           {/* <li>
           </li>
           <li>
@@ -94,7 +94,7 @@ function Navbar() {
               - contact -
             </Link>
           </li>
-          <a href={resume} download='resume'>
+          <a href={resume} download='spencer_knight_resume.pdf'>
             <div>- resume -</div>
           </a>
         </ul>

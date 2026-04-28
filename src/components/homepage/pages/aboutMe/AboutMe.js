@@ -1,14 +1,13 @@
-import './aboutMe.css';
+import "./aboutMe.css";
 
 function AboutMe() {
   return (
-    <main className='about page'>
-      <p id='about_me_paragraph'>
-        Hello! My name is Spencer Knight, I am a US Navy veteran, fitness
-        enthusiast, and a web developer. Solving complex problems with simple
-        solutions is what I like to do. Front-end development is my current
-        passion, but am confident I can thrive in any environment. Checkout my
-        blog and send me a message if you would like to talk more!
+    <main className="about page">
+      <p id="about_me_paragraph">
+        Hi, I’m Spencer Knight — a Fullstack Software Engineer specializing in React, Node.js, and scalable backend
+        systems. I’ve led development of web and mobile applications serving 100K+ users and executed large-scale data
+        migrations (20M+ records) into Salesforce. I focus on building reliable systems, clean APIs, and solutions that
+        scale. Feel free to explore my work or reach out to connect.
       </p>
     </main>
   );

@@ -1,11 +1,14 @@
-import { render, screen } from '@testing-library/react';
-import AboutMe from './AboutMe';
+import { render, screen } from "@testing-library/react";
+import AboutMe from "./AboutMe";
 
-describe('about me', () => {
-  test('includes about me paragraph', () => {
+describe("about me", () => {
+  test("includes about me paragraph", () => {
     render(<AboutMe />);
     const aboutMeParagraph = screen.getByText(
-      'Hello! My name is Spencer Knight, I am a US Navy veteran, fitness enthusiast, and a web developer. Solving complex problems with simple solutions is what I like to do. Front-end development is my current passion, but am confident I can thrive in any environment. Checkout my blog and send me a message if you would like to talk more!'
+      `Hi, I’m Spencer Knight — a Fullstack Software Engineer specializing in React, Node.js, and scalable backend
+        systems. I’ve led development of web and mobile applications serving 100K+ users and executed large-scale data
+        migrations (20M+ records) into Salesforce. I focus on building reliable systems, clean APIs, and solutions that
+        scale. Feel free to explore my work or reach out to connect.`,
     );
     expect(aboutMeParagraph).toBeInTheDocument();
   });
